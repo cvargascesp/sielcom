@@ -415,3 +415,7 @@ G:\Sistema\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1
 G:\Sistema\WindowsApplication1\WindowsApplication1\obj\Debug\Control Ventas e Inventario.TrustInfo.xml
 G:\Sistema\WindowsApplication1\WindowsApplication1\obj\Debug\Control Ventas e Inventario.exe.manifest
 G:\Sistema\WindowsApplication1\WindowsApplication1\obj\Debug\Control Ventas e Inventario.application
+C:\Users\Administrador\Documents\GitHub\sielcom\WindowsApplication1\bin\Debug\Control Ventas e Inventario.exe.config
+C:\Users\Administrador\Documents\GitHub\sielcom\WindowsApplication1\obj\Debug\Control Ventas e Inventario.exe
+C:\Users\Administrador\Documents\GitHub\sielcom\WindowsApplication1\obj\Debug\Control Ventas e Inventario.xml
+C:\Users\Administrador\Documents\GitHub\sielcom\WindowsApplication1\obj\Debug\Control Ventas e Inventario.pdb
