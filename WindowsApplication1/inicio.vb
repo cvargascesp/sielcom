@@ -119,10 +119,10 @@ Public Class inicio
     End Sub
 
     Private Sub Button11_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button11.Click
-        bodega.Button5.Visible = False
-        bodega.Button6.Visible = True
+        bodega_compraventa.Button5.Visible = False
+        bodega_compraventa.Button6.Visible = True
         Me.Close()
-        bodega.Show()
+        bodega_general.Show()
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
@@ -174,10 +174,10 @@ Public Class inicio
     End Sub
 
     Private Sub BodegaToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BodegaToolStripMenuItem.Click
-        bodega.Button5.Visible = False
-        bodega.Button6.Visible = True
+        bodega_compraventa.Button5.Visible = False
+        bodega_compraventa.Button6.Visible = True
         Me.Close()
-        bodega.Show()
+        bodega_compraventa.Show()
     End Sub
 
     Private Sub StockToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles StockToolStripMenuItem.Click

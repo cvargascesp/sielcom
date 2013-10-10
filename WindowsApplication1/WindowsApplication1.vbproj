@@ -146,6 +146,12 @@
     <Compile Include="AboutBox1.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="agregar_materia_prima.Designer.vb">
+      <DependentUpon>agregar_materia_prima.vb</DependentUpon>
+    </Compile>
+    <Compile Include="agregar_materia_prima.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ApplicationEvents.vb" />
     <Compile Include="bienvenida.Designer.vb">
       <DependentUpon>bienvenida.vb</DependentUpon>
@@ -153,10 +159,22 @@
     <Compile Include="bienvenida.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="bodega.Designer.vb">
-      <DependentUpon>bodega.vb</DependentUpon>
+    <Compile Include="bodega_compraventa.Designer.vb">
+      <DependentUpon>bodega_compraventa.vb</DependentUpon>
     </Compile>
-    <Compile Include="bodega.vb">
+    <Compile Include="bodega_compraventa.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="bodega_general.Designer.vb">
+      <DependentUpon>bodega_general.vb</DependentUpon>
+    </Compile>
+    <Compile Include="bodega_general.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="bodega_materias_primas_principal.Designer.vb">
+      <DependentUpon>bodega_materias_primas_principal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="bodega_materias_primas_principal.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="b_buscarventa.Designer.vb">
@@ -339,13 +357,22 @@
       <DependentUpon>AboutBox1.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="agregar_materia_prima.resx">
+      <DependentUpon>agregar_materia_prima.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="bienvenida.resx">
       <DependentUpon>bienvenida.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="bodega.resx">
-      <DependentUpon>bodega.vb</DependentUpon>
+    <EmbeddedResource Include="bodega_compraventa.resx">
+      <DependentUpon>bodega_compraventa.vb</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bodega_general.resx">
+      <DependentUpon>bodega_general.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bodega_materias_primas_principal.resx">
+      <DependentUpon>bodega_materias_primas_principal.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="b_buscarventa.resx">
       <DependentUpon>b_buscarventa.vb</DependentUpon>
@@ -531,12 +558,12 @@
   <ItemGroup>
     <PublishFile Include="40.ICO">
       <Visible>False</Visible>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
   </ItemGroup>

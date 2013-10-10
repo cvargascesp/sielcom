@@ -3,7 +3,7 @@ Imports iTextSharp.text
 Imports System.IO
 Imports MySql.Data.MySqlClient
 
-Public Class bodega
+Public Class bodega_compraventa
 
     Private Sub CambiarContraseñaToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CambiarContraseñaToolStripMenuItem.Click
         Dim n_usuario As New n_usuario

@@ -139,4 +139,8 @@ Public Class n_recibestock
             txtPrecioventa.Text = porc
         End If
     End Sub
+
+    Private Sub cbProveedor_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbProveedor.SelectedIndexChanged
+
+    End Sub
 End Class

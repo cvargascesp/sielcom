@@ -116,8 +116,8 @@ Public Class login
                     venta.Button5.Visible = False
                     caja.Button5.Visible = False
                     caja.Button6.Visible = True
-                    bodega.Button5.Visible = False
-                    bodega.Button6.Visible = True
+                    bodega_compraventa.Button5.Visible = False
+                    bodega_compraventa.Button6.Visible = True
                     empaque.Button6.Visible = True
                     empaque.Button5.Visible = False
                     Me.Hide()
@@ -128,10 +128,10 @@ Public Class login
                     Me.Hide()
                     caja.Show()
                 Case "BODEGA"
-                    bodega.Button6.Visible = False
-                    bodega.Button5.Visible = True
+                    bodega_compraventa.Button6.Visible = False
+                    bodega_compraventa.Button5.Visible = True
                     Me.Hide()
-                    bodega.Show()
+                    bodega_compraventa.Show()
                 Case "EMPAQUE"
                     empaque.Button6.Visible = False
                     empaque.Button5.Visible = True

@@ -27,6 +27,7 @@ Partial Class n_recibestock
         Me.Cancel_Button = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.btnRecalculaVenta = New System.Windows.Forms.Button()
         Me.lblUtilidad = New System.Windows.Forms.Label()
         Me.txtMargen = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -46,7 +47,6 @@ Partial Class n_recibestock
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtFactura = New System.Windows.Forms.TextBox()
-        Me.btnRecalculaVenta = New System.Windows.Forms.Button()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
@@ -125,6 +125,15 @@ Partial Class n_recibestock
         Me.GroupBox1.TabIndex = 2
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Datos de ingreso"
+        '
+        'btnRecalculaVenta
+        '
+        Me.btnRecalculaVenta.Image = Global.WindowsApplication1.My.Resources.Resources.DownArrowShort
+        Me.btnRecalculaVenta.Location = New System.Drawing.Point(196, 153)
+        Me.btnRecalculaVenta.Name = "btnRecalculaVenta"
+        Me.btnRecalculaVenta.Size = New System.Drawing.Size(22, 28)
+        Me.btnRecalculaVenta.TabIndex = 18
+        Me.btnRecalculaVenta.UseVisualStyleBackColor = True
         '
         'lblUtilidad
         '
@@ -305,15 +314,6 @@ Partial Class n_recibestock
         Me.txtFactura.Name = "txtFactura"
         Me.txtFactura.Size = New System.Drawing.Size(128, 20)
         Me.txtFactura.TabIndex = 0
-        '
-        'btnRecalculaVenta
-        '
-        Me.btnRecalculaVenta.Image = Global.WindowsApplication1.My.Resources.Resources.DownArrowShort
-        Me.btnRecalculaVenta.Location = New System.Drawing.Point(196, 153)
-        Me.btnRecalculaVenta.Name = "btnRecalculaVenta"
-        Me.btnRecalculaVenta.Size = New System.Drawing.Size(22, 28)
-        Me.btnRecalculaVenta.TabIndex = 18
-        Me.btnRecalculaVenta.UseVisualStyleBackColor = True
         '
         'n_recibestock
         '
