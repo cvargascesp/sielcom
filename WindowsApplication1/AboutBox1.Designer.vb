@@ -142,7 +142,7 @@ Partial Class AboutBox1
         Me.TextBoxDescription.TabIndex = 0
         Me.TextBoxDescription.TabStop = False
         Me.TextBoxDescription.Text = "Descripción:  Este sistema de gestión  y control de bodega es realizado  al detal" & _
-            "le, segun las necesidades del cliente"
+    "le, segun las necesidades del cliente"
         '
         'OKButton
         '
