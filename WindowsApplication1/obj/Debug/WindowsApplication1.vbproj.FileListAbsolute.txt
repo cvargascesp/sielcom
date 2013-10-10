@@ -419,3 +419,49 @@ C:\Users\Administrador\Documents\GitHub\sielcom\WindowsApplication1\bin\Debug\Co
 C:\Users\Administrador\Documents\GitHub\sielcom\WindowsApplication1\obj\Debug\Control Ventas e Inventario.exe
 C:\Users\Administrador\Documents\GitHub\sielcom\WindowsApplication1\obj\Debug\Control Ventas e Inventario.xml
 C:\Users\Administrador\Documents\GitHub\sielcom\WindowsApplication1\obj\Debug\Control Ventas e Inventario.pdb
+C:\Users\camilo\Documents\GitHub\sielcom\WindowsApplication1\bin\Debug\Control Ventas e Inventario.exe.config
+C:\Users\camilo\Documents\GitHub\sielcom\WindowsApplication1\obj\Debug\Control Ventas e Inventario.exe
+C:\Users\camilo\Documents\GitHub\sielcom\WindowsApplication1\obj\Debug\Control Ventas e Inventario.xml
+C:\Users\camilo\Documents\GitHub\sielcom\WindowsApplication1\obj\Debug\Control Ventas e Inventario.pdb
+C:\Users\camilo\Documents\GitHub\sielcom\WindowsApplication1\bin\Debug\Resources\Inicio.jpg
+C:\Users\camilo\Documents\GitHub\sielcom\WindowsApplication1\bin\Debug\Resources\Secundario.jpg
+C:\Users\camilo\Documents\GitHub\sielcom\WindowsApplication1\bin\Debug\Control Ventas e Inventario.exe.manifest
+C:\Users\camilo\Documents\GitHub\sielcom\WindowsApplication1\bin\Debug\Control Ventas e Inventario.application
+C:\Users\camilo\Documents\GitHub\sielcom\WindowsApplication1\bin\Debug\Control Ventas e Inventario.exe
+C:\Users\camilo\Documents\GitHub\sielcom\WindowsApplication1\bin\Debug\Control Ventas e Inventario.pdb
+C:\Users\camilo\Documents\GitHub\sielcom\WindowsApplication1\bin\Debug\Control Ventas e Inventario.xml
+C:\Users\camilo\Documents\GitHub\sielcom\WindowsApplication1\obj\Debug\WindowsApplication1.vbprojResolveAssemblyReference.cache
+C:\Users\camilo\Documents\GitHub\sielcom\WindowsApplication1\obj\Debug\WindowsApplication1.AboutBox1.resources
+C:\Users\camilo\Documents\GitHub\sielcom\WindowsApplication1\obj\Debug\WindowsApplication1.bienvenida.resources
+C:\Users\camilo\Documents\GitHub\sielcom\WindowsApplication1\obj\Debug\WindowsApplication1.bodega.resources
+C:\Users\camilo\Documents\GitHub\sielcom\WindowsApplication1\obj\Debug\WindowsApplication1.b_buscarventa.resources
+C:\Users\camilo\Documents\GitHub\sielcom\WindowsApplication1\obj\Debug\WindowsApplication1.b_cliente.resources
+C:\Users\camilo\Documents\GitHub\sielcom\WindowsApplication1\obj\Debug\WindowsApplication1.b_proveedor.resources
+C:\Users\camilo\Documents\GitHub\sielcom\WindowsApplication1\obj\Debug\WindowsApplication1.b_usuario.resources
+C:\Users\camilo\Documents\GitHub\sielcom\WindowsApplication1\obj\Debug\WindowsApplication1.caja.resources
+C:\Users\camilo\Documents\GitHub\sielcom\WindowsApplication1\obj\Debug\WindowsApplication1.b_producto.resources
+C:\Users\camilo\Documents\GitHub\sielcom\WindowsApplication1\obj\Debug\WindowsApplication1.Configuraciones.resources
+C:\Users\camilo\Documents\GitHub\sielcom\WindowsApplication1\obj\Debug\WindowsApplication1.i_ranking.resources
+C:\Users\camilo\Documents\GitHub\sielcom\WindowsApplication1\obj\Debug\WindowsApplication1.i_stock.resources
+C:\Users\camilo\Documents\GitHub\sielcom\WindowsApplication1\obj\Debug\WindowsApplication1.empaque.resources
+C:\Users\camilo\Documents\GitHub\sielcom\WindowsApplication1\obj\Debug\WindowsApplication1.factura.resources
+C:\Users\camilo\Documents\GitHub\sielcom\WindowsApplication1\obj\Debug\WindowsApplication1.i_venta.resources
+C:\Users\camilo\Documents\GitHub\sielcom\WindowsApplication1\obj\Debug\WindowsApplication1.login.resources
+C:\Users\camilo\Documents\GitHub\sielcom\WindowsApplication1\obj\Debug\WindowsApplication1.imprimir.resources
+C:\Users\camilo\Documents\GitHub\sielcom\WindowsApplication1\obj\Debug\WindowsApplication1.inicio.resources
+C:\Users\camilo\Documents\GitHub\sielcom\WindowsApplication1\obj\Debug\WindowsApplication1.Resources.resources
+C:\Users\camilo\Documents\GitHub\sielcom\WindowsApplication1\obj\Debug\WindowsApplication1.m_boleta.resources
+C:\Users\camilo\Documents\GitHub\sielcom\WindowsApplication1\obj\Debug\WindowsApplication1.m_bol_fac.resources
+C:\Users\camilo\Documents\GitHub\sielcom\WindowsApplication1\obj\Debug\WindowsApplication1.n_boleta.resources
+C:\Users\camilo\Documents\GitHub\sielcom\WindowsApplication1\obj\Debug\WindowsApplication1.n_cliente.resources
+C:\Users\camilo\Documents\GitHub\sielcom\WindowsApplication1\obj\Debug\WindowsApplication1.n_producto.resources
+C:\Users\camilo\Documents\GitHub\sielcom\WindowsApplication1\obj\Debug\WindowsApplication1.n_proveedor.resources
+C:\Users\camilo\Documents\GitHub\sielcom\WindowsApplication1\obj\Debug\WindowsApplication1.n_recibestock.resources
+C:\Users\camilo\Documents\GitHub\sielcom\WindowsApplication1\obj\Debug\WindowsApplication1.n_ticket.resources
+C:\Users\camilo\Documents\GitHub\sielcom\WindowsApplication1\obj\Debug\WindowsApplication1.n_factura.resources
+C:\Users\camilo\Documents\GitHub\sielcom\WindowsApplication1\obj\Debug\WindowsApplication1.n_usuario.resources
+C:\Users\camilo\Documents\GitHub\sielcom\WindowsApplication1\obj\Debug\WindowsApplication1.venta.resources
+C:\Users\camilo\Documents\GitHub\sielcom\WindowsApplication1\obj\Debug\WindowsApplication1.vbproj.GenerateResource.Cache
+C:\Users\camilo\Documents\GitHub\sielcom\WindowsApplication1\obj\Debug\Control Ventas e Inventario.TrustInfo.xml
+C:\Users\camilo\Documents\GitHub\sielcom\WindowsApplication1\obj\Debug\Control Ventas e Inventario.exe.manifest
+C:\Users\camilo\Documents\GitHub\sielcom\WindowsApplication1\obj\Debug\Control Ventas e Inventario.application

@@ -14,6 +14,7 @@
     End Sub
 
     Public Shared Sub close()
+        'uhjnjn
         conn.Close()
     End Sub
 End Class
