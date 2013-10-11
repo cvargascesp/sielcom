@@ -9,16 +9,16 @@ Public Class libro_ingreso_mercaderia
 
     Private Sub libro_ingreso_mercaderia_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         formato_datetimepicker()
-
+        llenar_combobox_familias()
     End Sub
 
-    Private Sub ComboBox1_LostFocus(sender As Object, e As EventArgs) Handles ComboBox1.LostFocus
-        If ComboBox1.Text <> "" Then
+    Private Sub ComboBox1_LostFocus(sender As Object, e As EventArgs) Handles comboproveedor.LostFocus
+        If comboproveedor.Text <> "" Then
             Try
                 'verifica si existe proveedor
                 Dim r As Integer
                 Conexion.open()
-                Dim sql As String = "SELECT COUNT(*) FROM materia_prima WHERE codigo_mp ='" & ComboBox1.Text & "'"
+                Dim sql As String = "SELECT COUNT(*) FROM materia_prima WHERE codigo_mp ='" & comboproveedor.Text & "'"
                 Dim cm As New MySqlCommand(sql, Conexion.conn)
                 r = cm.ExecuteScalar()
                 Conexion.close()
@@ -28,18 +28,18 @@ Public Class libro_ingreso_mercaderia
                     resul = MessageBox.Show("Proveedor NO Existe, Desea Crearlo", "Proveedor", MessageBoxButtons.YesNo, MessageBoxIcon.Information, MessageBoxDefaultButton.Button2)
                     If resul = Windows.Forms.DialogResult.Yes Then
                         Dim n_proveedor As New n_proveedor
-                        n_proveedor.TextBox2.Text = ComboBox1.Text
+                        n_proveedor.TextBox2.Text = comboproveedor.Text
                         n_proveedor.ShowDialog()
-                        ComboBox1.DataSource = Nothing
+                        comboproveedor.DataSource = Nothing
 
                     End If
 
                 End If
             Catch err As MySqlException
-            MessageBox.Show(err.Message)
-        Catch err As Exception
-            MessageBox.Show(err.Message)
-        End Try
+                MessageBox.Show(err.Message)
+            Catch err As Exception
+                MessageBox.Show(err.Message)
+            End Try
         End If
 
 
@@ -86,4 +86,23 @@ Public Class libro_ingreso_mercaderia
     Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
 
     End Sub
+
+    Sub llenar_combobox_familias()
+        Dim ssql As String = "select * from proveedor"
+        Dim ds As New DataSet
+        Dim da As New MySqlDataAdapter(ssql, Conexion.conn)
+        Try
+            Dim actual As String = Me.comboproveedor.Text
+            da.Fill(ds)
+            Me.comboproveedor.DataSource = ds.Tables(0)
+            Me.comboproveedor.DisplayMember = "nombre"
+            'Me.comboproveedor.ValueMember = "idfamilia"
+            Me.comboproveedor.SelectedValue = actual
+        Catch ex As Exception
+            'MessageBox.Show(ex.Message)
+        End Try
+
+    End Sub
+   
+
 End Class

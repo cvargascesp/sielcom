@@ -39,7 +39,7 @@ Partial Class libro_ingreso_mercaderia
         Me.TextBox6 = New System.Windows.Forms.TextBox()
         Me.TextBox7 = New System.Windows.Forms.TextBox()
         Me.TextBox8 = New System.Windows.Forms.TextBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.comboproveedor = New System.Windows.Forms.ComboBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
@@ -181,13 +181,13 @@ Partial Class libro_ingreso_mercaderia
         Me.TextBox8.Size = New System.Drawing.Size(124, 20)
         Me.TextBox8.TabIndex = 17
         '
-        'ComboBox1
+        'comboproveedor
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(198, 152)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox1.TabIndex = 18
+        Me.comboproveedor.FormattingEnabled = True
+        Me.comboproveedor.Location = New System.Drawing.Point(198, 152)
+        Me.comboproveedor.Name = "comboproveedor"
+        Me.comboproveedor.Size = New System.Drawing.Size(121, 21)
+        Me.comboproveedor.TabIndex = 18
         '
         'Button1
         '
@@ -215,7 +215,7 @@ Partial Class libro_ingreso_mercaderia
         Me.ClientSize = New System.Drawing.Size(593, 412)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.comboproveedor)
         Me.Controls.Add(Me.TextBox8)
         Me.Controls.Add(Me.TextBox7)
         Me.Controls.Add(Me.TextBox6)
@@ -256,7 +256,7 @@ Partial Class libro_ingreso_mercaderia
     Friend WithEvents TextBox6 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox7 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox8 As System.Windows.Forms.TextBox
-    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
+    Friend WithEvents comboproveedor As System.Windows.Forms.ComboBox
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Button2 As System.Windows.Forms.Button
 End Class

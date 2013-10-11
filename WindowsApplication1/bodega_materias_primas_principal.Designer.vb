@@ -98,7 +98,7 @@ Partial Class bodega_materias_primas_principal
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MateriasPrimasToolStripMenuItem, Me.ParametrosToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(443, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(451, 24)
         Me.MenuStrip1.TabIndex = 6
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -107,7 +107,7 @@ Partial Class bodega_materias_primas_principal
         Me.MateriasPrimasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AgregarMateriaPrimaToolStripMenuItem, Me.EditarMateriaPrimaToolStripMenuItem, Me.CatalogoToolStripMenuItem})
         Me.MateriasPrimasToolStripMenuItem.Name = "MateriasPrimasToolStripMenuItem"
         Me.MateriasPrimasToolStripMenuItem.Size = New System.Drawing.Size(103, 20)
-        Me.MateriasPrimasToolStripMenuItem.Text = "materias Primas"
+        Me.MateriasPrimasToolStripMenuItem.Text = "Materias Primas"
         '
         'AgregarMateriaPrimaToolStripMenuItem
         '
@@ -150,7 +150,7 @@ Partial Class bodega_materias_primas_principal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(443, 397)
+        Me.ClientSize = New System.Drawing.Size(451, 397)
         Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Button4)
