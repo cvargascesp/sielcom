@@ -72,14 +72,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Control Ventas e Inventario.exe" size="1022464">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Control Ventas e Inventario.exe" size="1022976">
       <assemblyIdentity name="Control Ventas e Inventario" version="3.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>XNUtzHkkv+QjL/meN3PEXCkLcZQ=</dsig:DigestValue>
+        <dsig:DigestValue>RQqNGEyBKDojYLUORsIER/NosRw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

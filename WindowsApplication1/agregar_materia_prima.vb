@@ -4,6 +4,7 @@ Public Class agregar_materia_prima
     Private Sub agregar_materia_prima_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         formato_datetimepicker()
         llenar_combobox_familias()
+        llenar_combobox_unidadmedida()
     End Sub
     Private Sub combofamilia_SelectedIndexChanged(sender As Object, e As EventArgs) Handles combofamilia.SelectedIndexChanged
 
@@ -58,6 +59,21 @@ Public Class agregar_materia_prima
         DateTimePicker1.Format = DateTimePickerFormat.Custom
         DateTimePicker1.CustomFormat = "yyyy-MM-dd"
 
+    End Sub
+
+    Sub llenar_combobox_unidadmedida()
+        Dim ssql As String = "SELECT nomum FROM unidades_medida"
+        Dim ds As New DataSet
+        Dim da As New MySqlDataAdapter(ssql, Conexion.conn)
+        Try
+            Dim actual As String = combofamilia.Text
+            da.Fill(ds)
+            combofamilia.DataSource = ds.Tables(0)
+            combofamilia.DisplayMember = "nomum"
+            combofamilia.SelectedValue = actual
+        Catch ex As Exception
+            'MessageBox.Show(ex.Message)
+        End Try
     End Sub
 
 
