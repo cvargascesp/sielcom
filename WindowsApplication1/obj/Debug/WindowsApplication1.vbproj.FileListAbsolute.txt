@@ -511,3 +511,4 @@ C:\Users\Administrador\Documents\GitHub\sielcom\WindowsApplication1\obj\Debug\Co
 C:\Users\Administrador\Documents\GitHub\sielcom\WindowsApplication1\obj\Debug\WindowsApplication1.bodega_materias_primas_principal.resources
 C:\Users\Administrador\Documents\GitHub\sielcom\WindowsApplication1\obj\Debug\WindowsApplication1.agregar_materia_prima.resources
 C:\Users\Administrador\Documents\GitHub\sielcom\WindowsApplication1\obj\Debug\WindowsApplication1.i_familias.resources
+C:\Users\Administrador\Documents\GitHub\sielcom\WindowsApplication1\obj\Debug\WindowsApplication1.i_unidadmedida.resources

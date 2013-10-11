@@ -16,4 +16,8 @@
     Private Sub FamiliasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FamiliasToolStripMenuItem.Click
         i_familias.Show()
     End Sub
+
+    Private Sub UnidadDeMedidaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UnidadDeMedidaToolStripMenuItem.Click
+        i_unidadmedida.Show()
+    End Sub
 End Class
