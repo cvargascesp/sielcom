@@ -24,19 +24,22 @@ Public Class libro_ingreso_mercaderia
                 Conexion.close()
                 If r = 0 Then
                     Dim resul As DialogResult
+
                     resul = MessageBox.Show("Proveedor NO Existe, Desea Crearlo", "Proveedor", MessageBoxButtons.YesNo, MessageBoxIcon.Information, MessageBoxDefaultButton.Button2)
                     If resul = Windows.Forms.DialogResult.Yes Then
                         Dim n_proveedor As New n_proveedor
                         n_proveedor.TextBox2.Text = ComboBox1.Text
                         n_proveedor.ShowDialog()
                         ComboBox1.DataSource = Nothing
+
                     End If
+
                 End If
             Catch err As MySqlException
-                MessageBox.Show(err.Message)
-            Catch err As Exception
-                MessageBox.Show(err.Message)
-            End Try
+            MessageBox.Show(err.Message)
+        Catch err As Exception
+            MessageBox.Show(err.Message)
+        End Try
         End If
 
 
@@ -65,8 +68,12 @@ Public Class libro_ingreso_mercaderia
             existe = cm.ExecuteScalar()
             Conexion.close()
             If existe = 0 Then
-                MessageBox.Show("El Producto ingresado No existe desea Crearlo", "Ingresar", MessageBoxButtons.YesNo, MessageBoxIcon.Information, MessageBoxDefaultButton.Button2)
-                agregar_materia_prima.Show()
+                If (Me.TextBox1.Text <> "") Then
+                    MessageBox.Show("El Producto ingresado No existe desea Crearlo", "Ingresar", MessageBoxButtons.YesNo, MessageBoxIcon.Information, MessageBoxDefaultButton.Button2)
+                    'agregar resultado del dialogresult anterior
+                    agregar_materia_prima.Show()
+                End If
+                
             End If
         Catch err As MySqlException
             MessageBox.Show(err.Message)
@@ -76,4 +83,7 @@ Public Class libro_ingreso_mercaderia
     End Sub
 
    
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
+
+    End Sub
 End Class
