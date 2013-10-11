@@ -4,14 +4,14 @@
   <description asmv2:publisher="Isystem" asmv2:product="Sistema Control Ventas e Inventario" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <deployment install="true" mapFileExtensions="true" />
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="Control Ventas e Inventario.exe.manifest" size="8698">
+    <dependentAssembly dependencyType="install" codebase="Control Ventas e Inventario.exe.manifest" size="8699">
       <assemblyIdentity name="Control Ventas e Inventario.exe" version="3.0.0.0" publicKeyToken="0000000000000000" language="es-CL" processorArchitecture="x86" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>Mz+LV6zJbPLv9cjOlF9COtgUoaU=</dsig:DigestValue>
+        <dsig:DigestValue>C2+oekeuY9mtgIHRfdI/rKO5Dpk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

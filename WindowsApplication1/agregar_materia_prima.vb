@@ -22,7 +22,6 @@ Public Class agregar_materia_prima
 
 
     Sub agregar_materia_prima()
-        '                       txt_ubicacion_mp
         Dim sqlquery As String = "insert into materia_prima values('" & Me.txtcodigo_mp.Text & "', '" & Me.txt_nom_mp.Text & "', '" & Me.DateTimePicker1.Text & "','" & Me.txt_ubicacion_mp.Text & "','" & Me.unidadmedida_mp.Text & "', '" & Me.combofamilia.SelectedValue & "'  )"
         Dim cmd As New MySqlCommand(sqlquery, Conexion.conn)
         Try

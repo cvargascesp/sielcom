@@ -22,6 +22,7 @@ Partial Class bodega_general
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(bodega_general))
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
@@ -29,9 +30,10 @@ Partial Class bodega_general
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(12, 46)
+        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
+        Me.Button1.Location = New System.Drawing.Point(33, 31)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(136, 92)
+        Me.Button1.Size = New System.Drawing.Size(175, 143)
         Me.Button1.TabIndex = 0
         Me.Button1.Text = "bodega compra/venta"
         Me.Button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter
@@ -39,9 +41,10 @@ Partial Class bodega_general
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(210, 46)
+        Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
+        Me.Button2.Location = New System.Drawing.Point(253, 31)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(136, 92)
+        Me.Button2.Size = New System.Drawing.Size(175, 143)
         Me.Button2.TabIndex = 1
         Me.Button2.Text = "Gestion materias Primas"
         Me.Button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter
@@ -49,9 +52,9 @@ Partial Class bodega_general
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(12, 227)
+        Me.Button3.Location = New System.Drawing.Point(33, 216)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 23)
+        Me.Button3.Size = New System.Drawing.Size(88, 34)
         Me.Button3.TabIndex = 2
         Me.Button3.Text = "Volver"
         Me.Button3.UseVisualStyleBackColor = True
@@ -60,12 +63,12 @@ Partial Class bodega_general
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(459, 262)
+        Me.ClientSize = New System.Drawing.Size(448, 262)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Name = "bodega_general"
-        Me.Text = "bodega_general"
+        Me.Text = "Menu general de bodega"
         Me.ResumeLayout(False)
 
     End Sub
