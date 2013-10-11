@@ -34,12 +34,13 @@ Partial Class agregar_materia_prima
         Me.combofamilia = New System.Windows.Forms.ComboBox()
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(13, 22)
+        Me.Label1.Location = New System.Drawing.Point(14, 64)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(43, 13)
         Me.Label1.TabIndex = 0
@@ -48,7 +49,7 @@ Partial Class agregar_materia_prima
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(12, 83)
+        Me.Label2.Location = New System.Drawing.Point(13, 125)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(42, 13)
         Me.Label2.TabIndex = 1
@@ -57,7 +58,7 @@ Partial Class agregar_materia_prima
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(13, 53)
+        Me.Label3.Location = New System.Drawing.Point(14, 95)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(47, 13)
         Me.Label3.TabIndex = 2
@@ -66,7 +67,7 @@ Partial Class agregar_materia_prima
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(395, 22)
+        Me.Label7.Location = New System.Drawing.Point(14, 33)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(85, 13)
         Me.Label7.TabIndex = 6
@@ -74,15 +75,15 @@ Partial Class agregar_materia_prima
         '
         'DateTimePicker1
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(478, 16)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(131, 27)
         Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(200, 20)
+        Me.DateTimePicker1.Size = New System.Drawing.Size(155, 20)
         Me.DateTimePicker1.TabIndex = 7
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(13, 115)
+        Me.Label8.Location = New System.Drawing.Point(14, 157)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(82, 13)
         Me.Label8.TabIndex = 8
@@ -91,7 +92,7 @@ Partial Class agregar_materia_prima
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(13, 148)
+        Me.Label9.Location = New System.Drawing.Point(14, 190)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(58, 13)
         Me.Label9.TabIndex = 9
@@ -99,14 +100,14 @@ Partial Class agregar_materia_prima
         '
         'txtcodigo_mp
         '
-        Me.txtcodigo_mp.Location = New System.Drawing.Point(132, 19)
+        Me.txtcodigo_mp.Location = New System.Drawing.Point(133, 61)
         Me.txtcodigo_mp.Name = "txtcodigo_mp"
         Me.txtcodigo_mp.Size = New System.Drawing.Size(155, 20)
         Me.txtcodigo_mp.TabIndex = 10
         '
         'txt_nom_mp
         '
-        Me.txt_nom_mp.Location = New System.Drawing.Point(132, 50)
+        Me.txt_nom_mp.Location = New System.Drawing.Point(133, 92)
         Me.txt_nom_mp.Name = "txt_nom_mp"
         Me.txt_nom_mp.Size = New System.Drawing.Size(155, 20)
         Me.txt_nom_mp.TabIndex = 11
@@ -114,7 +115,7 @@ Partial Class agregar_materia_prima
         'combofamilia
         '
         Me.combofamilia.FormattingEnabled = True
-        Me.combofamilia.Location = New System.Drawing.Point(132, 80)
+        Me.combofamilia.Location = New System.Drawing.Point(133, 122)
         Me.combofamilia.Name = "combofamilia"
         Me.combofamilia.Size = New System.Drawing.Size(155, 21)
         Me.combofamilia.TabIndex = 12
@@ -123,23 +124,34 @@ Partial Class agregar_materia_prima
         '
         Me.ComboBox2.FormattingEnabled = True
         Me.ComboBox2.Items.AddRange(New Object() {"Unidad", "Kilo", "Metro", "Caja", "Bolsa", "Palet", "Litro", "Jaba"})
-        Me.ComboBox2.Location = New System.Drawing.Point(132, 115)
+        Me.ComboBox2.Location = New System.Drawing.Point(133, 157)
         Me.ComboBox2.Name = "ComboBox2"
         Me.ComboBox2.Size = New System.Drawing.Size(155, 21)
         Me.ComboBox2.TabIndex = 13
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(132, 145)
+        Me.TextBox1.Location = New System.Drawing.Point(133, 187)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(155, 20)
         Me.TextBox1.TabIndex = 14
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(96, 233)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(166, 46)
+        Me.Button1.TabIndex = 15
+        Me.Button1.Text = "Guardar"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'agregar_materia_prima
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(707, 375)
+        Me.AutoSize = True
+        Me.ClientSize = New System.Drawing.Size(351, 291)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.ComboBox2)
         Me.Controls.Add(Me.combofamilia)
@@ -170,4 +182,5 @@ Partial Class agregar_materia_prima
     Friend WithEvents combofamilia As System.Windows.Forms.ComboBox
     Friend WithEvents ComboBox2 As System.Windows.Forms.ComboBox
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents Button1 As System.Windows.Forms.Button
 End Class
