@@ -58,7 +58,6 @@ Public Class agregar_materia_prima
     Sub formato_datetimepicker()
         DateTimePicker1.Format = DateTimePickerFormat.Custom
         DateTimePicker1.CustomFormat = "yyyy-MM-dd"
-
     End Sub
 
     Sub llenar_combobox_unidadmedida()
@@ -68,9 +67,9 @@ Public Class agregar_materia_prima
         Try
             Dim actual As String = combofamilia.Text
             da.Fill(ds)
-            combofamilia.DataSource = ds.Tables(0)
-            combofamilia.DisplayMember = "nomum"
-            combofamilia.SelectedValue = actual
+            unidadmedida_mp.DataSource = ds.Tables(0)
+            unidadmedida_mp.DisplayMember = "nomum"
+            unidadmedida_mp.SelectedValue = actual
         Catch ex As Exception
             'MessageBox.Show(ex.Message)
         End Try

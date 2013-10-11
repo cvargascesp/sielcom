@@ -220,6 +220,12 @@
     <Compile Include="Configuraciones.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="i_familias.Designer.vb">
+      <DependentUpon>i_familias.vb</DependentUpon>
+    </Compile>
+    <Compile Include="i_familias.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="i_ranking.Designer.vb">
       <DependentUpon>i_ranking.vb</DependentUpon>
     </Compile>
@@ -399,6 +405,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Configuraciones.resx">
       <DependentUpon>Configuraciones.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="i_familias.resx">
+      <DependentUpon>i_familias.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="i_ranking.resx">
       <DependentUpon>i_ranking.vb</DependentUpon>

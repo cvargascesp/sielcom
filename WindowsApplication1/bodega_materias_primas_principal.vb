@@ -12,4 +12,8 @@
     Private Sub AgregarMateriaPrimaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AgregarMateriaPrimaToolStripMenuItem.Click
         agregar_materia_prima.Show()
     End Sub
+
+    Private Sub FamiliasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FamiliasToolStripMenuItem.Click
+        i_familias.Show()
+    End Sub
 End Class
