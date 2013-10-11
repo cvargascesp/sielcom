@@ -33,6 +33,9 @@ Partial Class bodega_materias_primas_principal
         Me.AgregarMateriaPrimaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EditarMateriaPrimaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CatalogoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ParametrosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UnidadDeMedidaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.FamiliasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -92,7 +95,7 @@ Partial Class bodega_materias_primas_principal
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MateriasPrimasToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MateriasPrimasToolStripMenuItem, Me.ParametrosToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(443, 24)
@@ -123,6 +126,25 @@ Partial Class bodega_materias_primas_principal
         Me.CatalogoToolStripMenuItem.Name = "CatalogoToolStripMenuItem"
         Me.CatalogoToolStripMenuItem.Size = New System.Drawing.Size(193, 22)
         Me.CatalogoToolStripMenuItem.Text = "Catalogo"
+        '
+        'ParametrosToolStripMenuItem
+        '
+        Me.ParametrosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UnidadDeMedidaToolStripMenuItem, Me.FamiliasToolStripMenuItem})
+        Me.ParametrosToolStripMenuItem.Name = "ParametrosToolStripMenuItem"
+        Me.ParametrosToolStripMenuItem.Size = New System.Drawing.Size(79, 20)
+        Me.ParametrosToolStripMenuItem.Text = "Parametros"
+        '
+        'UnidadDeMedidaToolStripMenuItem
+        '
+        Me.UnidadDeMedidaToolStripMenuItem.Name = "UnidadDeMedidaToolStripMenuItem"
+        Me.UnidadDeMedidaToolStripMenuItem.Size = New System.Drawing.Size(171, 22)
+        Me.UnidadDeMedidaToolStripMenuItem.Text = "Unidad de medida"
+        '
+        'FamiliasToolStripMenuItem
+        '
+        Me.FamiliasToolStripMenuItem.Name = "FamiliasToolStripMenuItem"
+        Me.FamiliasToolStripMenuItem.Size = New System.Drawing.Size(171, 22)
+        Me.FamiliasToolStripMenuItem.Text = "Familias"
         '
         'bodega_materias_primas_principal
         '
@@ -155,4 +177,7 @@ Partial Class bodega_materias_primas_principal
     Friend WithEvents AgregarMateriaPrimaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents EditarMateriaPrimaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents CatalogoToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ParametrosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents UnidadDeMedidaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents FamiliasToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class

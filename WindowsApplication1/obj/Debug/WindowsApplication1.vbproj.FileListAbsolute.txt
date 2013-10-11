@@ -509,8 +509,13 @@ C:\Users\Administrador\Documents\GitHub\sielcom\WindowsApplication1\obj\Debug\Co
 C:\Users\Administrador\Documents\GitHub\sielcom\WindowsApplication1\obj\Debug\Control Ventas e Inventario.application
 C:\Users\Administrador\Documents\GitHub\sielcom\WindowsApplication1\obj\Debug\WindowsApplication1.bodega_materias_primas_principal.resources
 C:\Users\Administrador\Documents\GitHub\sielcom\WindowsApplication1\obj\Debug\WindowsApplication1.agregar_materia_prima.resources
+<<<<<<< HEAD
 C:\Users\camilo\Documents\GitHub\sielcom\WindowsApplication1\obj\Debug\WindowsApplication1.agregar_materia_prima.resources
 C:\Users\camilo\Documents\GitHub\sielcom\WindowsApplication1\obj\Debug\WindowsApplication1.bodega_compraventa.resources
 C:\Users\camilo\Documents\GitHub\sielcom\WindowsApplication1\obj\Debug\WindowsApplication1.bodega_general.resources
 C:\Users\camilo\Documents\GitHub\sielcom\WindowsApplication1\obj\Debug\WindowsApplication1.bodega_materias_primas_principal.resources
 C:\Users\camilo\Documents\GitHub\sielcom\WindowsApplication1\obj\Debug\WindowsApplication1.libro_ingreso_mercaderia.resources
+=======
+C:\Users\Administrador\Documents\GitHub\sielcom\WindowsApplication1\obj\Debug\WindowsApplication1.i_familias.resources
+C:\Users\Administrador\Documents\GitHub\sielcom\WindowsApplication1\obj\Debug\WindowsApplication1.i_unidadmedida.resources
+>>>>>>> 21e51fc7a130c276928d9abdc559fd3770edab20
