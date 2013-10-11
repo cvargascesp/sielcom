@@ -377,6 +377,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="agregar_materia_prima.resx">
       <DependentUpon>agregar_materia_prima.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="bienvenida.resx">
       <DependentUpon>bienvenida.vb</DependentUpon>
