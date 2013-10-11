@@ -12,4 +12,8 @@
     Private Sub AgregarMateriaPrimaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AgregarMateriaPrimaToolStripMenuItem.Click
         agregar_materia_prima.Show()
     End Sub
+
+    Private Sub Button2h_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        libro_ingreso_mercaderia.Show()
+    End Sub
 End Class
