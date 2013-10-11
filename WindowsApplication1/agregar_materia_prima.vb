@@ -2,8 +2,41 @@
 Public Class agregar_materia_prima
 
     Private Sub agregar_materia_prima_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        formato_datetimepicker()
         llenar_combobox_familias()
     End Sub
+    Private Sub combofamilia_SelectedIndexChanged(sender As Object, e As EventArgs) Handles combofamilia.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        'boton para guardar materia prima
+        If (Me.txtcodigo_mp.Text <> "" Or Me.txt_nom_mp.Text <> "") Then
+            agregar_materia_prima()
+        Else
+            MessageBox.Show("Campos Faltantes", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1)
+        End If
+
+    End Sub
+
+
+
+    Sub agregar_materia_prima()
+        '                       txt_ubicacion_mp
+        Dim sqlquery As String = "insert into materia_prima values('" & Me.txtcodigo_mp.Text & "', '" & Me.txt_nom_mp.Text & "', '" & Me.DateTimePicker1.Text & "','" & Me.txt_ubicacion_mp.Text & "','" & Me.unidadmedida_mp.Text & "', '" & Me.combofamilia.SelectedValue & "'  )"
+        Dim cmd As New MySqlCommand(sqlquery, Conexion.conn)
+        Try
+            Conexion.open()
+            cmd.ExecuteNonQuery()
+            Conexion.close()
+            MessageBox.Show("Materia Prima Guardada Con Exito", "Guardada", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1)
+            Me.Close()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+    End Sub
+
+
 
     Sub llenar_combobox_familias()
         Dim ssql As String = "select * from familias"
@@ -22,11 +55,11 @@ Public Class agregar_materia_prima
 
     End Sub
 
-    Private Sub combofamilia_SelectedIndexChanged(sender As Object, e As EventArgs) Handles combofamilia.SelectedIndexChanged
+    Sub formato_datetimepicker()
+        DateTimePicker1.Format = DateTimePickerFormat.Custom
+        DateTimePicker1.CustomFormat = "yyyy-MM-dd"
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
-    End Sub
 End Class

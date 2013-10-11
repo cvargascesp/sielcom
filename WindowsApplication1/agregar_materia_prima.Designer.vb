@@ -32,8 +32,8 @@ Partial Class agregar_materia_prima
         Me.txtcodigo_mp = New System.Windows.Forms.TextBox()
         Me.txt_nom_mp = New System.Windows.Forms.TextBox()
         Me.combofamilia = New System.Windows.Forms.ComboBox()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.unidadmedida_mp = New System.Windows.Forms.ComboBox()
+        Me.txt_ubicacion_mp = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
@@ -120,21 +120,21 @@ Partial Class agregar_materia_prima
         Me.combofamilia.Size = New System.Drawing.Size(155, 21)
         Me.combofamilia.TabIndex = 12
         '
-        'ComboBox2
+        'unidadmedida_mp
         '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Items.AddRange(New Object() {"Unidad", "Kilo", "Metro", "Caja", "Bolsa", "Palet", "Litro", "Jaba"})
-        Me.ComboBox2.Location = New System.Drawing.Point(133, 157)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(155, 21)
-        Me.ComboBox2.TabIndex = 13
+        Me.unidadmedida_mp.FormattingEnabled = True
+        Me.unidadmedida_mp.Items.AddRange(New Object() {"Unidad", "Kilo", "Metro", "Caja", "Bolsa", "Palet", "Litro", "Jaba"})
+        Me.unidadmedida_mp.Location = New System.Drawing.Point(133, 157)
+        Me.unidadmedida_mp.Name = "unidadmedida_mp"
+        Me.unidadmedida_mp.Size = New System.Drawing.Size(155, 21)
+        Me.unidadmedida_mp.TabIndex = 13
         '
-        'TextBox1
+        'txt_ubicacion_mp
         '
-        Me.TextBox1.Location = New System.Drawing.Point(133, 187)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(155, 20)
-        Me.TextBox1.TabIndex = 14
+        Me.txt_ubicacion_mp.Location = New System.Drawing.Point(133, 187)
+        Me.txt_ubicacion_mp.Name = "txt_ubicacion_mp"
+        Me.txt_ubicacion_mp.Size = New System.Drawing.Size(155, 20)
+        Me.txt_ubicacion_mp.TabIndex = 14
         '
         'Button1
         '
@@ -152,8 +152,8 @@ Partial Class agregar_materia_prima
         Me.AutoSize = True
         Me.ClientSize = New System.Drawing.Size(351, 291)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.ComboBox2)
+        Me.Controls.Add(Me.txt_ubicacion_mp)
+        Me.Controls.Add(Me.unidadmedida_mp)
         Me.Controls.Add(Me.combofamilia)
         Me.Controls.Add(Me.txt_nom_mp)
         Me.Controls.Add(Me.txtcodigo_mp)
@@ -180,7 +180,7 @@ Partial Class agregar_materia_prima
     Friend WithEvents txtcodigo_mp As System.Windows.Forms.TextBox
     Friend WithEvents txt_nom_mp As System.Windows.Forms.TextBox
     Friend WithEvents combofamilia As System.Windows.Forms.ComboBox
-    Friend WithEvents ComboBox2 As System.Windows.Forms.ComboBox
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents unidadmedida_mp As System.Windows.Forms.ComboBox
+    Friend WithEvents txt_ubicacion_mp As System.Windows.Forms.TextBox
     Friend WithEvents Button1 As System.Windows.Forms.Button
 End Class
