@@ -50,7 +50,7 @@ Partial Class bodega_materias_primas_principal
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(138, 90)
+        Me.Button2.Location = New System.Drawing.Point(30, 173)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(89, 64)
         Me.Button2.TabIndex = 1
@@ -68,7 +68,7 @@ Partial Class bodega_materias_primas_principal
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(30, 173)
+        Me.Button4.Location = New System.Drawing.Point(138, 90)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(89, 64)
         Me.Button4.TabIndex = 3
