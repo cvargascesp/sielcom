@@ -37,6 +37,7 @@ Public Class libro_ingreso_mercaderia
                     MessageBox.Show("El Producto ingresado No existe desea Crearlo", "Ingresar", MessageBoxButtons.YesNo, MessageBoxIcon.Information, MessageBoxDefaultButton.Button2)
                     'agregar resultado del dialogresult anterior
                     agregar_materia_prima.Show()
+                    Me.Button1.Enabled = False
                 End If
             Else
                 Dim dataadapter2 As MySqlDataAdapter
@@ -46,10 +47,11 @@ Public Class libro_ingreso_mercaderia
                 dataset2 = New DataSet()
                 dataadapter2.Fill(dataset2)
                 Me.TextBox2.Text = dataset2.Tables(0).Rows(0).Item(1).ToString()
+                Me.Button1.Enabled = True
             End If
 
 
-            Conexion.close()
+                Conexion.close()
         Catch err As MySqlException
             MessageBox.Show(err.Message)
         End Try

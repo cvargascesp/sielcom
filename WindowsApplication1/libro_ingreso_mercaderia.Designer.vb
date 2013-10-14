@@ -153,7 +153,7 @@ Partial Class libro_ingreso_mercaderia
         '
         Me.TextBox5.Location = New System.Drawing.Point(195, 178)
         Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(172, 20)
+        Me.TextBox5.Size = New System.Drawing.Size(124, 20)
         Me.TextBox5.TabIndex = 14
         '
         'TextBox6
@@ -207,7 +207,7 @@ Partial Class libro_ingreso_mercaderia
         '
         Me.NumericUpDown1.Location = New System.Drawing.Point(195, 126)
         Me.NumericUpDown1.Name = "NumericUpDown1"
-        Me.NumericUpDown1.Size = New System.Drawing.Size(39, 20)
+        Me.NumericUpDown1.Size = New System.Drawing.Size(121, 20)
         Me.NumericUpDown1.TabIndex = 21
         '
         'Label10
