@@ -274,6 +274,12 @@
     <Compile Include="libro_ingreso_mercaderia.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Libro_pedidos.Designer.vb">
+      <DependentUpon>Libro_pedidos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Libro_pedidos.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="login.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -456,6 +462,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="libro_ingreso_mercaderia.resx">
       <DependentUpon>libro_ingreso_mercaderia.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Libro_pedidos.resx">
+      <DependentUpon>Libro_pedidos.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.vb</DependentUpon>

@@ -36,6 +36,7 @@ Partial Class bodega_materias_primas_principal
         Me.ParametrosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UnidadDeMedidaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.FamiliasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OrdenesDeCompraToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -95,7 +96,7 @@ Partial Class bodega_materias_primas_principal
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MateriasPrimasToolStripMenuItem, Me.ParametrosToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MateriasPrimasToolStripMenuItem, Me.ParametrosToolStripMenuItem, Me.OrdenesDeCompraToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(451, 24)
@@ -146,6 +147,12 @@ Partial Class bodega_materias_primas_principal
         Me.FamiliasToolStripMenuItem.Size = New System.Drawing.Size(171, 22)
         Me.FamiliasToolStripMenuItem.Text = "Familias"
         '
+        'OrdenesDeCompraToolStripMenuItem
+        '
+        Me.OrdenesDeCompraToolStripMenuItem.Name = "OrdenesDeCompraToolStripMenuItem"
+        Me.OrdenesDeCompraToolStripMenuItem.Size = New System.Drawing.Size(125, 20)
+        Me.OrdenesDeCompraToolStripMenuItem.Text = "Ordenes de Compra"
+        '
         'bodega_materias_primas_principal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -180,4 +187,5 @@ Partial Class bodega_materias_primas_principal
     Friend WithEvents ParametrosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents UnidadDeMedidaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents FamiliasToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents OrdenesDeCompraToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class

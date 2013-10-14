@@ -103,3 +103,4 @@ C:\Users\camilo\Documents\GitHub\sielcom\WindowsApplication1\obj\Debug\Control V
 C:\Users\camilo\Documents\GitHub\sielcom\WindowsApplication1\obj\Debug\Control Ventas e Inventario.exe.manifest
 C:\Users\camilo\Documents\GitHub\sielcom\WindowsApplication1\obj\Debug\Control Ventas e Inventario.application
 C:\Users\Administrador\Documents\GitHub\sielcom\WindowsApplication1\obj\Debug\WindowsApplication1.i_libro_pedido.resources
+C:\Users\Administrador\Documents\GitHub\sielcom\WindowsApplication1\obj\Debug\WindowsApplication1.Libro_pedidos.resources

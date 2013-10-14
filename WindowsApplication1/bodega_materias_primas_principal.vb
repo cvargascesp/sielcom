@@ -29,4 +29,8 @@
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         i_libro_pedido.Show()
     End Sub
+
+    Private Sub OrdenesDeCompraToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OrdenesDeCompraToolStripMenuItem.Click
+        Libro_pedidos.Show()
+    End Sub
 End Class

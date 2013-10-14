@@ -148,7 +148,7 @@ Partial Class i_libro_pedido
         Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button1.Location = New System.Drawing.Point(15, 161)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(106, 52)
+        Me.Button1.Size = New System.Drawing.Size(112, 52)
         Me.Button1.TabIndex = 14
         Me.Button1.Text = "Agregar"
         Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -218,7 +218,7 @@ Partial Class i_libro_pedido
         Me.Controls.Add(Me.fecha_ingreso)
         Me.Controls.Add(Me.Label1)
         Me.Name = "i_libro_pedido"
-        Me.Text = "i_libro_pedido"
+        Me.Text = "Ingresar Libro de pedido"
         CType(Me.txtcantmp, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
