@@ -71,7 +71,7 @@ Public Class libro_ingreso_mercaderia
             da.Fill(ds)
             Me.comboproveedor.DataSource = ds.Tables(0)
             Me.comboproveedor.DisplayMember = "nombre"
-            'Me.comboproveedor.ValueMember = "idfamilia"
+            Me.comboproveedor.ValueMember = "rut"
             Me.comboproveedor.SelectedValue = actual
         Catch ex As Exception
             'MessageBox.Show(ex.Message)

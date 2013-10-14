@@ -102,3 +102,4 @@ C:\Users\camilo\Documents\GitHub\sielcom\WindowsApplication1\obj\Debug\WindowsAp
 C:\Users\camilo\Documents\GitHub\sielcom\WindowsApplication1\obj\Debug\Control Ventas e Inventario.TrustInfo.xml
 C:\Users\camilo\Documents\GitHub\sielcom\WindowsApplication1\obj\Debug\Control Ventas e Inventario.exe.manifest
 C:\Users\camilo\Documents\GitHub\sielcom\WindowsApplication1\obj\Debug\Control Ventas e Inventario.application
+C:\Users\Administrador\Documents\GitHub\sielcom\WindowsApplication1\obj\Debug\WindowsApplication1.i_libro_pedido.resources
