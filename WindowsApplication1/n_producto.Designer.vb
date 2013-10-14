@@ -891,7 +891,7 @@ Partial Class n_producto
         Me.AutoScroll = True
         Me.AutoSize = True
         Me.BackColor = System.Drawing.SystemColors.Control
-        Me.ClientSize = New System.Drawing.Size(795, 588)
+        Me.ClientSize = New System.Drawing.Size(795, 634)
         Me.ControlBox = False
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.PictureBox1)

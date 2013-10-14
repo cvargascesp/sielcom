@@ -3,10 +3,10 @@ Public Class libro_ingreso_mercaderia
 
     Dim existe As Integer
 
-
     Private Sub libro_ingreso_mercaderia_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         formato_datetimepicker()
         llenar_combobox_proveedores()
+        Me.Button1.Enabled = True
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
@@ -30,14 +30,12 @@ Public Class libro_ingreso_mercaderia
             Dim sql As String = "SELECT COUNT(*) FROM materia_prima WHERE codigo_mp ='" & TextBox1.Text & "' limit 1"
             Dim cm As New MySqlCommand(sql, Conexion.conn)
             existe = cm.ExecuteScalar()
-
             If existe = 0 Then
                 If (Me.TextBox1.Text <> "") Then
-
-                    MessageBox.Show("El Producto ingresado No existe desea Crearlo", "Ingresar", MessageBoxButtons.YesNo, MessageBoxIcon.Information, MessageBoxDefaultButton.Button2)
-                    'agregar resultado del dialogresult anterior
-                    agregar_materia_prima.Show()
+                    MessageBox.Show("El Producto ingresado no esta Registrado, Debe Ser creado", "Error")
                     Me.Button1.Enabled = False
+                    Me.TextBox1.Text = ""
+                    Me.TextBox1.Focus()
                 End If
             Else
                 Dim dataadapter2 As MySqlDataAdapter
@@ -48,10 +46,11 @@ Public Class libro_ingreso_mercaderia
                 dataadapter2.Fill(dataset2)
                 Me.TextBox2.Text = dataset2.Tables(0).Rows(0).Item(1).ToString()
                 Me.Button1.Enabled = True
+                Me.NumericUpDown1.Focus()
             End If
 
 
-                Conexion.close()
+            Conexion.close()
         Catch err As MySqlException
             MessageBox.Show(err.Message)
         End Try
@@ -79,23 +78,52 @@ Public Class libro_ingreso_mercaderia
 
     End Sub
 
-
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Try
             'valida que no hayan datos vacios
-            If TextBox1.Text <> "" And TextBox2.Text <> "" And TextBox3.Text <> "" And NumericUpDown1.Value >= 1 And comboproveedor.Text <> "" And TextBox5.Text <> "" And TextBox6.Text <> "" And TextBox7.Text <> "" And TextBox8.Text <> "" Then
-                Dim sql As String
-                'inserta un nuevo producto
-                '  sql = "INSERT INTO producto (codigo,codigoint,nombre,descripcion,marca,modelo,linea,categoria,proveedor,ubicacion,umedida,stock,critico,porvender,porllegar,fechapedido,preciouni,margen,precioventa,utilidaduni,estado,fechaingreso,creado)" & _
-                ' "VALUES('" & TextBox1.Text & "','" & Label25.Text & "','" & txtNombre.Text & "', '" & TextBox4.Text & "', '" & ComboBox1.Text & "', '" & ComboBox6.Text & "', '" & cbLinea.Text & "', '" & ComboBox2.Text & "','" & ComboBox3.Text & "','" & txtUbicacion.Text & "','" & txtUmedida.Text & "'," & NumericUpDown1.Value & "," & NumericUpDown2.Value & "," & nupPorvender.Value & "," & nupPorllegar.Value & ", " & IIf(fechapedido = Nothing, "NULL", "'" & fechapedido.ToString("yyyy-MM-dd HH:mm:ss") & "'") & "," & TextBox7.Text & "," & TextBox8.Text.Replace(",", ".") & "," & TextBox10.Text & ",0,'NUEVO','" & CDate(Label17.Text).Date.ToString("yyyy-MM-dd") & " " & Now.ToString("HH:mm:ss") & "','" & Label35.Text & "')"
-                Console.Write(sql)
-                Dim cm3 As New MySqlCommand(sql, Conexion.conn)
-                Conexion.open()
-                cm3.ExecuteNonQuery()
-                Conexion.close()
+            If TextBox1.Text <> "" And TextBox2.Text <> "" And NumericUpDown1.TextAlign = "0" And comboproveedor.Text <> "0" And TextBox5.Text <> "0" And TextBox6.Text <> "0" And TextBox7.Text <> "0" And TextBox8.Text <> "0" And TextBox3.Text <> "0" Then
 
-                MessageBox.Show("Producto Guardado con Exito", "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                Me.Hide()
+
+
+                'Dim sql As String
+                ' If existe = 0 Then
+                'inserta un nuevo producto ans
+                '   Sql = "INSERT INTO producto (codigo,codigoint,nombre,descripcion,marca,modelo,linea,categoria,proveedor,ubicacion,umedida,stock,critico,porvender,porllegar,fechapedido,preciouni,margen,precioventa,utilidaduni,estado,fechaingreso,creado)" & _
+                '      "VALUES('" & TextBox1.Text & "','" & Label25.Text & "','" & txtNombre.Text & "', '" & TextBox4.Text & "', '" & ComboBox1.Text & "', '" & ComboBox6.Text & "', '" & cbLinea.Text & "', '" & ComboBox2.Text & "','" & ComboBox3.Text & "','" & txtUbicacion.Text & "','" & txtUmedida.Text & "'," & NumericUpDown1.Value & "," & NumericUpDown2.Value & "," & nupPorvender.Value & "," & nupPorllegar.Value & ", " & IIf(fechapedido = Nothing, "NULL", "'" & fechapedido.ToString("yyyy-MM-dd HH:mm:ss") & "'") & "," & TextBox7.Text & "," & TextBox8.Text.Replace(",", ".") & "," & TextBox10.Text & ",0,'NUEVO','" & CDate(Label17.Text).Date.ToString("yyyy-MM-dd") & " " & Now.ToString("HH:mm:ss") & "','" & Label35.Text & "')"
+                '    Console.Write(Sql)
+                '  Else
+                'modificar un producto
+                '   Sql = "UPDATE producto SET " &
+                '   "codigo = '" & TextBox1.Text &
+                '   "', codigoint = '" & Label25.Text &
+                '  "', nombre = '" & txtNombre.Text &
+                '    "', descripcion = '" & TextBox4.Text &
+                '   "', marca = '" & ComboBox1.Text &
+                '    "', modelo = '" & ComboBox6.Text &
+                '  "', linea = '" & cbLinea.Text &
+                '   "', categoria = '" & ComboBox2.Text &
+                '    "', proveedor = '" & ComboBox3.Text &
+                '     "', ubicacion = '" & txtUbicacion.Text &
+                '      "', umedida = '" & txtUmedida.Text &
+                '       "', stock = " & NumericUpDown1.Value &
+                '        ", critico = " & NumericUpDown2.Value &
+                '         ", porvender = " & nupPorvender.Value &
+                '          ", porllegar = " & nupPorllegar.Value &
+                '           ", fechapedido = " & IIf(fechapedido = Nothing, "NULL", "'" & fechapedido.ToString("yyyy-MM-dd HH:mm:ss") & "'") &
+                '            ", preciouni = " & TextBox7.Text &
+                '             ", margen = " & TextBox8.Text.Replace(",", ".") &
+                '              ", precioventa = " & TextBox10.Text &
+                '               " WHERE codigo = '" & TextBox1.Text & "'"
+                '        End If
+
+                'Dim cm3 As New MySqlCommand(sql, Conexion.conn)
+                'Conexion.open()
+                'cm3.ExecuteNonQuery()
+                'Conexion.close()
+                'producto = producto + 1
+                ' Label25.Text = producto
+                ' MessageBox.Show("Producto Guardado con Exito", "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                '  Me.Hide()
             Else
                 MessageBox.Show("Complete Información Requerida", "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End If
