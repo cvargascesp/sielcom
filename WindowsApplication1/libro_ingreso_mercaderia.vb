@@ -81,49 +81,23 @@ Public Class libro_ingreso_mercaderia
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Try
             'valida que no hayan datos vacios
-            If TextBox1.Text <> "" And TextBox2.Text <> "" And NumericUpDown1.TextAlign = "0" And comboproveedor.Text <> "0" And TextBox5.Text <> "0" And TextBox6.Text <> "0" And TextBox7.Text <> "0" And TextBox8.Text <> "0" And TextBox3.Text <> "0" Then
+            If TextBox1.Text <> "" And TextBox2.Text <> "" And NumericUpDown1.TextAlign = "0" And comboproveedor.Text <> "0" And TextBox5.Text <> "0" And TextBox6.Text <> "0" And TextBox7.Text <> "0" And TextBox8.Text <> "0" Then
+                Dim sqlquery As String = "insert into libro_ingreso_mp (codigo_mp,fecha_ingresomp,cantidad_mp,rut_proveedor,precio_compra_mp,numero_factura,guia_despacho,orden_compra) values('" & Me.TextBox1.Text & "',  '" & Me.DateTimePicker1.Text & "',  '" & Me.NumericUpDown1.Value & "', '" & Me.comboproveedor.SelectedValue & "',   '" & Me.TextBox5.Text & "',  '" & Me.TextBox6.Text & "' ,  '" & Me.TextBox7.Text & "',  '" & Me.TextBox8.Text & "' )"
+                Dim cmd As New MySqlCommand(sqlquery, Conexion.conn)
+                Try
+                    Conexion.open()
+                    cmd.ExecuteNonQuery()
+                    Conexion.close()
+                    MessageBox.Show("Familia Guardada con exito", "Guardada", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1)
+                Catch ex As Exception
+                    MessageBox.Show(ex.Message)
+                End Try
 
 
 
-                'Dim sql As String
-                ' If existe = 0 Then
-                'inserta un nuevo producto ans
-                '   Sql = "INSERT INTO producto (codigo,codigoint,nombre,descripcion,marca,modelo,linea,categoria,proveedor,ubicacion,umedida,stock,critico,porvender,porllegar,fechapedido,preciouni,margen,precioventa,utilidaduni,estado,fechaingreso,creado)" & _
-                '      "VALUES('" & TextBox1.Text & "','" & Label25.Text & "','" & txtNombre.Text & "', '" & TextBox4.Text & "', '" & ComboBox1.Text & "', '" & ComboBox6.Text & "', '" & cbLinea.Text & "', '" & ComboBox2.Text & "','" & ComboBox3.Text & "','" & txtUbicacion.Text & "','" & txtUmedida.Text & "'," & NumericUpDown1.Value & "," & NumericUpDown2.Value & "," & nupPorvender.Value & "," & nupPorllegar.Value & ", " & IIf(fechapedido = Nothing, "NULL", "'" & fechapedido.ToString("yyyy-MM-dd HH:mm:ss") & "'") & "," & TextBox7.Text & "," & TextBox8.Text.Replace(",", ".") & "," & TextBox10.Text & ",0,'NUEVO','" & CDate(Label17.Text).Date.ToString("yyyy-MM-dd") & " " & Now.ToString("HH:mm:ss") & "','" & Label35.Text & "')"
-                '    Console.Write(Sql)
-                '  Else
-                'modificar un producto
-                '   Sql = "UPDATE producto SET " &
-                '   "codigo = '" & TextBox1.Text &
-                '   "', codigoint = '" & Label25.Text &
-                '  "', nombre = '" & txtNombre.Text &
-                '    "', descripcion = '" & TextBox4.Text &
-                '   "', marca = '" & ComboBox1.Text &
-                '    "', modelo = '" & ComboBox6.Text &
-                '  "', linea = '" & cbLinea.Text &
-                '   "', categoria = '" & ComboBox2.Text &
-                '    "', proveedor = '" & ComboBox3.Text &
-                '     "', ubicacion = '" & txtUbicacion.Text &
-                '      "', umedida = '" & txtUmedida.Text &
-                '       "', stock = " & NumericUpDown1.Value &
-                '        ", critico = " & NumericUpDown2.Value &
-                '         ", porvender = " & nupPorvender.Value &
-                '          ", porllegar = " & nupPorllegar.Value &
-                '           ", fechapedido = " & IIf(fechapedido = Nothing, "NULL", "'" & fechapedido.ToString("yyyy-MM-dd HH:mm:ss") & "'") &
-                '            ", preciouni = " & TextBox7.Text &
-                '             ", margen = " & TextBox8.Text.Replace(",", ".") &
-                '              ", precioventa = " & TextBox10.Text &
-                '               " WHERE codigo = '" & TextBox1.Text & "'"
-                '        End If
 
-                'Dim cm3 As New MySqlCommand(sql, Conexion.conn)
-                'Conexion.open()
-                'cm3.ExecuteNonQuery()
-                'Conexion.close()
-                'producto = producto + 1
-                ' Label25.Text = producto
-                ' MessageBox.Show("Producto Guardado con Exito", "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                '  Me.Hide()
+
+
             Else
                 MessageBox.Show("Complete Información Requerida", "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End If
@@ -140,11 +114,19 @@ Public Class libro_ingreso_mercaderia
         If (check_oc_exists() = 0) Then
             MessageBox.Show("La orden de compra ingresada no existe", "error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
             Me.Button1.Enabled = False
+        Else
+            Me.Button1.Enabled = True
         End If
+
+
         If (check_ot_ontime() = 1) Then
             MessageBox.Show("La orden de compra sobrepaso su fecha tope", "error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
             Me.Button1.Enabled = False
+        Else
+            Me.Button1.Enabled = True
         End If
+
+
     End Sub
 
     Function check_oc_exists()
@@ -169,7 +151,8 @@ Public Class libro_ingreso_mercaderia
             Return dataset2.Tables(0).Rows(0).Item(0).ToString()
             Conexion.close()
         Else
-            Return 1
+            Return "2344"
+            'valor solo referencial
         End If
     End Function
 

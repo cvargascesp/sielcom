@@ -42,8 +42,6 @@ Partial Class libro_ingreso_mercaderia
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -210,30 +208,12 @@ Partial Class libro_ingreso_mercaderia
         Me.NumericUpDown1.Size = New System.Drawing.Size(124, 20)
         Me.NumericUpDown1.TabIndex = 3
         '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(28, 288)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(95, 13)
-        Me.Label10.TabIndex = 22
-        Me.Label10.Text = "Numero de Pedido"
-        '
-        'TextBox3
-        '
-        Me.TextBox3.Location = New System.Drawing.Point(195, 285)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(124, 20)
-        Me.TextBox3.TabIndex = 9
-        '
         'libro_ingreso_mercaderia
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSize = True
         Me.ClientSize = New System.Drawing.Size(593, 412)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.NumericUpDown1)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
@@ -281,6 +261,4 @@ Partial Class libro_ingreso_mercaderia
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents NumericUpDown1 As System.Windows.Forms.NumericUpDown
-    Friend WithEvents Label10 As System.Windows.Forms.Label
-    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
 End Class
