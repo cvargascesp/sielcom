@@ -165,9 +165,12 @@ Public Class libro_ingreso_mercaderia
         Dim dataset2 As New DataSet
         Dim dataadapter2 As New MySqlDataAdapter(query2, Conexion.conn)
         dataadapter2.Fill(dataset2)
-        Return dataset2.Tables(0).Rows(0).Item(0).ToString()
-        Conexion.close()
-        Return 0
+        If (dataset2.Tables(0).Rows.Count <> 0) Then
+            Return dataset2.Tables(0).Rows(0).Item(0).ToString()
+            Conexion.close()
+        Else
+            Return 1
+        End If
     End Function
 
     
