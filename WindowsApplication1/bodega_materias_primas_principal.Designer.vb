@@ -26,7 +26,6 @@ Partial Class bodega_materias_primas_principal
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.MateriasPrimasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -37,6 +36,10 @@ Partial Class bodega_materias_primas_principal
         Me.UnidadDeMedidaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.FamiliasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OrdenesDeCompraToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PcesoDeFabricacionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SolicitudDeProductosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EnProcesoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ConsultaDeProcesoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -51,7 +54,7 @@ Partial Class bodega_materias_primas_principal
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(30, 173)
+        Me.Button2.Location = New System.Drawing.Point(377, 90)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(89, 64)
         Me.Button2.TabIndex = 1
@@ -76,15 +79,6 @@ Partial Class bodega_materias_primas_principal
         Me.Button4.Text = "Libro de pedidos"
         Me.Button4.UseVisualStyleBackColor = True
         '
-        'Button5
-        '
-        Me.Button5.Location = New System.Drawing.Point(138, 173)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(89, 64)
-        Me.Button5.TabIndex = 4
-        Me.Button5.Text = "procesamiento de productos"
-        Me.Button5.UseVisualStyleBackColor = True
-        '
         'Button6
         '
         Me.Button6.Location = New System.Drawing.Point(356, 362)
@@ -96,10 +90,10 @@ Partial Class bodega_materias_primas_principal
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MateriasPrimasToolStripMenuItem, Me.ParametrosToolStripMenuItem, Me.OrdenesDeCompraToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MateriasPrimasToolStripMenuItem, Me.ParametrosToolStripMenuItem, Me.OrdenesDeCompraToolStripMenuItem, Me.PcesoDeFabricacionToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(451, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(642, 24)
         Me.MenuStrip1.TabIndex = 6
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -153,13 +147,37 @@ Partial Class bodega_materias_primas_principal
         Me.OrdenesDeCompraToolStripMenuItem.Size = New System.Drawing.Size(125, 20)
         Me.OrdenesDeCompraToolStripMenuItem.Text = "Ordenes de Compra"
         '
+        'PcesoDeFabricacionToolStripMenuItem
+        '
+        Me.PcesoDeFabricacionToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SolicitudDeProductosToolStripMenuItem, Me.EnProcesoToolStripMenuItem, Me.ConsultaDeProcesoToolStripMenuItem})
+        Me.PcesoDeFabricacionToolStripMenuItem.Name = "PcesoDeFabricacionToolStripMenuItem"
+        Me.PcesoDeFabricacionToolStripMenuItem.Size = New System.Drawing.Size(141, 20)
+        Me.PcesoDeFabricacionToolStripMenuItem.Text = "Proceso de Fabricacion"
+        '
+        'SolicitudDeProductosToolStripMenuItem
+        '
+        Me.SolicitudDeProductosToolStripMenuItem.Name = "SolicitudDeProductosToolStripMenuItem"
+        Me.SolicitudDeProductosToolStripMenuItem.Size = New System.Drawing.Size(193, 22)
+        Me.SolicitudDeProductosToolStripMenuItem.Text = "Solicitud de Productos"
+        '
+        'EnProcesoToolStripMenuItem
+        '
+        Me.EnProcesoToolStripMenuItem.Name = "EnProcesoToolStripMenuItem"
+        Me.EnProcesoToolStripMenuItem.Size = New System.Drawing.Size(193, 22)
+        Me.EnProcesoToolStripMenuItem.Text = "En Proceso"
+        '
+        'ConsultaDeProcesoToolStripMenuItem
+        '
+        Me.ConsultaDeProcesoToolStripMenuItem.Name = "ConsultaDeProcesoToolStripMenuItem"
+        Me.ConsultaDeProcesoToolStripMenuItem.Size = New System.Drawing.Size(193, 22)
+        Me.ConsultaDeProcesoToolStripMenuItem.Text = "Consulta de Proceso"
+        '
         'bodega_materias_primas_principal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(451, 397)
+        Me.ClientSize = New System.Drawing.Size(642, 397)
         Me.Controls.Add(Me.Button6)
-        Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
@@ -177,7 +195,6 @@ Partial Class bodega_materias_primas_principal
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents Button4 As System.Windows.Forms.Button
-    Friend WithEvents Button5 As System.Windows.Forms.Button
     Friend WithEvents Button6 As System.Windows.Forms.Button
     Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
     Friend WithEvents MateriasPrimasToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
@@ -188,4 +205,8 @@ Partial Class bodega_materias_primas_principal
     Friend WithEvents UnidadDeMedidaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents FamiliasToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents OrdenesDeCompraToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents PcesoDeFabricacionToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents SolicitudDeProductosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents EnProcesoToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ConsultaDeProcesoToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class

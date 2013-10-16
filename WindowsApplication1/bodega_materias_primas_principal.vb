@@ -33,4 +33,13 @@
     Private Sub OrdenesDeCompraToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OrdenesDeCompraToolStripMenuItem.Click
         Libro_pedidos.Show()
     End Sub
+
+    Private Sub PcesoDeFabricacionToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PcesoDeFabricacionToolStripMenuItem.Click
+
+    End Sub
+
+    Private Sub SolicitudDeProductosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SolicitudDeProductosToolStripMenuItem.Click
+        solicitud_productos_fabricacion.Show()
+
+    End Sub
 End Class

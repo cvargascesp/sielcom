@@ -83,7 +83,7 @@ Public Class libro_ingreso_mercaderia
         Try
             'valida que no hayan datos vacios
             If TextBox1.Text <> "" And TextBox2.Text <> "" And NumericUpDown1.TextAlign = "0" And comboproveedor.Text <> "0" And TextBox5.Text <> "0" And TextBox6.Text <> "0" And TextBox7.Text <> "0" And TextBox8.Text <> "0" Then
-                Dim sqlquery As String = "insert into libro_ingreso_mp (codigo_mp,fecha_ingresomp,cantidad_mp,rut_proveedor,precio_compra_mp,numero_factura,guia_despacho,orden_compra) values('" & Me.TextBox1.Text & "',  '" & Me.DateTimePicker1.Text & "',  '" & Me.NumericUpDown1.Value & "', '" & Me.comboproveedor.SelectedValue & "',   '" & Me.TextBox5.Text & "',  '" & Me.TextBox6.Text & "' ,  '" & Me.TextBox7.Text & "',  '" & Me.TextBox8.Text & "' )"
+                Dim sqlquery As String = "insert into libro_ingreso_mp (codigo_mp,fecha_ingresomp,cantidad_mp,rut_proveedor,precio_compra_mp,numero_factura,guia_despacho,orden_compra) values ('" & Me.TextBox1.Text & "',  '" & Me.DateTimePicker1.Text & "',  '" & Me.NumericUpDown1.Value & "', '" & Me.comboproveedor.SelectedValue & "','" & Me.TextBox5.Text & "',  '" & Me.TextBox6.Text & "' ,  '" & Me.TextBox7.Text & "',  '" & Me.TextBox8.Text & "' )"
                 Dim cmd As New MySqlCommand(sqlquery, Conexion.conn)
                 Try
                     cmd.ExecuteNonQuery()
