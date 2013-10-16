@@ -79,24 +79,19 @@ Public Class libro_ingreso_mercaderia
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+
         Try
             'valida que no hayan datos vacios
             If TextBox1.Text <> "" And TextBox2.Text <> "" And NumericUpDown1.TextAlign = "0" And comboproveedor.Text <> "0" And TextBox5.Text <> "0" And TextBox6.Text <> "0" And TextBox7.Text <> "0" And TextBox8.Text <> "0" Then
                 Dim sqlquery As String = "insert into libro_ingreso_mp (codigo_mp,fecha_ingresomp,cantidad_mp,rut_proveedor,precio_compra_mp,numero_factura,guia_despacho,orden_compra) values('" & Me.TextBox1.Text & "',  '" & Me.DateTimePicker1.Text & "',  '" & Me.NumericUpDown1.Value & "', '" & Me.comboproveedor.SelectedValue & "',   '" & Me.TextBox5.Text & "',  '" & Me.TextBox6.Text & "' ,  '" & Me.TextBox7.Text & "',  '" & Me.TextBox8.Text & "' )"
                 Dim cmd As New MySqlCommand(sqlquery, Conexion.conn)
                 Try
-                    Conexion.open()
                     cmd.ExecuteNonQuery()
-                    Conexion.close()
-                    MessageBox.Show("Familia Guardada con exito", "Guardada", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1)
+                    ingreso_stock_mp(Me.TextBox1.Text, Me.NumericUpDown1.Value)
+                    MessageBox.Show("ingreso exitoso a existencias", "Guardada", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1)
                 Catch ex As Exception
                     MessageBox.Show(ex.Message)
                 End Try
-
-
-
-
-
 
             Else
                 MessageBox.Show("Complete Información Requerida", "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -156,5 +151,34 @@ Public Class libro_ingreso_mercaderia
         End If
     End Function
 
-    
+    Sub ingreso_stock_mp(ByVal codigo_mp, ByVal cantidad_mp)
+        'checkeamos si el producto existe
+        Conexion.open()
+        Dim query3 As String = "SELECT * FROM materia_prima_existencias where codigo_mp='" & codigo_mp & "'"
+        Dim dataset3 As New DataSet
+        Dim dataadapter3 As New MySqlDataAdapter(query3, Conexion.conn)
+        dataadapter3.Fill(dataset3)
+        If (dataset3.Tables(0).Rows.Count <> 0) Then
+            'producto existe y hay que modificarlo
+            Dim query_update As String = "UPDATE materia_prima_existencias SET stock_mp=stock_mp+'" & cantidad_mp & "' where codigo_mp='" & codigo_mp & "'"
+            Dim cmd2 As New MySqlCommand(query_update, Conexion.conn)
+            Try
+                cmd2.ExecuteNonQuery()
+            Catch ex As Exception
+                MessageBox.Show(ex.Message)
+            End Try
+
+        Else
+            'producto no existe y se inserta a existencias
+            Dim query_insert As String = "INSERT INTO materia_prima_existencias VALUES ('" & codigo_mp & "','" & cantidad_mp & "')"
+            Dim cmd2 As New MySqlCommand(query_insert, Conexion.conn)
+            Try
+                cmd2.ExecuteNonQuery()
+                Catch ex As Exception
+                MessageBox.Show(ex.Message)
+            End Try
+        End If
+    End Sub
+
+
 End Class
