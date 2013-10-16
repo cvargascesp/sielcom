@@ -4,14 +4,59 @@ Public Class solicitud_productos_fabricacion
         formatear_fechas()
         preparar_datagrid()
         Me.comentamotivo.Enabled = False
+        Me.Label7.Visible = False
     End Sub
     Sub formatear_fechas()
         fecha_solicitud.Format = DateTimePickerFormat.Custom
         fecha_solicitud.CustomFormat = "yyyy-MM-dd"
     End Sub
+    Sub indicar_stock()
+        Conexion.open()
+        Dim dataadapter5 As MySqlDataAdapter
+        Dim dataset5 As DataSet
+        
+        Dim sql5 As String = "SELECT * FROM materia_prima_existencias inner join materia_prima on materia_prima.codigo_mp=materia_prima_existencias.codigo_mp WHERE materia_prima.codigo_mp LIKE '" & Me.producto.Text & "' OR materia_prima.nombre_mp LIKE '" & Me.producto.Text & "'"
+        dataadapter5 = New MySqlDataAdapter(sql5, Conexion.conn)
+        dataset5 = New DataSet()
+        dataadapter5.Fill(dataset5)
+        If (dataset5.Tables(0).Rows.Count <> 0) Then
+            Me.Label7.Visible = True
+            Me.Label7.Text = "Stock Disponible: " + dataset5.Tables(0).Rows(0).Item(1).ToString()
+            Me.Label7.ForeColor = Color.Red
+            Me.cantidad.Maximum = dataset5.Tables(0).Rows(0).Item(1).ToString()
+        End If
+        Conexion.close()
+    End Sub
+    Sub quitar_de_inventario(ByVal codigo_mp, ByVal cantidad_mp)
+        Dim sql As String = "UPDATE materia_prima_existencias SET stock_mp=stock_mp-'" & cantidad_mp & "' where codigo_mp='" & codigo_mp & "'"
+        Dim cmd As New MySqlCommand(sql, Conexion.conn)
+        Try
+            cmd.ExecuteNonQuery()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+    End Sub
+
+    Sub nueva_orden_salida()
+        Conexion.open()
+        For i As Integer = 0 To Me.DataGridView1.Rows.Count - 1
+            Dim sqlquery As String = "INSERT INTO libro_salida_mp (id_salida, codigo_mp,fecha_salida,cantidad_salida,motivo,comentario)VALUES('" & Me.num_salida.Text & "','" & Me.Label8.Text & "', '" & Me.fecha_solicitud.Text & "', '" & Me.Label10.Text & "','" & Me.motivo.SelectedItem & "','" & Me.comentamotivo.Text & "')"
+            Dim cmd As New MySqlCommand(sqlquery, Conexion.conn)
+            Try
+                cmd.ExecuteNonQuery()
+                quitar_de_inventario(CInt(Me.DataGridView1.Rows(i).Cells(0).Value.ToString()), CInt(Me.DataGridView1.Rows(i).Cells(2).Value.ToString()))
+            Catch ex As Exception
+                MessageBox.Show(ex.Message)
+            End Try
+        Next
+        MessageBox.Show("Solicitud salida Guardada con exito", "Guardada", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1)
+        Conexion.close()
+    End Sub
     Sub preparar_datagrid()
-        Dim col1, col2, col3 As New DataGridViewTextBoxColumn
+        Dim col0, col1, col2, col3 As New DataGridViewTextBoxColumn
         Me.KeyPreview = True
+        col0.Name = "Codigo"
+        DataGridView1.Columns.Add(col0)
         col1.Name = "Producto"
         DataGridView1.Columns.Add(col1)
         col2.Name = "Cantidad"
@@ -28,7 +73,9 @@ Public Class solicitud_productos_fabricacion
         dataset4 = New DataSet()
         dataadapter4.Fill(dataset4)
         If (dataset4.Tables(0).Rows.Count <> 0) Then
-            DataGridView1.Rows.Add(New String() {dataset4.Tables(0).Rows(0).Item(1).ToString(), Me.cantidad.Value, dataset4.Tables(0).Rows(0).Item(4).ToString()})
+            DataGridView1.Rows.Add(New String() {dataset4.Tables(0).Rows(0).Item(0).ToString(), dataset4.Tables(0).Rows(0).Item(1).ToString(), Me.cantidad.Value, dataset4.Tables(0).Rows(0).Item(4).ToString()})
+            Me.Label8.Text = dataset4.Tables(0).Rows(0).Item(0).ToString()
+            Me.Label10.Text = Me.cantidad.Value
         End If
         Conexion.close()
     End Sub
@@ -44,6 +91,7 @@ Public Class solicitud_productos_fabricacion
             dataadapter3.Fill(dataset3)
             If (dataset3.Tables(0).Rows.Count <> 0) Then
                 Me.umedida.Text = dataset3.Tables(0).Rows(0).Item(4).ToString()
+                indicar_stock()
             Else
                 Dim opcion As DialogResult = MessageBox.Show("El producto Ingresado no es Valido", "Error")
                 Me.producto.Text = ""
@@ -72,4 +120,8 @@ Public Class solicitud_productos_fabricacion
     End Sub
 
     
+    
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        nueva_orden_salida()
+    End Sub
 End Class
