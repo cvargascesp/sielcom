@@ -134,4 +134,41 @@ Public Class libro_ingreso_mercaderia
         End Try
         Conexion.close()
     End Sub
+
+    
+    Private Sub TextBox8_TextChanged(sender As Object, e As EventArgs) Handles TextBox8.LostFocus
+        If (check_oc_exists() = 0) Then
+            MessageBox.Show("La orden de compra ingresada no existe", "error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            Me.Button1.Enabled = False
+        End If
+        If (check_ot_ontime() = 1) Then
+            MessageBox.Show("La orden de compra sobrepaso su fecha tope", "error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            Me.Button1.Enabled = False
+        End If
+    End Sub
+
+    Function check_oc_exists()
+        'verificamos que la orden ingresada exista
+        Conexion.open()
+        Dim query As String = "SELECT COUNT(*) FROM orden_compramp_cabezera WHERE id_ordencompramp='" & Me.TextBox8.Text & "'"
+        Dim dataset1 As New DataSet
+        Dim dataadapter1 As New MySqlDataAdapter(query, Conexion.conn)
+        dataadapter1.Fill(dataset1)
+        Return dataset1.Tables(0).Rows(0).Item(0).ToString()
+        Conexion.close()
+    End Function
+    Function check_ot_ontime()
+        'verifica que la orden de compra no este atrasada
+        ' retorna 0 si a tiempo o 1 si atrasada
+        Conexion.open()
+        Dim query2 As String = "SELECT  IF(fecha_tope-CURDATE()>=0,'0','1')'estado' FROM orden_compramp_cabezera WHERE id_ordencompramp='" & Me.TextBox8.Text & "'"
+        Dim dataset2 As New DataSet
+        Dim dataadapter2 As New MySqlDataAdapter(query2, Conexion.conn)
+        dataadapter2.Fill(dataset2)
+        Return dataset2.Tables(0).Rows(0).Item(0).ToString()
+        Conexion.close()
+        Return 0
+    End Function
+
+    
 End Class
