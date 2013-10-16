@@ -3,7 +3,7 @@ Public Class solicitud_productos_fabricacion
     Private Sub solicitud_productos_fabricacion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         formatear_fechas()
         preparar_datagrid()
-
+        Me.comentamotivo.Enabled = False
     End Sub
     Sub formatear_fechas()
         fecha_solicitud.Format = DateTimePickerFormat.Custom
@@ -63,4 +63,13 @@ Public Class solicitud_productos_fabricacion
         Me.umedida.Text = ""
         Me.producto.Focus()
     End Sub
+
+    Private Sub motivo_LostFocus(sender As Object, e As EventArgs) Handles motivo.LostFocus
+        If Me.motivo.Text <> "" And Me.motivo.Text = "Otro" Then
+            Me.comentamotivo.Enabled = True
+            Me.comentamotivo.Focus()
+        End If
+    End Sub
+
+    
 End Class

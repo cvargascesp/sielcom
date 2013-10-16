@@ -31,6 +31,10 @@ Partial Class solicitud_productos_fabricacion
         Me.BuscarProductoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProductosPorLLegarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.comentamotivo = New System.Windows.Forms.TextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.motivo = New System.Windows.Forms.ComboBox()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.fecha_solicitud = New System.Windows.Forms.DateTimePicker()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -98,6 +102,10 @@ Partial Class solicitud_productos_fabricacion
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.comentamotivo)
+        Me.GroupBox1.Controls.Add(Me.Label6)
+        Me.GroupBox1.Controls.Add(Me.motivo)
+        Me.GroupBox1.Controls.Add(Me.Label5)
         Me.GroupBox1.Controls.Add(Me.fecha_solicitud)
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.Button1)
@@ -109,10 +117,45 @@ Partial Class solicitud_productos_fabricacion
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 61)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(667, 169)
+        Me.GroupBox1.Size = New System.Drawing.Size(667, 261)
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Productos"
+        '
+        'comentamotivo
+        '
+        Me.comentamotivo.Location = New System.Drawing.Point(111, 189)
+        Me.comentamotivo.Multiline = True
+        Me.comentamotivo.Name = "comentamotivo"
+        Me.comentamotivo.Size = New System.Drawing.Size(240, 66)
+        Me.comentamotivo.TabIndex = 21
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(8, 192)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(52, 13)
+        Me.Label6.TabIndex = 20
+        Me.Label6.Text = "Comente:"
+        '
+        'motivo
+        '
+        Me.motivo.FormattingEnabled = True
+        Me.motivo.Items.AddRange(New Object() {"Produccion y Fabricacion", "Otro"})
+        Me.motivo.Location = New System.Drawing.Point(111, 158)
+        Me.motivo.Name = "motivo"
+        Me.motivo.Size = New System.Drawing.Size(121, 21)
+        Me.motivo.TabIndex = 19
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(8, 161)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(89, 13)
+        Me.Label5.TabIndex = 18
+        Me.Label5.Text = "Motivo de Salida:"
         '
         'fecha_solicitud
         '
@@ -196,7 +239,7 @@ Partial Class solicitud_productos_fabricacion
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLight
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 244)
+        Me.DataGridView1.Location = New System.Drawing.Point(12, 342)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.Size = New System.Drawing.Size(667, 150)
@@ -204,7 +247,7 @@ Partial Class solicitud_productos_fabricacion
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(206, 417)
+        Me.Button2.Location = New System.Drawing.Point(393, 513)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(202, 30)
         Me.Button2.TabIndex = 3
@@ -215,7 +258,7 @@ Partial Class solicitud_productos_fabricacion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(691, 459)
+        Me.ClientSize = New System.Drawing.Size(691, 555)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.GroupBox1)
@@ -252,4 +295,8 @@ Partial Class solicitud_productos_fabricacion
     Friend WithEvents fecha_solicitud As System.Windows.Forms.DateTimePicker
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents comentamotivo As System.Windows.Forms.TextBox
+    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents motivo As System.Windows.Forms.ComboBox
+    Friend WithEvents Label5 As System.Windows.Forms.Label
 End Class
