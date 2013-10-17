@@ -10,9 +10,9 @@ WindowsApplication1/obj/
 
 # Build results
 
-[Dd]ebug/
-[Rr]elease/
-x64/
-build/
-[Bb]in/
-[Oo]bj/
+WindowsApplication1/[Dd]ebug/
+WindowsApplication1/[Rr]elease/
+WindowsApplication1/x64/
+WindowsApplication1/build/
+WindowsApplication1/[Bb]in/
+WindowsApplication1/[Oo]bj/
