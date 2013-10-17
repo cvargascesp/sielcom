@@ -28,11 +28,13 @@ Partial Class ifabricacion
         Me.Button1 = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.txt_productofabricar = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.fechatermino = New System.Windows.Forms.DateTimePicker()
         Me.Fecha_inicio = New System.Windows.Forms.DateTimePicker()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.ArchivoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -78,9 +80,9 @@ Partial Class ifabricacion
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(286, 19)
+        Me.Button1.Location = New System.Drawing.Point(261, 19)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(139, 61)
+        Me.Button1.Size = New System.Drawing.Size(192, 61)
         Me.Button1.TabIndex = 3
         Me.Button1.Text = "buscar Orden de Salida"
         Me.Button1.UseVisualStyleBackColor = True
@@ -101,30 +103,39 @@ Partial Class ifabricacion
         'GroupBox2
         '
         Me.GroupBox2.Controls.Add(Me.Button2)
+        Me.GroupBox2.Controls.Add(Me.txt_productofabricar)
+        Me.GroupBox2.Controls.Add(Me.Label4)
         Me.GroupBox2.Controls.Add(Me.Label3)
         Me.GroupBox2.Controls.Add(Me.Label2)
         Me.GroupBox2.Controls.Add(Me.fechatermino)
         Me.GroupBox2.Controls.Add(Me.Fecha_inicio)
         Me.GroupBox2.Location = New System.Drawing.Point(12, 320)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(705, 127)
+        Me.GroupBox2.Size = New System.Drawing.Size(705, 169)
         Me.GroupBox2.TabIndex = 3
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Tiempo de Fabricacion:"
         '
-        'Button2
+        'txt_productofabricar
         '
-        Me.Button2.Location = New System.Drawing.Point(247, 92)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(215, 23)
-        Me.Button2.TabIndex = 4
-        Me.Button2.Text = "Guardar"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.txt_productofabricar.Location = New System.Drawing.Point(124, 22)
+        Me.txt_productofabricar.Name = "txt_productofabricar"
+        Me.txt_productofabricar.Size = New System.Drawing.Size(165, 20)
+        Me.txt_productofabricar.TabIndex = 5
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(15, 25)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(103, 13)
+        Me.Label4.TabIndex = 4
+        Me.Label4.Text = "Producto a Fabricar:"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(303, 57)
+        Me.Label3.Location = New System.Drawing.Point(350, 69)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(150, 13)
         Me.Label3.TabIndex = 3
@@ -133,7 +144,7 @@ Partial Class ifabricacion
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(6, 57)
+        Me.Label2.Location = New System.Drawing.Point(15, 69)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(68, 13)
         Me.Label2.TabIndex = 2
@@ -141,17 +152,26 @@ Partial Class ifabricacion
         '
         'fechatermino
         '
-        Me.fechatermino.Location = New System.Drawing.Point(459, 51)
+        Me.fechatermino.Location = New System.Drawing.Point(506, 63)
         Me.fechatermino.Name = "fechatermino"
-        Me.fechatermino.Size = New System.Drawing.Size(200, 20)
+        Me.fechatermino.Size = New System.Drawing.Size(123, 20)
         Me.fechatermino.TabIndex = 1
         '
         'Fecha_inicio
         '
-        Me.Fecha_inicio.Location = New System.Drawing.Point(80, 51)
+        Me.Fecha_inicio.Location = New System.Drawing.Point(124, 69)
         Me.Fecha_inicio.Name = "Fecha_inicio"
-        Me.Fecha_inicio.Size = New System.Drawing.Size(200, 20)
+        Me.Fecha_inicio.Size = New System.Drawing.Size(123, 20)
         Me.Fecha_inicio.TabIndex = 0
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(213, 100)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(240, 53)
+        Me.Button2.TabIndex = 4
+        Me.Button2.Text = "Guardar"
+        Me.Button2.UseVisualStyleBackColor = True
         '
         'Button3
         '
@@ -213,7 +233,7 @@ Partial Class ifabricacion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(729, 501)
+        Me.ClientSize = New System.Drawing.Size(729, 505)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
@@ -251,4 +271,6 @@ Partial Class ifabricacion
     Friend WithEvents VerToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents VolverToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ConsultarStockToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents txt_productofabricar As System.Windows.Forms.TextBox
 End Class

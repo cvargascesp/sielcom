@@ -8,6 +8,7 @@ Public Class proceso_de_fabricacion
         fechaconsulta.Format = DateTimePickerFormat.Custom
         fechaconsulta.CustomFormat = "yyyy-MM-dd"
     End Sub
+ 
     Sub preparar_datagrid()
         Dim col1, col2, col3, col4 As New DataGridViewTextBoxColumn
         Me.KeyPreview = True
@@ -31,5 +32,14 @@ Public Class proceso_de_fabricacion
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         bodega_materias_primas_principal.Show()
+    End Sub
+
+    Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GroupBox1.Enter
+
+    End Sub
+
+    
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+
     End Sub
 End Class

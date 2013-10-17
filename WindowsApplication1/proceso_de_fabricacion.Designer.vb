@@ -25,21 +25,21 @@ Partial Class proceso_de_fabricacion
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.RchivoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MisDatosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.VolverToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ConsultaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BuscarProductosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EstadoDeFrabricacionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EditarEstadoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.n_ordensalida = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.fechaconsulta = New System.Windows.Forms.DateTimePicker()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button3 = New System.Windows.Forms.Button()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.VolverToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -67,6 +67,12 @@ Partial Class proceso_de_fabricacion
         Me.MisDatosToolStripMenuItem.Name = "MisDatosToolStripMenuItem"
         Me.MisDatosToolStripMenuItem.Size = New System.Drawing.Size(126, 22)
         Me.MisDatosToolStripMenuItem.Text = "Mis Datos"
+        '
+        'VolverToolStripMenuItem
+        '
+        Me.VolverToolStripMenuItem.Name = "VolverToolStripMenuItem"
+        Me.VolverToolStripMenuItem.Size = New System.Drawing.Size(126, 22)
+        Me.VolverToolStripMenuItem.Text = "Volver"
         '
         'ConsultaToolStripMenuItem
         '
@@ -123,6 +129,22 @@ Partial Class proceso_de_fabricacion
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Datos a Consultar"
         '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(199, 115)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(114, 20)
+        Me.TextBox1.TabIndex = 6
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(17, 118)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(176, 13)
+        Me.Label3.TabIndex = 5
+        Me.Label3.Text = "Numero de Reporte de Fabricacion:"
+        '
         'Button1
         '
         Me.Button1.Location = New System.Drawing.Point(389, 46)
@@ -172,28 +194,6 @@ Partial Class proceso_de_fabricacion
         Me.Button3.TabIndex = 5
         Me.Button3.Text = "Volver"
         Me.Button3.UseVisualStyleBackColor = True
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(17, 118)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(176, 13)
-        Me.Label3.TabIndex = 5
-        Me.Label3.Text = "Numero de Reporte de Fabricacion:"
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(199, 115)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(114, 20)
-        Me.TextBox1.TabIndex = 6
-        '
-        'VolverToolStripMenuItem
-        '
-        Me.VolverToolStripMenuItem.Name = "VolverToolStripMenuItem"
-        Me.VolverToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.VolverToolStripMenuItem.Text = "Volver"
         '
         'Button2
         '
