@@ -39,9 +39,9 @@ Partial Class bodega_materias_primas_principal
         Me.PcesoDeFabricacionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SolicitudDeProductosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EnProcesoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ConsultaDeProcesoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.IngresarProductosAFabricacionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EditarProcesoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ConsultaDeProcesoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -169,12 +169,6 @@ Partial Class bodega_materias_primas_principal
         Me.EnProcesoToolStripMenuItem.Size = New System.Drawing.Size(193, 22)
         Me.EnProcesoToolStripMenuItem.Text = "En Proceso"
         '
-        'ConsultaDeProcesoToolStripMenuItem
-        '
-        Me.ConsultaDeProcesoToolStripMenuItem.Name = "ConsultaDeProcesoToolStripMenuItem"
-        Me.ConsultaDeProcesoToolStripMenuItem.Size = New System.Drawing.Size(193, 22)
-        Me.ConsultaDeProcesoToolStripMenuItem.Text = "Consulta de Proceso"
-        '
         'IngresarProductosAFabricacionToolStripMenuItem
         '
         Me.IngresarProductosAFabricacionToolStripMenuItem.Name = "IngresarProductosAFabricacionToolStripMenuItem"
@@ -186,6 +180,12 @@ Partial Class bodega_materias_primas_principal
         Me.EditarProcesoToolStripMenuItem.Name = "EditarProcesoToolStripMenuItem"
         Me.EditarProcesoToolStripMenuItem.Size = New System.Drawing.Size(244, 22)
         Me.EditarProcesoToolStripMenuItem.Text = "Editar Proceso"
+        '
+        'ConsultaDeProcesoToolStripMenuItem
+        '
+        Me.ConsultaDeProcesoToolStripMenuItem.Name = "ConsultaDeProcesoToolStripMenuItem"
+        Me.ConsultaDeProcesoToolStripMenuItem.Size = New System.Drawing.Size(193, 22)
+        Me.ConsultaDeProcesoToolStripMenuItem.Text = "Consulta de Proceso"
         '
         'bodega_materias_primas_principal
         '

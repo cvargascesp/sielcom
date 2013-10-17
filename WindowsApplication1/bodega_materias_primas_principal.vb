@@ -46,4 +46,8 @@
     Private Sub ConsultaDeProcesoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ConsultaDeProcesoToolStripMenuItem.Click
         proceso_de_fabricacion.Show()
     End Sub
+
+    Private Sub IngresarProductosAFabricacionToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles IngresarProductosAFabricacionToolStripMenuItem.Click
+        ifabricacion.Show()
+    End Sub
 End Class
