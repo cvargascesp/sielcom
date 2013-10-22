@@ -30,7 +30,7 @@ Public Class ifabricacion
     End Sub
 
     Sub nuevo_proceso_fabricacion()
-        Dim sqlquery As String = "INSERT INTO proceso_fabricacion (nombre_prod_fab,id_salida,fecha_inicio_fab,fecha_termino_fab)VALUES('" & Me.txt_productofabricar.Text & "','" & Me.TextBox1.Text & "','" & Me.Fecha_inicio.Text & "','" & Me.fechatermino.Text & "')"
+        Dim sqlquery As String = "INSERT INTO proceso_fabricacion (nombre_prod_fab,id_salida,fecha_inicio_fab,fecha_termino_fab,id_est_pro)VALUES('" & Me.txt_productofabricar.Text & "','" & Me.TextBox1.Text & "','" & Me.Fecha_inicio.Text & "','" & Me.fechatermino.Text & "','" & CInt("1") & "')"
         Dim cmd As New MySqlCommand(sqlquery, Conexion.conn)
         Try
             Conexion.open()
