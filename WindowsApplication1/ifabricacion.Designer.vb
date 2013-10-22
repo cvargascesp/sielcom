@@ -28,13 +28,13 @@ Partial Class ifabricacion
         Me.Button1 = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.txt_productofabricar = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.fechatermino = New System.Windows.Forms.DateTimePicker()
         Me.Fecha_inicio = New System.Windows.Forms.DateTimePicker()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.ArchivoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -116,9 +116,18 @@ Partial Class ifabricacion
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Tiempo de Fabricacion:"
         '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(213, 100)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(240, 53)
+        Me.Button2.TabIndex = 4
+        Me.Button2.Text = "Guardar"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'txt_productofabricar
         '
-        Me.txt_productofabricar.Location = New System.Drawing.Point(124, 22)
+        Me.txt_productofabricar.Location = New System.Drawing.Point(124, 26)
         Me.txt_productofabricar.Name = "txt_productofabricar"
         Me.txt_productofabricar.Size = New System.Drawing.Size(165, 20)
         Me.txt_productofabricar.TabIndex = 5
@@ -126,7 +135,7 @@ Partial Class ifabricacion
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(15, 25)
+        Me.Label4.Location = New System.Drawing.Point(15, 29)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(103, 13)
         Me.Label4.TabIndex = 4
@@ -163,15 +172,6 @@ Partial Class ifabricacion
         Me.Fecha_inicio.Name = "Fecha_inicio"
         Me.Fecha_inicio.Size = New System.Drawing.Size(123, 20)
         Me.Fecha_inicio.TabIndex = 0
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(213, 100)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(240, 53)
-        Me.Button2.TabIndex = 4
-        Me.Button2.Text = "Guardar"
-        Me.Button2.UseVisualStyleBackColor = True
         '
         'Button3
         '
