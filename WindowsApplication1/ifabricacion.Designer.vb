@@ -239,6 +239,8 @@ Partial Class ifabricacion
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
+        Me.MaximizeBox = False
+        Me.MaximumSize = New System.Drawing.Size(745, 543)
         Me.Name = "ifabricacion"
         Me.Text = "Ingreso de Materiales  a Proceso de Fabricacion"
         Me.GroupBox1.ResumeLayout(False)

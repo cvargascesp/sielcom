@@ -5,6 +5,7 @@ Public Class solicitud_productos_fabricacion
         preparar_datagrid()
         Me.comentamotivo.Enabled = False
         Me.Label7.Visible = False
+
     End Sub
     Sub formatear_fechas()
         fecha_solicitud.Format = DateTimePickerFormat.Custom
@@ -123,5 +124,9 @@ Public Class solicitud_productos_fabricacion
     
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         nueva_orden_salida()
+    End Sub
+
+    Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GroupBox1.Enter
+
     End Sub
 End Class

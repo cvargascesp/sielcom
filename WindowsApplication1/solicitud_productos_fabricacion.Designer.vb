@@ -31,6 +31,8 @@ Partial Class solicitud_productos_fabricacion
         Me.BuscarProductoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProductosPorLLegarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.num_salida = New System.Windows.Forms.TextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.comentamotivo = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -48,8 +50,6 @@ Partial Class solicitud_productos_fabricacion
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.num_salida = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -129,6 +129,22 @@ Partial Class solicitud_productos_fabricacion
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Productos"
+        '
+        'num_salida
+        '
+        Me.num_salida.Location = New System.Drawing.Point(155, 80)
+        Me.num_salida.Name = "num_salida"
+        Me.num_salida.Size = New System.Drawing.Size(196, 20)
+        Me.num_salida.TabIndex = 24
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(8, 87)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(106, 13)
+        Me.Label9.TabIndex = 23
+        Me.Label9.Text = "Numero orden Salida"
         '
         'Label7
         '
@@ -280,22 +296,6 @@ Partial Class solicitud_productos_fabricacion
         Me.Label8.TabIndex = 4
         Me.Label8.Text = "Label8"
         '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(8, 87)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(106, 13)
-        Me.Label9.TabIndex = 23
-        Me.Label9.Text = "Numero orden Salida"
-        '
-        'num_salida
-        '
-        Me.num_salida.Location = New System.Drawing.Point(155, 80)
-        Me.num_salida.Name = "num_salida"
-        Me.num_salida.Size = New System.Drawing.Size(196, 20)
-        Me.num_salida.TabIndex = 24
-        '
         'Label10
         '
         Me.Label10.AutoSize = True
@@ -317,6 +317,8 @@ Partial Class solicitud_productos_fabricacion
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
+        Me.MaximizeBox = False
+        Me.MaximumSize = New System.Drawing.Size(707, 655)
         Me.Name = "solicitud_productos_fabricacion"
         Me.Text = "Solicitud de Productos Para Proceso de Fabricacion"
         Me.MenuStrip1.ResumeLayout(False)
