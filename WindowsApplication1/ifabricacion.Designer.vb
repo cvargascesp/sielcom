@@ -111,7 +111,7 @@ Partial Class ifabricacion
         Me.GroupBox2.Controls.Add(Me.Fecha_inicio)
         Me.GroupBox2.Location = New System.Drawing.Point(12, 320)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(705, 169)
+        Me.GroupBox2.Size = New System.Drawing.Size(705, 173)
         Me.GroupBox2.TabIndex = 3
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Tiempo de Fabricacion:"
