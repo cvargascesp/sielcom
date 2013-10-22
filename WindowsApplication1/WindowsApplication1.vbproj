@@ -220,6 +220,12 @@
     <Compile Include="Configuraciones.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="e_materia_prima.Designer.vb">
+      <DependentUpon>e_materia_prima.vb</DependentUpon>
+    </Compile>
+    <Compile Include="e_materia_prima.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="e_proceso_fabricacion.Designer.vb">
       <DependentUpon>e_proceso_fabricacion.vb</DependentUpon>
     </Compile>
@@ -454,6 +460,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Configuraciones.resx">
       <DependentUpon>Configuraciones.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="e_materia_prima.resx">
+      <DependentUpon>e_materia_prima.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="e_proceso_fabricacion.resx">
       <DependentUpon>e_proceso_fabricacion.vb</DependentUpon>

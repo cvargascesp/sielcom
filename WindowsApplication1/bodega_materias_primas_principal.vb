@@ -54,4 +54,8 @@
     Private Sub EditarProcesoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EditarProcesoToolStripMenuItem.Click
         e_proceso_fabricacion.Show()
     End Sub
+
+    Private Sub EditarMateriaPrimaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EditarMateriaPrimaToolStripMenuItem.Click
+
+    End Sub
 End Class

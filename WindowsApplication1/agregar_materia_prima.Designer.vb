@@ -35,6 +35,7 @@ Partial Class agregar_materia_prima
         Me.unidadmedida_mp = New System.Windows.Forms.ComboBox()
         Me.txt_ubicacion_mp = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label1
@@ -138,12 +139,21 @@ Partial Class agregar_materia_prima
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(96, 233)
+        Me.Button1.Location = New System.Drawing.Point(57, 233)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(166, 46)
+        Me.Button1.Size = New System.Drawing.Size(89, 46)
         Me.Button1.TabIndex = 15
         Me.Button1.Text = "Guardar"
         Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(197, 233)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(89, 46)
+        Me.Button2.TabIndex = 16
+        Me.Button2.Text = "Volver"
+        Me.Button2.UseVisualStyleBackColor = True
         '
         'agregar_materia_prima
         '
@@ -151,6 +161,7 @@ Partial Class agregar_materia_prima
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSize = True
         Me.ClientSize = New System.Drawing.Size(351, 291)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.txt_ubicacion_mp)
         Me.Controls.Add(Me.unidadmedida_mp)
@@ -183,4 +194,5 @@ Partial Class agregar_materia_prima
     Friend WithEvents unidadmedida_mp As System.Windows.Forms.ComboBox
     Friend WithEvents txt_ubicacion_mp As System.Windows.Forms.TextBox
     Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents Button2 As System.Windows.Forms.Button
 End Class

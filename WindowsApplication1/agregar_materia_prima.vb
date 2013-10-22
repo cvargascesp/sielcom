@@ -76,4 +76,9 @@ Public Class agregar_materia_prima
     End Sub
 
 
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        bodega_materias_primas_principal.Show()
+    End Sub
+
+  
 End Class
