@@ -45,6 +45,26 @@ Public Class e_proceso_fabricacion
         llenar_combobox_estado()
         Me.GroupBox2.Enabled = True
         Me.fecha_i.Enabled = False
+        'carga de datos
+        Conexion.open()
+        Dim dataadapter As MySqlDataAdapter
+        Dim dataset As DataSet
+        Dim sqlquery As String = "SELECT proceso_fabricacion.id_fab, proceso_fabricacion.nombre_prod_fab, proceso_fabricacion.id_salida, proceso_fabricacion.fecha_inicio_fab, proceso_fabricacion.fecha_termino_fab, proceso_fabricacion.id_est_pro, estados_de_produccion.nom_est_pro FROM proceso_fabricacion INNER JOIN estados_de_produccion ON estados_de_produccion.id_est_pro=proceso_fabricacion.id_est_pro WHERE id_fab='" & Me.n_fabricacion_c.Text & "'"
+        dataadapter = New MySqlDataAdapter(sqlquery, Conexion.conn)
+        dataset = New DataSet()
+        dataadapter.Fill(dataset)
+        If (dataset.Tables(0).Rows.Count <> 0) Then
+            Me.cod_fab.Text = dataset.Tables(0).Rows(0).Item(0).ToString()
+            Me.prod_fab.Text = dataset.Tables(0).Rows(0).Item(1).ToString()
+            Me.fecha_i.Value = dataset.Tables(0).Rows(0).Item(3).ToString()
+            Me.fecha_t.Value = dataset.Tables(0).Rows(0).Item(4).ToString()
+            Me.estado_fab.SelectedText = dataset.Tables(0).Rows(0).Item(6).ToString()
+            Me.estado_fab.SelectedValue = CInt(dataset.Tables(0).Rows(0).Item(5))
+
+        Else
+            MessageBox.Show("el numero de fabricacion es invalido", "error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        End If
+        Conexion.close()
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
@@ -56,6 +76,17 @@ Public Class e_proceso_fabricacion
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Conexion.open()
+        Dim query_update = "UPDATE proceso_fabricacion SET fecha_termino_fab='" & Me.fecha_t.Text & "', id_est_pro='" & Me.estado_fab.SelectedValue & "'    WHERE id_fab ='" & Me.n_fabricacion_c.Text & "'"
+        Dim cmd As New MySqlCommand(query_update, Conexion.conn)
+        Try
+            cmd.ExecuteNonQuery()
+            MessageBox.Show("Datos modificados exitosamente", "guardado", MessageBoxButtons.OK, MessageBoxIcon.Information)
+         Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+
+        Conexion.close()
         limpiar_formulario()
     End Sub
 End Class
