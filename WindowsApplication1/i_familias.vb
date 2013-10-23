@@ -42,4 +42,23 @@ Public Class i_familias
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
 
     End Sub
+    Sub eliminar_familia()
+        Conexion.open()
+        Dim query_elim As String = "DELETE FROM familias WHERE idfamilia='" & Me.txt_del_fam.Text & "'"
+        Dim cmd As New MySqlCommand(query_elim, Conexion.conn)
+        Try
+            cmd.ExecuteNonQuery()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+        Conexion.close()
+    End Sub
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Dim pregunta As DialogResult = MessageBox.Show("Esta seguro que desea eliminar la famila de productos?", "eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+        If (pregunta = Windows.Forms.DialogResult.Yes) Then
+            eliminar_familia()
+            llenar_datagridview()
+        End If
+        Me.txt_del_fam.Text = ""
+    End Sub
 End Class

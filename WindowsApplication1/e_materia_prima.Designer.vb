@@ -34,6 +34,9 @@ Partial Class e_materia_prima
         Me.txtcodigo_mp = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.txtstockcrit = New System.Windows.Forms.NumericUpDown()
+        Me.Label4 = New System.Windows.Forms.Label()
+        CType(Me.txtstockcrit, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label9
@@ -123,7 +126,7 @@ Partial Class e_materia_prima
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(38, 207)
+        Me.Button1.Location = New System.Drawing.Point(38, 217)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(105, 33)
         Me.Button1.TabIndex = 21
@@ -132,18 +135,36 @@ Partial Class e_materia_prima
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(162, 207)
+        Me.Button2.Location = New System.Drawing.Point(162, 217)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(105, 33)
         Me.Button2.TabIndex = 22
         Me.Button2.Text = "Volver"
         Me.Button2.UseVisualStyleBackColor = True
         '
+        'txtstockcrit
+        '
+        Me.txtstockcrit.Location = New System.Drawing.Point(96, 178)
+        Me.txtstockcrit.Name = "txtstockcrit"
+        Me.txtstockcrit.Size = New System.Drawing.Size(155, 20)
+        Me.txtstockcrit.TabIndex = 23
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(13, 180)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(67, 13)
+        Me.Label4.TabIndex = 24
+        Me.Label4.Text = "Stock Critico"
+        '
         'e_materia_prima
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(376, 262)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.txtstockcrit)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.txt_ubicacion_mp)
@@ -161,6 +182,7 @@ Partial Class e_materia_prima
         Me.MinimumSize = New System.Drawing.Size(392, 300)
         Me.Name = "e_materia_prima"
         Me.Text = "Editar Materias Primas"
+        CType(Me.txtstockcrit, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -177,4 +199,6 @@ Partial Class e_materia_prima
     Friend WithEvents txtcodigo_mp As System.Windows.Forms.TextBox
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents txtstockcrit As System.Windows.Forms.NumericUpDown
+    Friend WithEvents Label4 As System.Windows.Forms.Label
 End Class

@@ -71,13 +71,16 @@ Partial Class i_unidadmedida
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(364, 329)
+        Me.ClientSize = New System.Drawing.Size(371, 329)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.txtnomum)
         Me.Controls.Add(Me.Label1)
+        Me.MaximumSize = New System.Drawing.Size(387, 367)
+        Me.MinimizeBox = False
+        Me.MinimumSize = New System.Drawing.Size(387, 367)
         Me.Name = "i_unidadmedida"
-        Me.Text = "i_unidadmedida"
+        Me.Text = "Nueva Unidad de medida"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

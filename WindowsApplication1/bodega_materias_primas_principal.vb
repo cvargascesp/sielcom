@@ -58,4 +58,8 @@
     Private Sub EditarMateriaPrimaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EditarMateriaPrimaToolStripMenuItem.Click
         e_materia_prima.Show()
     End Sub
+
+    Private Sub CatalogoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CatalogoToolStripMenuItem.Click
+        catalogo_mp.Show()
+    End Sub
 End Class

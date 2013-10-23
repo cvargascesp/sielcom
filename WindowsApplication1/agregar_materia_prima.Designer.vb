@@ -36,6 +36,9 @@ Partial Class agregar_materia_prima
         Me.txt_ubicacion_mp = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.txt_stock_crit = New System.Windows.Forms.NumericUpDown()
+        CType(Me.txt_stock_crit, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -93,7 +96,7 @@ Partial Class agregar_materia_prima
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(14, 190)
+        Me.Label9.Location = New System.Drawing.Point(12, 232)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(58, 13)
         Me.Label9.TabIndex = 9
@@ -132,14 +135,14 @@ Partial Class agregar_materia_prima
         '
         'txt_ubicacion_mp
         '
-        Me.txt_ubicacion_mp.Location = New System.Drawing.Point(133, 187)
+        Me.txt_ubicacion_mp.Location = New System.Drawing.Point(131, 229)
         Me.txt_ubicacion_mp.Name = "txt_ubicacion_mp"
         Me.txt_ubicacion_mp.Size = New System.Drawing.Size(155, 20)
         Me.txt_ubicacion_mp.TabIndex = 14
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(57, 233)
+        Me.Button1.Location = New System.Drawing.Point(62, 291)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(89, 46)
         Me.Button1.TabIndex = 15
@@ -148,19 +151,37 @@ Partial Class agregar_materia_prima
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(197, 233)
+        Me.Button2.Location = New System.Drawing.Point(202, 291)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(89, 46)
         Me.Button2.TabIndex = 16
         Me.Button2.Text = "Volver"
         Me.Button2.UseVisualStyleBackColor = True
         '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(12, 196)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(70, 13)
+        Me.Label4.TabIndex = 17
+        Me.Label4.Text = "Stock Critico:"
+        '
+        'txt_stock_crit
+        '
+        Me.txt_stock_crit.Location = New System.Drawing.Point(131, 189)
+        Me.txt_stock_crit.Name = "txt_stock_crit"
+        Me.txt_stock_crit.Size = New System.Drawing.Size(155, 20)
+        Me.txt_stock_crit.TabIndex = 18
+        '
         'agregar_materia_prima
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSize = True
-        Me.ClientSize = New System.Drawing.Size(351, 291)
+        Me.ClientSize = New System.Drawing.Size(387, 349)
+        Me.Controls.Add(Me.txt_stock_crit)
+        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.txt_ubicacion_mp)
@@ -177,6 +198,7 @@ Partial Class agregar_materia_prima
         Me.Controls.Add(Me.Label1)
         Me.Name = "agregar_materia_prima"
         Me.Text = "Agregar materia Prima"
+        CType(Me.txt_stock_crit, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -195,4 +217,6 @@ Partial Class agregar_materia_prima
     Friend WithEvents txt_ubicacion_mp As System.Windows.Forms.TextBox
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents txt_stock_crit As System.Windows.Forms.NumericUpDown
 End Class

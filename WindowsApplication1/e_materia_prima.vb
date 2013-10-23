@@ -21,11 +21,12 @@ Public Class e_materia_prima
         Dim ds1 As New DataSet
         Dim da1 As New MySqlDataAdapter(ssql1, Conexion.conn)
         Try
+            Dim actual As String = Me.combofamilia.Text
             da1.Fill(ds1)
             Me.combofamilia.DataSource = ds1.Tables(0)
             Me.combofamilia.DisplayMember = "nom_familia"
             Me.combofamilia.ValueMember = "idfamilia"
-
+            Me.combofamilia.SelectedValue = actual
         Catch ex As Exception
             'MessageBox.Show(ex.Message)
         End Try
@@ -36,6 +37,8 @@ Public Class e_materia_prima
         Me.combofamilia.Enabled = False
         Me.unidadmedida_mp.Enabled = False
         Me.txt_ubicacion_mp.Enabled = False
+        Me.txtstockcrit.Enabled = False
+
     End Sub
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         bodega_materias_primas_principal.Show()
@@ -50,6 +53,7 @@ Public Class e_materia_prima
         Me.combofamilia.Enabled = True
         Me.unidadmedida_mp.Enabled = True
         Me.txt_ubicacion_mp.Enabled = True
+        Me.txtstockcrit.Enabled = True
         llenar_combobox_unidadmedida()
         Conexion.open()
         Dim dataadapter As MySqlDataAdapter
@@ -60,12 +64,15 @@ Public Class e_materia_prima
         dataadapter.Fill(dataset)
         Me.unidadmedida_mp.Text = ""
         If (dataset.Tables(0).Rows.Count <> 0) Then
+            llenar_combobox_familias()
+            combofamilia.Text = ""
             Me.txt_nom_mp.Text = dataset.Tables(0).Rows(0).Item(1).ToString()
-            Me.combofamilia.SelectedValue = CInt(dataset.Tables(0).Rows(0).Item(6).ToString())
-            Me.combofamilia.SelectedText = CStr(dataset.Tables(0).Rows(0).Item(7).ToString())
+            Me.combofamilia.SelectedValue = CInt(dataset.Tables(0).Rows(0).Item(7).ToString())
+            'Me.combofamilia.SelectedText = CStr(dataset.Tables(0).Rows(0).Item(8).ToString())
             Me.unidadmedida_mp.SelectedText = dataset.Tables(0).Rows(0).Item(4).ToString()
             Me.txt_ubicacion_mp.Text = dataset.Tables(0).Rows(0).Item(3).ToString()
-            llenar_combobox_familias()
+            Me.txtstockcrit.Value = CInt(dataset.Tables(0).Rows(0).Item(6).ToString())
+
         Else
             MessageBox.Show("el codigo de materia prima es invalido", "error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         End If
@@ -76,7 +83,7 @@ Public Class e_materia_prima
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Conexion.open()
-        Dim sql_update As String = " UPDATE materia_prima SET nombre_mp= '" & Me.txt_nom_mp.Text & "',idfamilia= '" & Me.combofamilia.SelectedValue & "',unidad_medida_mp= '" & Me.unidadmedida_mp.Text & "',ubicacion_mp= '" & Me.txt_ubicacion_mp.Text & "' WHERE codigo_mp='" & Me.txtcodigo_mp.Text & "'"
+        Dim sql_update As String = " UPDATE materia_prima SET nombre_mp= '" & Me.txt_nom_mp.Text & "',idfamilia= '" & Me.combofamilia.SelectedValue & "',unidad_medida_mp= '" & Me.unidadmedida_mp.Text & "',ubicacion_mp= '" & Me.txt_ubicacion_mp.Text & "', stock_critico_mp='" & Me.txtstockcrit.Value & "' WHERE codigo_mp='" & Me.txtcodigo_mp.Text & "'"
         Dim cmd As New MySqlCommand(sql_update, Conexion.conn)
         Try
             cmd.ExecuteNonQuery()
@@ -90,6 +97,7 @@ Public Class e_materia_prima
         Me.unidadmedida_mp.Text = ""
         Me.txt_ubicacion_mp.Text = ""
         Me.txtcodigo_mp.Text = ""
+        Me.txtstockcrit.Value = 0
     End Sub
 
 End Class

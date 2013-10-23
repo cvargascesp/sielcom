@@ -56,7 +56,7 @@ Partial Class bodega_materias_primas_principal
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(377, 90)
+        Me.Button2.Location = New System.Drawing.Point(356, 90)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(89, 64)
         Me.Button2.TabIndex = 1
@@ -83,7 +83,7 @@ Partial Class bodega_materias_primas_principal
         '
         'Button6
         '
-        Me.Button6.Location = New System.Drawing.Point(356, 362)
+        Me.Button6.Location = New System.Drawing.Point(370, 198)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(75, 23)
         Me.Button6.TabIndex = 5
@@ -95,7 +95,7 @@ Partial Class bodega_materias_primas_principal
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MateriasPrimasToolStripMenuItem, Me.ParametrosToolStripMenuItem, Me.OrdenesDeCompraToolStripMenuItem, Me.PcesoDeFabricacionToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(642, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(515, 24)
         Me.MenuStrip1.TabIndex = 6
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -191,7 +191,7 @@ Partial Class bodega_materias_primas_principal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(642, 397)
+        Me.ClientSize = New System.Drawing.Size(515, 279)
         Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
