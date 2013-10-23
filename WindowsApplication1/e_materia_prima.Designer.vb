@@ -108,6 +108,8 @@ Partial Class e_materia_prima
         'txt_nom_mp
         '
         Me.txt_nom_mp.Location = New System.Drawing.Point(96, 57)
+        Me.txt_nom_mp.MaximumSize = New System.Drawing.Size(155, 20)
+        Me.txt_nom_mp.MinimumSize = New System.Drawing.Size(155, 20)
         Me.txt_nom_mp.Name = "txt_nom_mp"
         Me.txt_nom_mp.Size = New System.Drawing.Size(155, 20)
         Me.txt_nom_mp.TabIndex = 17
@@ -141,7 +143,7 @@ Partial Class e_materia_prima
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(299, 262)
+        Me.ClientSize = New System.Drawing.Size(376, 262)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.txt_ubicacion_mp)
@@ -154,6 +156,9 @@ Partial Class e_materia_prima
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
+        Me.MaximizeBox = False
+        Me.MaximumSize = New System.Drawing.Size(392, 300)
+        Me.MinimumSize = New System.Drawing.Size(392, 300)
         Me.Name = "e_materia_prima"
         Me.Text = "Editar Materias Primas"
         Me.ResumeLayout(False)

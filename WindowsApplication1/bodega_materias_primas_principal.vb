@@ -56,6 +56,6 @@
     End Sub
 
     Private Sub EditarMateriaPrimaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EditarMateriaPrimaToolStripMenuItem.Click
-
+        e_materia_prima.Show()
     End Sub
 End Class
