@@ -26,4 +26,19 @@ Public Class catalogo_mp
     Private Sub catalogo_mp_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         llenar_datagridview()
     End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Conexion.open()
+        Dim query As String = "SELECT 	materia_prima.codigo_mp 'Codigo materia Prima', materia_prima.nombre_mp 'nombre', materia_prima.fecha_creacion_mp'Fecha de creacion', materia_prima.ubicacion_mp'Ubicacion', materia_prima.unidad_medida_mp'Unidad de medida', familias.nom_familia'Familia', COALESCE(materia_prima_existencias.stock_mp,0)'stock Actual', materia_prima.stock_critico_mp'Stock Critico'FROM materia_prima LEFT JOIN materia_prima_existencias ON materia_prima_existencias.codigo_mp=materia_prima.codigo_mp INNER JOIN familias ON familias.idfamilia=materia_prima.idfamilia where materia_prima.codigo_mp='" & Me.txtsearch.Text & "' or materia_prima.nombre_mp like'%" & Me.txtsearch.Text & "%' "
+        Dim Adpt As New MySqlDataAdapter(query, Conexion.conn)
+        Dim ds As New DataSet()
+        Adpt.Fill(ds, "Emp")
+        DataGridView1.DataSource = ds.Tables(0)
+        Conexion.close()
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        llenar_datagridview()
+        Me.txtsearch.Text = ""
+    End Sub
 End Class
