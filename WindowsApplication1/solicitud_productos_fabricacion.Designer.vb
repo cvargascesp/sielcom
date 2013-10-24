@@ -280,7 +280,7 @@ Partial Class solicitud_productos_fabricacion
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(390, 572)
+        Me.Button2.Location = New System.Drawing.Point(474, 575)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(202, 30)
         Me.Button2.TabIndex = 3

@@ -178,9 +178,9 @@ Partial Class libro_ingreso_mercaderia
         'comboproveedor
         '
         Me.comboproveedor.FormattingEnabled = True
-        Me.comboproveedor.Location = New System.Drawing.Point(198, 152)
+        Me.comboproveedor.Location = New System.Drawing.Point(195, 152)
         Me.comboproveedor.Name = "comboproveedor"
-        Me.comboproveedor.Size = New System.Drawing.Size(121, 21)
+        Me.comboproveedor.Size = New System.Drawing.Size(124, 21)
         Me.comboproveedor.TabIndex = 4
         '
         'Button1
