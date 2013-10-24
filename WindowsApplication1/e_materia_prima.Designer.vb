@@ -162,6 +162,7 @@ Partial Class e_materia_prima
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoSize = True
         Me.ClientSize = New System.Drawing.Size(376, 262)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.txtstockcrit)
@@ -181,6 +182,7 @@ Partial Class e_materia_prima
         Me.MaximumSize = New System.Drawing.Size(392, 300)
         Me.MinimumSize = New System.Drawing.Size(392, 300)
         Me.Name = "e_materia_prima"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Editar Materias Primas"
         CType(Me.txtstockcrit, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

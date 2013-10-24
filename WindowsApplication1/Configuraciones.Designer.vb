@@ -33,6 +33,7 @@ Partial Class Configuraciones
         Me.btnCancelar = New System.Windows.Forms.Button()
         Me.txtCotizaciones = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'txtIva
@@ -90,7 +91,7 @@ Partial Class Configuraciones
         '
         'btnAceptar
         '
-        Me.btnAceptar.Location = New System.Drawing.Point(97, 213)
+        Me.btnAceptar.Location = New System.Drawing.Point(107, 213)
         Me.btnAceptar.Name = "btnAceptar"
         Me.btnAceptar.Size = New System.Drawing.Size(75, 23)
         Me.btnAceptar.TabIndex = 6
@@ -99,7 +100,7 @@ Partial Class Configuraciones
         '
         'btnCancelar
         '
-        Me.btnCancelar.Location = New System.Drawing.Point(196, 213)
+        Me.btnCancelar.Location = New System.Drawing.Point(212, 213)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(75, 23)
         Me.btnCancelar.TabIndex = 7
@@ -122,11 +123,21 @@ Partial Class Configuraciones
         Me.Label4.TabIndex = 8
         Me.Label4.Text = "Cotizaciones"
         '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(105, 267)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(182, 13)
+        Me.Label9.TabIndex = 51
+        Me.Label9.Text = "© 2013 Copyright Orion System Ltda."
+        '
         'Configuraciones
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(413, 262)
+        Me.ClientSize = New System.Drawing.Size(413, 289)
+        Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.txtCotizaciones)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.btnCancelar)
@@ -156,4 +167,5 @@ Partial Class Configuraciones
     Friend WithEvents btnCancelar As System.Windows.Forms.Button
     Friend WithEvents txtCotizaciones As System.Windows.Forms.TextBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents Label9 As System.Windows.Forms.Label
 End Class

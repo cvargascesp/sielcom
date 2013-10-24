@@ -23,7 +23,6 @@ Partial Class bienvenida
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(bienvenida))
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -49,15 +48,14 @@ Partial Class bienvenida
         Me.Label9.BackColor = System.Drawing.SystemColors.Control
         Me.Label9.Font = New System.Drawing.Font("Corbel", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label9.Location = New System.Drawing.Point(136, 276)
+        Me.Label9.Location = New System.Drawing.Point(180, 276)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(344, 18)
+        Me.Label9.Size = New System.Drawing.Size(236, 18)
         Me.Label9.TabIndex = 15
-        Me.Label9.Text = "© 2013 Copyright Ingeniería y Desarrollo Isystem S.P.A."
+        Me.Label9.Text = "© 2013 Copyright Orion System Ltda."
         '
         'PictureBox1
         '
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
         Me.PictureBox1.ImageLocation = ".\Resources\Inicio.jpg"
         Me.PictureBox1.Location = New System.Drawing.Point(-4, 0)
         Me.PictureBox1.Name = "PictureBox1"

@@ -38,6 +38,7 @@ Partial Class agregar_materia_prima
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txt_stock_crit = New System.Windows.Forms.NumericUpDown()
+        Me.Label5 = New System.Windows.Forms.Label()
         CType(Me.txt_stock_crit, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -174,12 +175,22 @@ Partial Class agregar_materia_prima
         Me.txt_stock_crit.Size = New System.Drawing.Size(155, 20)
         Me.txt_stock_crit.TabIndex = 18
         '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(84, 349)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(182, 13)
+        Me.Label5.TabIndex = 50
+        Me.Label5.Text = "© 2013 Copyright Orion System Ltda."
+        '
         'agregar_materia_prima
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSize = True
-        Me.ClientSize = New System.Drawing.Size(387, 349)
+        Me.ClientSize = New System.Drawing.Size(387, 371)
+        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.txt_stock_crit)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Button2)
@@ -197,6 +208,7 @@ Partial Class agregar_materia_prima
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Name = "agregar_materia_prima"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Agregar materia Prima"
         CType(Me.txt_stock_crit, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -219,4 +231,5 @@ Partial Class agregar_materia_prima
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents txt_stock_crit As System.Windows.Forms.NumericUpDown
+    Friend WithEvents Label5 As System.Windows.Forms.Label
 End Class

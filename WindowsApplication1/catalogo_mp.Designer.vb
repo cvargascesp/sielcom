@@ -25,10 +25,12 @@ Partial Class catalogo_mp
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(catalogo_mp))
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.txtsearch = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.txtsearch = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Button3 = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
@@ -43,7 +45,7 @@ Partial Class catalogo_mp
         Me.DataGridView1.Location = New System.Drawing.Point(12, 165)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.Size = New System.Drawing.Size(873, 323)
+        Me.DataGridView1.Size = New System.Drawing.Size(873, 267)
         Me.DataGridView1.TabIndex = 0
         '
         'GroupBox1
@@ -58,14 +60,14 @@ Partial Class catalogo_mp
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Buscardor"
         '
-        'Label1
+        'Button1
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(6, 40)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(53, 13)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Producto:"
+        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
+        Me.Button1.Location = New System.Drawing.Point(263, 14)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 61)
+        Me.Button1.TabIndex = 2
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'txtsearch
         '
@@ -74,14 +76,14 @@ Partial Class catalogo_mp
         Me.txtsearch.Size = New System.Drawing.Size(175, 20)
         Me.txtsearch.TabIndex = 1
         '
-        'Button1
+        'Label1
         '
-        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
-        Me.Button1.Location = New System.Drawing.Point(263, 14)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 64)
-        Me.Button1.TabIndex = 2
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(6, 40)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(53, 13)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "Producto:"
         '
         'Button2
         '
@@ -95,11 +97,32 @@ Partial Class catalogo_mp
         Me.Button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.Button2.UseVisualStyleBackColor = True
         '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(329, 478)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(182, 13)
+        Me.Label9.TabIndex = 51
+        Me.Label9.Text = "© 2013 Copyright Orion System Ltda."
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(810, 465)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(75, 23)
+        Me.Button3.TabIndex = 52
+        Me.Button3.Text = "Volver"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
         'catalogo_mp
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoSize = True
         Me.ClientSize = New System.Drawing.Size(897, 500)
+        Me.Controls.Add(Me.Button3)
+        Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.DataGridView1)
@@ -108,11 +131,13 @@ Partial Class catalogo_mp
         Me.MinimizeBox = False
         Me.MinimumSize = New System.Drawing.Size(913, 538)
         Me.Name = "catalogo_mp"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Catalogo materias Primas"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
@@ -121,4 +146,6 @@ Partial Class catalogo_mp
     Friend WithEvents txtsearch As System.Windows.Forms.TextBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents Label9 As System.Windows.Forms.Label
+    Friend WithEvents Button3 As System.Windows.Forms.Button
 End Class

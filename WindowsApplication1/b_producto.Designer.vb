@@ -51,10 +51,10 @@ Partial Class b_producto
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.Label9 = New System.Windows.Forms.Label()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Label9 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -329,20 +329,11 @@ Partial Class b_producto
         Me.Button2.BackColor = System.Drawing.SystemColors.Control
         Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
-        Me.Button2.Location = New System.Drawing.Point(601, 573)
+        Me.Button2.Location = New System.Drawing.Point(607, 573)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(62, 51)
         Me.Button2.TabIndex = 43
         Me.Button2.UseVisualStyleBackColor = False
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(162, 597)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(293, 15)
-        Me.Label9.TabIndex = 44
-        Me.Label9.Text = "© 2012 Copyright Ingeniería y Desarrollo Isystem S.A."
         '
         'GroupBox3
         '
@@ -380,16 +371,26 @@ Partial Class b_producto
         Me.PictureBox1.TabIndex = 47
         Me.PictureBox1.TabStop = False
         '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(238, 604)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(210, 15)
+        Me.Label9.TabIndex = 50
+        Me.Label9.Text = "© 2013 Copyright Orion System Ltda."
+        '
         'b_producto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoSize = True
         Me.BackColor = System.Drawing.SystemColors.Control
-        Me.ClientSize = New System.Drawing.Size(681, 588)
+        Me.ClientSize = New System.Drawing.Size(681, 628)
         Me.ControlBox = False
+        Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.GroupBox3)
-        Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label7)
@@ -414,7 +415,6 @@ Partial Class b_producto
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents Label11 As System.Windows.Forms.Label
     Friend WithEvents Button2 As System.Windows.Forms.Button
-    Friend WithEvents Label9 As System.Windows.Forms.Label
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
@@ -440,4 +440,5 @@ Partial Class b_producto
     Friend WithEvents DateTimePicker1 As System.Windows.Forms.DateTimePicker
     Friend WithEvents cbLinea As System.Windows.Forms.ComboBox
     Friend WithEvents Label8 As System.Windows.Forms.Label
+    Friend WithEvents Label9 As System.Windows.Forms.Label
 End Class

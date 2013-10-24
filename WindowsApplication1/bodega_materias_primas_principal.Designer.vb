@@ -42,6 +42,7 @@ Partial Class bodega_materias_primas_principal
         Me.IngresarProductosAFabricacionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EditarProcesoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ConsultaDeProcesoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Label9 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -83,9 +84,9 @@ Partial Class bodega_materias_primas_principal
         '
         'Button6
         '
-        Me.Button6.Location = New System.Drawing.Point(370, 198)
+        Me.Button6.Location = New System.Drawing.Point(428, 250)
         Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(75, 23)
+        Me.Button6.Size = New System.Drawing.Size(75, 46)
         Me.Button6.TabIndex = 5
         Me.Button6.Text = "Volver"
         Me.Button6.UseVisualStyleBackColor = True
@@ -187,11 +188,22 @@ Partial Class bodega_materias_primas_principal
         Me.ConsultaDeProcesoToolStripMenuItem.Size = New System.Drawing.Size(193, 22)
         Me.ConsultaDeProcesoToolStripMenuItem.Text = "Consulta de Proceso"
         '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(165, 298)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(182, 13)
+        Me.Label9.TabIndex = 51
+        Me.Label9.Text = "© 2013 Copyright Orion System Ltda."
+        '
         'bodega_materias_primas_principal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(515, 279)
+        Me.AutoSize = True
+        Me.ClientSize = New System.Drawing.Size(515, 320)
+        Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
@@ -199,6 +211,7 @@ Partial Class bodega_materias_primas_principal
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Name = "bodega_materias_primas_principal"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Gestion de materias Primas"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
@@ -226,4 +239,5 @@ Partial Class bodega_materias_primas_principal
     Friend WithEvents ConsultaDeProcesoToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents IngresarProductosAFabricacionToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents EditarProcesoToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents Label9 As System.Windows.Forms.Label
 End Class

@@ -102,7 +102,7 @@ Partial Class AboutBox1
         Me.LabelVersion.Name = "LabelVersion"
         Me.LabelVersion.Size = New System.Drawing.Size(257, 17)
         Me.LabelVersion.TabIndex = 0
-        Me.LabelVersion.Text = "2.1"
+        Me.LabelVersion.Text = "1.0"
         Me.LabelVersion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'LabelCopyright
@@ -126,7 +126,7 @@ Partial Class AboutBox1
         Me.LabelCompanyName.Name = "LabelCompanyName"
         Me.LabelCompanyName.Size = New System.Drawing.Size(257, 17)
         Me.LabelCompanyName.TabIndex = 0
-        Me.LabelCompanyName.Text = "Isystem"
+        Me.LabelCompanyName.Text = "Orion System "
         Me.LabelCompanyName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'TextBoxDescription
@@ -141,8 +141,8 @@ Partial Class AboutBox1
         Me.TextBoxDescription.Size = New System.Drawing.Size(257, 123)
         Me.TextBoxDescription.TabIndex = 0
         Me.TextBoxDescription.TabStop = False
-        Me.TextBoxDescription.Text = "Descripción:  Este sistema de gestión  y control de bodega es realizado  al detal" & _
-    "le, segun las necesidades del cliente"
+        Me.TextBoxDescription.Text = "Descripción:" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "        Este sistema desarrollado por Cistobal vargas y Camilo Hern" & _
+    "andez  esta Orientado a la Educacion de Los jovenes de Nuestra Region. " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & " "
         '
         'OKButton
         '

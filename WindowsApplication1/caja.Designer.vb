@@ -40,7 +40,7 @@ Partial Class caja
         Me.Button6 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -184,9 +184,9 @@ Partial Class caja
         Me.Button6.Font = New System.Drawing.Font("Corbel", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button6.Image = CType(resources.GetObject("Button6.Image"), System.Drawing.Image)
         Me.Button6.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.Button6.Location = New System.Drawing.Point(348, 253)
+        Me.Button6.Location = New System.Drawing.Point(357, 285)
         Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(128, 65)
+        Me.Button6.Size = New System.Drawing.Size(128, 55)
         Me.Button6.TabIndex = 0
         Me.Button6.Text = "VOLVER"
         Me.Button6.TextAlign = System.Drawing.ContentAlignment.BottomCenter
@@ -200,9 +200,9 @@ Partial Class caja
         Me.Button5.Font = New System.Drawing.Font("Corbel", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button5.Image = CType(resources.GetObject("Button5.Image"), System.Drawing.Image)
         Me.Button5.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.Button5.Location = New System.Drawing.Point(483, 253)
+        Me.Button5.Location = New System.Drawing.Point(491, 285)
         Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(128, 65)
+        Me.Button5.Size = New System.Drawing.Size(128, 55)
         Me.Button5.TabIndex = 1
         Me.Button5.Text = "SALIR"
         Me.Button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter
@@ -218,14 +218,14 @@ Partial Class caja
         Me.PictureBox1.TabIndex = 1
         Me.PictureBox1.TabStop = False
         '
-        'Label9
+        'Label1
         '
-        Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(164, 329)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(300, 15)
-        Me.Label9.TabIndex = 49
-        Me.Label9.Text = "© 2013 Copyright Ingeniería y Desarrollo Isystem S.P.A."
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(209, 353)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(210, 15)
+        Me.Label1.TabIndex = 51
+        Me.Label1.Text = "© 2013 Copyright Orion System Ltda."
         '
         'caja
         '
@@ -233,9 +233,9 @@ Partial Class caja
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.SystemColors.Control
-        Me.ClientSize = New System.Drawing.Size(631, 353)
+        Me.ClientSize = New System.Drawing.Size(631, 377)
         Me.ControlBox = False
-        Me.Controls.Add(Me.Label9)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.GroupBox1)
@@ -273,5 +273,5 @@ Partial Class caja
     Friend WithEvents btnBuscarVenta As System.Windows.Forms.Button
     Friend WithEvents InformesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents VentaXFechaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents Label9 As System.Windows.Forms.Label
+    Friend WithEvents Label1 As System.Windows.Forms.Label
 End Class

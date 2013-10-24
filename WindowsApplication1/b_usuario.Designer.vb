@@ -22,8 +22,8 @@ Partial Class b_usuario
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(b_usuario))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(b_usuario))
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
@@ -38,7 +38,7 @@ Partial Class b_usuario
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.Label13 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -47,7 +47,6 @@ Partial Class b_usuario
         'PictureBox1
         '
         Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
         Me.PictureBox1.ImageLocation = ".\Resources\Secundario.jpg"
         Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
         Me.PictureBox1.Name = "PictureBox1"
@@ -198,24 +197,25 @@ Partial Class b_usuario
         Me.Button2.TabIndex = 44
         Me.Button2.UseVisualStyleBackColor = False
         '
-        'Label13
+        'Label9
         '
-        Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(302, 526)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(293, 15)
-        Me.Label13.TabIndex = 45
-        Me.Label13.Text = "© 2012 Copyright Ingeniería y Desarrollo Isystem S.A."
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(378, 545)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(210, 15)
+        Me.Label9.TabIndex = 50
+        Me.Label9.Text = "© 2013 Copyright Orion System Ltda."
         '
         'b_usuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
         Me.AutoScroll = True
+        Me.AutoSize = True
         Me.BackColor = System.Drawing.SystemColors.Control
         Me.ClientSize = New System.Drawing.Size(937, 569)
         Me.ControlBox = False
-        Me.Controls.Add(Me.Label13)
+        Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.PictureBox1)
@@ -248,5 +248,5 @@ Partial Class b_usuario
     Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
     Friend WithEvents ComboBox2 As System.Windows.Forms.ComboBox
     Friend WithEvents Button2 As System.Windows.Forms.Button
-    Friend WithEvents Label13 As System.Windows.Forms.Label
+    Friend WithEvents Label9 As System.Windows.Forms.Label
 End Class

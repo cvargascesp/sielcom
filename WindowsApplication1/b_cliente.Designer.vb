@@ -47,8 +47,8 @@ Partial Class b_cliente
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Label9 = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.Label9 = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -303,15 +303,6 @@ Partial Class b_cliente
         Me.DataGridView1.Size = New System.Drawing.Size(795, 179)
         Me.DataGridView1.TabIndex = 10
         '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(264, 511)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(270, 13)
-        Me.Label9.TabIndex = 48
-        Me.Label9.Text = "© 2013 Copyright Ingeniería y Desarrollo Isystem S.P.A."
-        '
         'Button2
         '
         Me.Button2.BackColor = System.Drawing.SystemColors.Control
@@ -323,11 +314,21 @@ Partial Class b_cliente
         Me.Button2.TabIndex = 11
         Me.Button2.UseVisualStyleBackColor = False
         '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(331, 528)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(182, 13)
+        Me.Label9.TabIndex = 50
+        Me.Label9.Text = "© 2013 Copyright Orion System Ltda."
+        '
         'b_cliente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
         Me.AutoScroll = True
+        Me.AutoSize = True
         Me.BackColor = System.Drawing.SystemColors.Control
         Me.ClientSize = New System.Drawing.Size(823, 550)
         Me.ControlBox = False
@@ -371,6 +372,6 @@ Partial Class b_cliente
     Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
     Friend WithEvents TextBox8 As System.Windows.Forms.TextBox
     Friend WithEvents Label13 As System.Windows.Forms.Label
-    Friend WithEvents Label9 As System.Windows.Forms.Label
     Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents Label9 As System.Windows.Forms.Label
 End Class

@@ -41,4 +41,8 @@ Public Class catalogo_mp
         llenar_datagridview()
         Me.txtsearch.Text = ""
     End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        bodega_materias_primas_principal.Show()
+    End Sub
 End Class

@@ -295,17 +295,18 @@ Partial Class b_proveedor
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(262, 489)
+        Me.Label9.Location = New System.Drawing.Point(327, 505)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(300, 15)
-        Me.Label9.TabIndex = 49
-        Me.Label9.Text = "© 2013 Copyright Ingeniería y Desarrollo Isystem S.P.A."
+        Me.Label9.Size = New System.Drawing.Size(210, 15)
+        Me.Label9.TabIndex = 50
+        Me.Label9.Text = "© 2013 Copyright Orion System Ltda."
         '
         'b_proveedor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
         Me.AutoScroll = True
+        Me.AutoSize = True
         Me.BackColor = System.Drawing.SystemColors.Control
         Me.ClientSize = New System.Drawing.Size(830, 529)
         Me.ControlBox = False

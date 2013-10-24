@@ -309,7 +309,7 @@ Partial Class inicio
         Me.GroupBox5.Font = New System.Drawing.Font("Corbel", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox5.Location = New System.Drawing.Point(10, 145)
         Me.GroupBox5.Name = "GroupBox5"
-        Me.GroupBox5.Size = New System.Drawing.Size(768, 118)
+        Me.GroupBox5.Size = New System.Drawing.Size(768, 132)
         Me.GroupBox5.TabIndex = 16
         Me.GroupBox5.TabStop = False
         Me.GroupBox5.Text = "AREA DE TRABAJO"
@@ -321,9 +321,9 @@ Partial Class inicio
         Me.Button1.Font = New System.Drawing.Font("Corbel", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
         Me.Button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.Button1.Location = New System.Drawing.Point(531, 22)
+        Me.Button1.Location = New System.Drawing.Point(541, 22)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(113, 74)
+        Me.Button1.Size = New System.Drawing.Size(113, 87)
         Me.Button1.TabIndex = 3
         Me.Button1.Text = "EMPAQUE"
         Me.Button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter
@@ -337,9 +337,9 @@ Partial Class inicio
         Me.Button9.ForeColor = System.Drawing.SystemColors.ControlText
         Me.Button9.Image = CType(resources.GetObject("Button9.Image"), System.Drawing.Image)
         Me.Button9.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.Button9.Location = New System.Drawing.Point(205, 22)
+        Me.Button9.Location = New System.Drawing.Point(195, 22)
         Me.Button9.Name = "Button9"
-        Me.Button9.Size = New System.Drawing.Size(113, 74)
+        Me.Button9.Size = New System.Drawing.Size(113, 87)
         Me.Button9.TabIndex = 1
         Me.Button9.Text = "VENTAS"
         Me.Button9.TextAlign = System.Drawing.ContentAlignment.BottomCenter
@@ -352,9 +352,9 @@ Partial Class inicio
         Me.Button10.Font = New System.Drawing.Font("Corbel", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button10.Image = CType(resources.GetObject("Button10.Image"), System.Drawing.Image)
         Me.Button10.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.Button10.Location = New System.Drawing.Point(370, 22)
+        Me.Button10.Location = New System.Drawing.Point(365, 22)
         Me.Button10.Name = "Button10"
-        Me.Button10.Size = New System.Drawing.Size(113, 74)
+        Me.Button10.Size = New System.Drawing.Size(113, 87)
         Me.Button10.TabIndex = 2
         Me.Button10.Text = "CAJA"
         Me.Button10.TextAlign = System.Drawing.ContentAlignment.BottomCenter
@@ -369,9 +369,9 @@ Partial Class inicio
         Me.Button11.ImageAlign = System.Drawing.ContentAlignment.TopCenter
         Me.Button11.Location = New System.Drawing.Point(41, 22)
         Me.Button11.Name = "Button11"
-        Me.Button11.Size = New System.Drawing.Size(113, 74)
+        Me.Button11.Size = New System.Drawing.Size(113, 87)
         Me.Button11.TabIndex = 0
-        Me.Button11.Text = "BODEGA"
+        Me.Button11.Text = "MANTENEDOR DE  EXISTENCIAS"
         Me.Button11.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.Button11.UseVisualStyleBackColor = False
         '
@@ -380,9 +380,9 @@ Partial Class inicio
         Me.GroupBox1.BackColor = System.Drawing.SystemColors.ControlLight
         Me.GroupBox1.Controls.Add(Me.DataGridView1)
         Me.GroupBox1.Font = New System.Drawing.Font("Corbel", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 269)
+        Me.GroupBox1.Location = New System.Drawing.Point(12, 283)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(766, 203)
+        Me.GroupBox1.Size = New System.Drawing.Size(766, 189)
         Me.GroupBox1.TabIndex = 17
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "PRODUCTOS STOCK CRITICO"
@@ -400,7 +400,7 @@ Partial Class inicio
         Me.DataGridView1.ReadOnly = True
         DataGridViewCellStyle2.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle2
-        Me.DataGridView1.Size = New System.Drawing.Size(760, 181)
+        Me.DataGridView1.Size = New System.Drawing.Size(760, 167)
         Me.DataGridView1.TabIndex = 0
         '
         'Button5
@@ -410,7 +410,7 @@ Partial Class inicio
         Me.Button5.Font = New System.Drawing.Font("Corbel", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button5.Image = CType(resources.GetObject("Button5.Image"), System.Drawing.Image)
         Me.Button5.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.Button5.Location = New System.Drawing.Point(584, 478)
+        Me.Button5.Location = New System.Drawing.Point(662, 488)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(113, 74)
         Me.Button5.TabIndex = 13
@@ -431,19 +431,20 @@ Partial Class inicio
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(234, 544)
+        Me.Label9.Location = New System.Drawing.Point(278, 554)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(300, 15)
+        Me.Label9.Size = New System.Drawing.Size(210, 15)
         Me.Label9.TabIndex = 49
-        Me.Label9.Text = "© 2013 Copyright Ingeniería y Desarrollo Isystem S.P.A."
+        Me.Label9.Text = "© 2013 Copyright Orion System Ltda."
         '
         'inicio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
         Me.AutoScroll = True
+        Me.AutoSize = True
         Me.BackColor = System.Drawing.SystemColors.Control
-        Me.ClientSize = New System.Drawing.Size(790, 568)
+        Me.ClientSize = New System.Drawing.Size(791, 574)
         Me.ControlBox = False
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.GroupBox1)
