@@ -32,7 +32,8 @@ Partial Class proceso_de_fabricacion
         Me.EditarEstadoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.fechaconsulta2 = New System.Windows.Forms.DateTimePicker()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.n_ordensalida = New System.Windows.Forms.TextBox()
@@ -41,9 +42,11 @@ Partial Class proceso_de_fabricacion
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.txtid_sal = New System.Windows.Forms.NumericUpDown()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.txtid_sal, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -115,7 +118,9 @@ Partial Class proceso_de_fabricacion
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.TextBox1)
+        Me.GroupBox1.Controls.Add(Me.txtid_sal)
+        Me.GroupBox1.Controls.Add(Me.fechaconsulta2)
+        Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.Button1)
         Me.GroupBox1.Controls.Add(Me.n_ordensalida)
@@ -129,17 +134,26 @@ Partial Class proceso_de_fabricacion
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Datos a Consultar"
         '
-        'TextBox1
+        'fechaconsulta2
         '
-        Me.TextBox1.Location = New System.Drawing.Point(199, 115)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(114, 20)
-        Me.TextBox1.TabIndex = 6
+        Me.fechaconsulta2.Location = New System.Drawing.Point(127, 64)
+        Me.fechaconsulta2.Name = "fechaconsulta2"
+        Me.fechaconsulta2.Size = New System.Drawing.Size(179, 20)
+        Me.fechaconsulta2.TabIndex = 8
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(17, 67)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(92, 13)
+        Me.Label4.TabIndex = 7
+        Me.Label4.Text = "Fecha de termino:"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(17, 118)
+        Me.Label3.Location = New System.Drawing.Point(10, 127)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(176, 13)
         Me.Label3.TabIndex = 5
@@ -156,15 +170,15 @@ Partial Class proceso_de_fabricacion
         '
         'n_ordensalida
         '
-        Me.n_ordensalida.Location = New System.Drawing.Point(113, 69)
+        Me.n_ordensalida.Location = New System.Drawing.Point(127, 95)
         Me.n_ordensalida.Name = "n_ordensalida"
-        Me.n_ordensalida.Size = New System.Drawing.Size(200, 20)
+        Me.n_ordensalida.Size = New System.Drawing.Size(179, 20)
         Me.n_ordensalida.TabIndex = 3
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(17, 72)
+        Me.Label2.Location = New System.Drawing.Point(17, 98)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(86, 13)
         Me.Label2.TabIndex = 2
@@ -172,9 +186,9 @@ Partial Class proceso_de_fabricacion
         '
         'fechaconsulta
         '
-        Me.fechaconsulta.Location = New System.Drawing.Point(106, 27)
+        Me.fechaconsulta.Location = New System.Drawing.Point(127, 27)
         Me.fechaconsulta.Name = "fechaconsulta"
-        Me.fechaconsulta.Size = New System.Drawing.Size(200, 20)
+        Me.fechaconsulta.Size = New System.Drawing.Size(179, 20)
         Me.fechaconsulta.TabIndex = 1
         '
         'Label1
@@ -204,6 +218,13 @@ Partial Class proceso_de_fabricacion
         Me.Button2.Text = "Volver"
         Me.Button2.UseVisualStyleBackColor = True
         '
+        'txtid_sal
+        '
+        Me.txtid_sal.Location = New System.Drawing.Point(192, 125)
+        Me.txtid_sal.Name = "txtid_sal"
+        Me.txtid_sal.Size = New System.Drawing.Size(114, 20)
+        Me.txtid_sal.TabIndex = 9
+        '
         'proceso_de_fabricacion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -222,6 +243,7 @@ Partial Class proceso_de_fabricacion
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        CType(Me.txtid_sal, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -242,7 +264,9 @@ Partial Class proceso_de_fabricacion
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents VolverToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents fechaconsulta2 As System.Windows.Forms.DateTimePicker
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents txtid_sal As System.Windows.Forms.NumericUpDown
 End Class
