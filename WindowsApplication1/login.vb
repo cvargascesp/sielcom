@@ -142,4 +142,8 @@ Public Class login
             MessageBox.Show("Ingrese Datos Requeridos", "Login", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         End If
     End Sub
+
+    Private Sub lblUsuario_Click(sender As Object, e As EventArgs) Handles lblUsuario.Click
+
+    End Sub
 End Class

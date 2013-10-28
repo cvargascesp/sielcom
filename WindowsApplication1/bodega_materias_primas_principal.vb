@@ -62,4 +62,8 @@
     Private Sub CatalogoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CatalogoToolStripMenuItem.Click
         catalogo_mp.Show()
     End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        kardex_mp.Show()
+    End Sub
 End Class

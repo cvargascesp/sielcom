@@ -24,6 +24,7 @@ Public Class agregar_materia_prima
 
     Sub agregar_materia_prima()
         Dim sqlquery As String = "insert into materia_prima values('" & Me.txtcodigo_mp.Text & "', '" & Me.txt_nom_mp.Text & "', '" & Me.DateTimePicker1.Text & "','" & Me.txt_ubicacion_mp.Text & "','" & Me.unidadmedida_mp.Text & "', '" & Me.combofamilia.SelectedValue & "', '" & Me.txt_stock_crit.Value & "' )"
+        kardex_mp.add_kardex_inicial(CInt(Me.txtcodigo_mp.Text))
         Dim cmd As New MySqlCommand(sqlquery, Conexion.conn)
         Try
             Conexion.open()

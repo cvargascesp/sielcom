@@ -164,6 +164,7 @@ Public Class libro_ingreso_mercaderia
             Dim cmd2 As New MySqlCommand(query_update, Conexion.conn)
             Try
                 cmd2.ExecuteNonQuery()
+                kardex_mp.add_kardex_entrada(codigo_mp, cantidad_mp)
             Catch ex As Exception
                 MessageBox.Show(ex.Message)
             End Try
@@ -174,6 +175,7 @@ Public Class libro_ingreso_mercaderia
             Dim cmd2 As New MySqlCommand(query_insert, Conexion.conn)
             Try
                 cmd2.ExecuteNonQuery()
+                kardex_mp.add_kardex_entrada(codigo_mp, cantidad_mp)
                 Catch ex As Exception
                 MessageBox.Show(ex.Message)
             End Try

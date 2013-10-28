@@ -135,7 +135,7 @@ Partial Class libro_pedido_desglose
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.DataGridView1)
         Me.Name = "libro_pedido_desglose"
-        Me.Text = "libro_pedido_desglose"
+        Me.Text = "Desglose Libro de pedido"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
