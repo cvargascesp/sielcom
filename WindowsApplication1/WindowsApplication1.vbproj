@@ -304,6 +304,12 @@
     <Compile Include="Libro_pedidos.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="libro_pedido_desglose.Designer.vb">
+      <DependentUpon>libro_pedido_desglose.vb</DependentUpon>
+    </Compile>
+    <Compile Include="libro_pedido_desglose.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="login.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -513,6 +519,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Libro_pedidos.resx">
       <DependentUpon>Libro_pedidos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="libro_pedido_desglose.resx">
+      <DependentUpon>libro_pedido_desglose.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.vb</DependentUpon>

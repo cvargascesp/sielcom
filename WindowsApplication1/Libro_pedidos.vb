@@ -1,6 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class Libro_pedidos
-
+    Public buscar_libro_pedido As Integer
     Private Sub Libro_pedidos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         llenar_grilla()
         formato_datetimepicker()
@@ -51,5 +51,16 @@ Public Class Libro_pedidos
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         llenar_grilla()
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        If ((IsNumeric(Me.NumericUpDown1.Value))) Then
+            buscar_libro_pedido = CInt(Me.NumericUpDown1.Value)
+            libro_pedido_desglose.Show()
+            Me.NumericUpDown1.Value = 0
+        Else
+            MessageBox.Show("Valor a buscar invalido", "error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End If
+
     End Sub
 End Class
