@@ -22,87 +22,49 @@ Partial Class bodega_materias_primas_principal
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button6 = New System.Windows.Forms.Button()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(bodega_materias_primas_principal))
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.MateriasPrimasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AgregarMateriaPrimaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EditarMateriaPrimaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CatalogoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ParametrosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.UnidadDeMedidaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.FamiliasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.OrdenesDeCompraToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.KardexToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PcesoDeFabricacionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SolicitudDeProductosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EnProcesoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.IngresarProductosAFabricacionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EditarProcesoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ConsultaDeProcesoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ParametrosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UnidadDeMedidaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.FamiliasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OrdenesDeCompraToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OrdenesDeCompraToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LibroDePedidosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LibroDeRecepcionDeMercaderiaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label9 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.MenuStrip1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox1.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(30, 90)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(89, 64)
-        Me.Button1.TabIndex = 0
-        Me.Button1.Text = "kardex"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(356, 90)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(89, 64)
-        Me.Button2.TabIndex = 1
-        Me.Button2.Text = "Libro de recepcion de mercaderia"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'Button3
-        '
-        Me.Button3.Location = New System.Drawing.Point(246, 90)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(89, 64)
-        Me.Button3.TabIndex = 2
-        Me.Button3.Text = "Informe de productos finales"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
-        'Button4
-        '
-        Me.Button4.Location = New System.Drawing.Point(138, 90)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(89, 64)
-        Me.Button4.TabIndex = 3
-        Me.Button4.Text = "Libro de pedidos"
-        Me.Button4.UseVisualStyleBackColor = True
-        '
-        'Button6
-        '
-        Me.Button6.Location = New System.Drawing.Point(428, 250)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(75, 46)
-        Me.Button6.TabIndex = 5
-        Me.Button6.Text = "Volver"
-        Me.Button6.UseVisualStyleBackColor = True
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MateriasPrimasToolStripMenuItem, Me.ParametrosToolStripMenuItem, Me.OrdenesDeCompraToolStripMenuItem, Me.PcesoDeFabricacionToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MateriasPrimasToolStripMenuItem, Me.PcesoDeFabricacionToolStripMenuItem, Me.ParametrosToolStripMenuItem, Me.OrdenesDeCompraToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(515, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(647, 24)
         Me.MenuStrip1.TabIndex = 6
         Me.MenuStrip1.Text = "MenuStrip1"
         '
         'MateriasPrimasToolStripMenuItem
         '
-        Me.MateriasPrimasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AgregarMateriaPrimaToolStripMenuItem, Me.EditarMateriaPrimaToolStripMenuItem, Me.CatalogoToolStripMenuItem})
+        Me.MateriasPrimasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AgregarMateriaPrimaToolStripMenuItem, Me.EditarMateriaPrimaToolStripMenuItem, Me.CatalogoToolStripMenuItem, Me.KardexToolStripMenuItem})
         Me.MateriasPrimasToolStripMenuItem.Name = "MateriasPrimasToolStripMenuItem"
         Me.MateriasPrimasToolStripMenuItem.Size = New System.Drawing.Size(103, 20)
         Me.MateriasPrimasToolStripMenuItem.Text = "Materias Primas"
@@ -125,30 +87,11 @@ Partial Class bodega_materias_primas_principal
         Me.CatalogoToolStripMenuItem.Size = New System.Drawing.Size(193, 22)
         Me.CatalogoToolStripMenuItem.Text = "Catalogo"
         '
-        'ParametrosToolStripMenuItem
+        'KardexToolStripMenuItem
         '
-        Me.ParametrosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UnidadDeMedidaToolStripMenuItem, Me.FamiliasToolStripMenuItem})
-        Me.ParametrosToolStripMenuItem.Name = "ParametrosToolStripMenuItem"
-        Me.ParametrosToolStripMenuItem.Size = New System.Drawing.Size(79, 20)
-        Me.ParametrosToolStripMenuItem.Text = "Parametros"
-        '
-        'UnidadDeMedidaToolStripMenuItem
-        '
-        Me.UnidadDeMedidaToolStripMenuItem.Name = "UnidadDeMedidaToolStripMenuItem"
-        Me.UnidadDeMedidaToolStripMenuItem.Size = New System.Drawing.Size(171, 22)
-        Me.UnidadDeMedidaToolStripMenuItem.Text = "Unidad de medida"
-        '
-        'FamiliasToolStripMenuItem
-        '
-        Me.FamiliasToolStripMenuItem.Name = "FamiliasToolStripMenuItem"
-        Me.FamiliasToolStripMenuItem.Size = New System.Drawing.Size(171, 22)
-        Me.FamiliasToolStripMenuItem.Text = "Familias"
-        '
-        'OrdenesDeCompraToolStripMenuItem
-        '
-        Me.OrdenesDeCompraToolStripMenuItem.Name = "OrdenesDeCompraToolStripMenuItem"
-        Me.OrdenesDeCompraToolStripMenuItem.Size = New System.Drawing.Size(125, 20)
-        Me.OrdenesDeCompraToolStripMenuItem.Text = "Ordenes de Compra"
+        Me.KardexToolStripMenuItem.Name = "KardexToolStripMenuItem"
+        Me.KardexToolStripMenuItem.Size = New System.Drawing.Size(193, 22)
+        Me.KardexToolStripMenuItem.Text = "Kardex"
         '
         'PcesoDeFabricacionToolStripMenuItem
         '
@@ -188,42 +131,130 @@ Partial Class bodega_materias_primas_principal
         Me.ConsultaDeProcesoToolStripMenuItem.Size = New System.Drawing.Size(193, 22)
         Me.ConsultaDeProcesoToolStripMenuItem.Text = "Consulta de Proceso"
         '
+        'ParametrosToolStripMenuItem
+        '
+        Me.ParametrosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UnidadDeMedidaToolStripMenuItem, Me.FamiliasToolStripMenuItem})
+        Me.ParametrosToolStripMenuItem.Name = "ParametrosToolStripMenuItem"
+        Me.ParametrosToolStripMenuItem.Size = New System.Drawing.Size(79, 20)
+        Me.ParametrosToolStripMenuItem.Text = "Parametros"
+        '
+        'UnidadDeMedidaToolStripMenuItem
+        '
+        Me.UnidadDeMedidaToolStripMenuItem.Name = "UnidadDeMedidaToolStripMenuItem"
+        Me.UnidadDeMedidaToolStripMenuItem.Size = New System.Drawing.Size(171, 22)
+        Me.UnidadDeMedidaToolStripMenuItem.Text = "Unidad de medida"
+        '
+        'FamiliasToolStripMenuItem
+        '
+        Me.FamiliasToolStripMenuItem.Name = "FamiliasToolStripMenuItem"
+        Me.FamiliasToolStripMenuItem.Size = New System.Drawing.Size(171, 22)
+        Me.FamiliasToolStripMenuItem.Text = "Familias"
+        '
+        'OrdenesDeCompraToolStripMenuItem
+        '
+        Me.OrdenesDeCompraToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OrdenesDeCompraToolStripMenuItem1, Me.LibroDePedidosToolStripMenuItem, Me.LibroDeRecepcionDeMercaderiaToolStripMenuItem})
+        Me.OrdenesDeCompraToolStripMenuItem.Name = "OrdenesDeCompraToolStripMenuItem"
+        Me.OrdenesDeCompraToolStripMenuItem.Size = New System.Drawing.Size(125, 20)
+        Me.OrdenesDeCompraToolStripMenuItem.Text = "Ordenes de Compra"
+        '
+        'OrdenesDeCompraToolStripMenuItem1
+        '
+        Me.OrdenesDeCompraToolStripMenuItem1.Name = "OrdenesDeCompraToolStripMenuItem1"
+        Me.OrdenesDeCompraToolStripMenuItem1.Size = New System.Drawing.Size(253, 22)
+        Me.OrdenesDeCompraToolStripMenuItem1.Text = "Ordenes de  Compra"
+        '
+        'LibroDePedidosToolStripMenuItem
+        '
+        Me.LibroDePedidosToolStripMenuItem.Name = "LibroDePedidosToolStripMenuItem"
+        Me.LibroDePedidosToolStripMenuItem.Size = New System.Drawing.Size(253, 22)
+        Me.LibroDePedidosToolStripMenuItem.Text = "Libro de Pedidos"
+        '
+        'LibroDeRecepcionDeMercaderiaToolStripMenuItem
+        '
+        Me.LibroDeRecepcionDeMercaderiaToolStripMenuItem.Name = "LibroDeRecepcionDeMercaderiaToolStripMenuItem"
+        Me.LibroDeRecepcionDeMercaderiaToolStripMenuItem.Size = New System.Drawing.Size(253, 22)
+        Me.LibroDeRecepcionDeMercaderiaToolStripMenuItem.Text = "Libro de Recepcion de Mercaderia"
+        '
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(165, 298)
+        Me.Label9.Location = New System.Drawing.Point(240, 496)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(182, 13)
         Me.Label9.TabIndex = 51
         Me.Label9.Text = "© 2013 Copyright Orion System Ltda."
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.ImageLocation = ".\Resources\Secundario.jpg"
+        Me.PictureBox1.Location = New System.Drawing.Point(0, 27)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(646, 120)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 52
+        Me.PictureBox1.TabStop = False
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.SystemColors.Control
+        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button1.Font = New System.Drawing.Font("Corbel", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
+        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.Button1.Location = New System.Drawing.Point(507, 441)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(128, 65)
+        Me.Button1.TabIndex = 53
+        Me.Button1.Text = "VOLVER"
+        Me.Button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.Button1.UseVisualStyleBackColor = False
+        Me.Button1.Visible = False
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.DataGridView1)
+        Me.GroupBox1.Location = New System.Drawing.Point(12, 166)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(623, 258)
+        Me.GroupBox1.TabIndex = 54
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Stock Critico de Materias Primas:"
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.AllowUserToAddRows = False
+        Me.DataGridView1.AllowUserToDeleteRows = False
+        Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLight
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(15, 19)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.ReadOnly = True
+        Me.DataGridView1.Size = New System.Drawing.Size(602, 224)
+        Me.DataGridView1.TabIndex = 0
         '
         'bodega_materias_primas_principal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSize = True
-        Me.ClientSize = New System.Drawing.Size(515, 320)
-        Me.Controls.Add(Me.Label9)
-        Me.Controls.Add(Me.Button6)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
+        Me.ClientSize = New System.Drawing.Size(647, 518)
+        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Name = "bodega_materias_primas_principal"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Gestion de materias Primas"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox1.ResumeLayout(False)
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents Button2 As System.Windows.Forms.Button
-    Friend WithEvents Button3 As System.Windows.Forms.Button
-    Friend WithEvents Button4 As System.Windows.Forms.Button
-    Friend WithEvents Button6 As System.Windows.Forms.Button
     Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
     Friend WithEvents MateriasPrimasToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents AgregarMateriaPrimaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
@@ -240,4 +271,12 @@ Partial Class bodega_materias_primas_principal
     Friend WithEvents IngresarProductosAFabricacionToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents EditarProcesoToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents Label9 As System.Windows.Forms.Label
+    Friend WithEvents KardexToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents OrdenesDeCompraToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents LibroDePedidosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents LibroDeRecepcionDeMercaderiaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
+    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
+    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
 End Class

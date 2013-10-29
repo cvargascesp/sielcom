@@ -1,6 +1,6 @@
 ﻿Public Class bodega_materias_primas_principal
 
-    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+    Private Sub Button6_Click(sender As Object, e As EventArgs)
         Dim result As DialogResult
         result = MessageBox.Show("¿Desea Volver?", "Volver", MessageBoxButtons.YesNo, MessageBoxIcon.Information, MessageBoxDefaultButton.Button2)
         If result = Windows.Forms.DialogResult.Yes Then
@@ -12,11 +12,6 @@
     Private Sub AgregarMateriaPrimaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AgregarMateriaPrimaToolStripMenuItem.Click
         agregar_materia_prima.Show()
     End Sub
-
-
-    Private Sub Button2h_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        libro_ingreso_mercaderia.Show()
-    End Sub
     Private Sub FamiliasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FamiliasToolStripMenuItem.Click
         i_familias.Show()
     End Sub
@@ -26,13 +21,9 @@
 
     End Sub
 
-    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-        i_libro_pedido.Show()
-    End Sub
+    
 
-    Private Sub OrdenesDeCompraToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OrdenesDeCompraToolStripMenuItem.Click
-        Libro_pedidos.Show()
-    End Sub
+ 
 
     Private Sub PcesoDeFabricacionToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PcesoDeFabricacionToolStripMenuItem.Click
 
@@ -63,7 +54,24 @@
         catalogo_mp.Show()
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    
+    Private Sub KardexToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles KardexToolStripMenuItem.Click
         kardex_mp.Show()
+    End Sub
+
+    Private Sub OrdenesDeCompraToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles OrdenesDeCompraToolStripMenuItem1.Click
+        Libro_pedidos.Show()
+    End Sub
+
+    Private Sub LibroDePedidosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LibroDePedidosToolStripMenuItem.Click
+        i_libro_pedido.Show()
+    End Sub
+
+    Private Sub LibroDeRecepcionDeMercaderiaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LibroDeRecepcionDeMercaderiaToolStripMenuItem.Click
+        libro_ingreso_mercaderia.Show()
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        inicio.Show()
     End Sub
 End Class
