@@ -35,7 +35,7 @@ Partial Class kardex_mp
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(330, 76)
+        Me.Button1.Location = New System.Drawing.Point(331, 98)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(104, 23)
         Me.Button1.TabIndex = 0

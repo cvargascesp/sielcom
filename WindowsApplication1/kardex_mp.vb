@@ -35,6 +35,18 @@ Public Class kardex_mp
         Conexion.close()
     End Sub
 
+    Public Sub add_kardex_salida(ByVal producto As Integer, ByVal cant_saliente As Integer)
+        Conexion.open()
+        Dim query_elim As String = "INSERT INTO kardexmp (fecha_kar,codigo_mp,usuario,entra_kar,sale_kar,saldo_kar,obs_kar) VALUES (curdate(),'" & producto & "','" & login.MaskedTextBox1.Text & "', '0','" & cant_saliente & "', '" & get_saldo(producto) - cant_saliente & "','--')"
+        Dim cmd As New MySqlCommand(query_elim, Conexion.conn)
+        Try
+            cmd.ExecuteNonQuery()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+        Conexion.close()
+    End Sub
+
     Public Sub add_kardex_inicial(ByVal producto As Integer)
         Conexion.open()
         Dim query_elim As String = "INSERT INTO kardexmp (fecha_kar,codigo_mp,usuario,entra_kar,sale_kar,saldo_kar,obs_kar) VALUES (curdate(),'" & producto & "','" & login.MaskedTextBox1.Text & "', '0', 0, '0','inic')"

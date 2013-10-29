@@ -32,6 +32,7 @@ Public Class solicitud_productos_fabricacion
         Dim sql As String = "UPDATE materia_prima_existencias SET stock_mp=stock_mp-'" & cantidad_mp & "' where codigo_mp='" & codigo_mp & "'"
         Dim cmd As New MySqlCommand(sql, Conexion.conn)
         Try
+            kardex_mp.add_kardex_salida(codigo_mp, cantidad_mp)
             cmd.ExecuteNonQuery()
         Catch ex As Exception
             MessageBox.Show(ex.Message)
@@ -46,6 +47,7 @@ Public Class solicitud_productos_fabricacion
             Try
                 cmd.ExecuteNonQuery()
                 quitar_de_inventario(CInt(Me.DataGridView1.Rows(i).Cells(0).Value.ToString()), CInt(Me.DataGridView1.Rows(i).Cells(2).Value.ToString()))
+
             Catch ex As Exception
                 MessageBox.Show(ex.Message)
             End Try
