@@ -22,7 +22,6 @@ Partial Class bodega_materias_primas_principal
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(bodega_materias_primas_principal))
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.MateriasPrimasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AgregarMateriaPrimaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -44,9 +43,9 @@ Partial Class bodega_materias_primas_principal
         Me.LibroDeRecepcionDeMercaderiaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -194,22 +193,6 @@ Partial Class bodega_materias_primas_principal
         Me.PictureBox1.TabIndex = 52
         Me.PictureBox1.TabStop = False
         '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.SystemColors.Control
-        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button1.Font = New System.Drawing.Font("Corbel", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
-        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.Button1.Location = New System.Drawing.Point(507, 441)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(128, 65)
-        Me.Button1.TabIndex = 53
-        Me.Button1.Text = "VOLVER"
-        Me.Button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.Button1.UseVisualStyleBackColor = False
-        Me.Button1.Visible = False
-        '
         'GroupBox1
         '
         Me.GroupBox1.Controls.Add(Me.DataGridView1)
@@ -224,6 +207,7 @@ Partial Class bodega_materias_primas_principal
         '
         Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.AllowUserToDeleteRows = False
+        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLight
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Location = New System.Drawing.Point(15, 19)
@@ -232,14 +216,23 @@ Partial Class bodega_materias_primas_principal
         Me.DataGridView1.Size = New System.Drawing.Size(602, 224)
         Me.DataGridView1.TabIndex = 0
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(536, 456)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(93, 53)
+        Me.Button1.TabIndex = 55
+        Me.Button1.Text = "Volver"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'bodega_materias_primas_principal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSize = True
         Me.ClientSize = New System.Drawing.Size(647, 518)
-        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.MenuStrip1)
@@ -276,7 +269,7 @@ Partial Class bodega_materias_primas_principal
     Friend WithEvents LibroDePedidosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents LibroDeRecepcionDeMercaderiaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
-    Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents Button1 As System.Windows.Forms.Button
 End Class
