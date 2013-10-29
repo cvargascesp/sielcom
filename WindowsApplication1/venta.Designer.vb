@@ -43,7 +43,7 @@ Partial Class venta
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Button6 = New System.Windows.Forms.Button()
-        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -75,7 +75,7 @@ Partial Class venta
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
         Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-        Me.MenuStrip1.Size = New System.Drawing.Size(263, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(355, 24)
         Me.MenuStrip1.TabIndex = 20
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -103,7 +103,7 @@ Partial Class venta
         '
         Me.ClientesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NuevoModificarToolStripMenuItem, Me.VerBuscarToolStripMenuItem})
         Me.ClientesToolStripMenuItem.Name = "ClientesToolStripMenuItem"
-        Me.ClientesToolStripMenuItem.Size = New System.Drawing.Size(120, 22)
+        Me.ClientesToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.ClientesToolStripMenuItem.Text = "Clientes"
         '
         'NuevoModificarToolStripMenuItem
@@ -243,14 +243,14 @@ Partial Class venta
         Me.Button6.UseVisualStyleBackColor = False
         Me.Button6.Visible = False
         '
-        'Label9
+        'Label1
         '
-        Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(201, 540)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(300, 15)
-        Me.Label9.TabIndex = 49
-        Me.Label9.Text = "© 2013 Copyright Ingeniería y Desarrollo Isystem S.P.A."
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(245, 540)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(210, 15)
+        Me.Label1.TabIndex = 52
+        Me.Label1.Text = "© 2013 Copyright Orion System Ltda."
         '
         'venta
         '
@@ -260,7 +260,7 @@ Partial Class venta
         Me.BackColor = System.Drawing.SystemColors.Control
         Me.ClientSize = New System.Drawing.Size(671, 564)
         Me.ControlBox = False
-        Me.Controls.Add(Me.Label9)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.GroupBox2)
@@ -309,5 +309,5 @@ Partial Class venta
     Friend WithEvents ClientesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents NuevoModificarToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents VerBuscarToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents Label9 As System.Windows.Forms.Label
+    Friend WithEvents Label1 As System.Windows.Forms.Label
 End Class

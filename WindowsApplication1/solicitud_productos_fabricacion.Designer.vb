@@ -48,13 +48,17 @@ Partial Class solicitud_productos_fabricacion
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Button6 = New System.Windows.Forms.Button()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.cantidad, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -62,7 +66,7 @@ Partial Class solicitud_productos_fabricacion
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ArchivoToolStripMenuItem, Me.ConsultaToolStripMenuItem, Me.ProductosPorLLegarToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(691, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(648, 24)
         Me.MenuStrip1.TabIndex = 0
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -123,16 +127,16 @@ Partial Class solicitud_productos_fabricacion
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 61)
+        Me.GroupBox1.Location = New System.Drawing.Point(12, 153)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(667, 310)
+        Me.GroupBox1.Size = New System.Drawing.Size(623, 251)
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Productos"
         '
         'num_salida
         '
-        Me.num_salida.Location = New System.Drawing.Point(155, 80)
+        Me.num_salida.Location = New System.Drawing.Point(394, 41)
         Me.num_salida.Name = "num_salida"
         Me.num_salida.Size = New System.Drawing.Size(196, 20)
         Me.num_salida.TabIndex = 24
@@ -140,7 +144,7 @@ Partial Class solicitud_productos_fabricacion
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(8, 87)
+        Me.Label9.Location = New System.Drawing.Point(277, 44)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(106, 13)
         Me.Label9.TabIndex = 23
@@ -149,7 +153,7 @@ Partial Class solicitud_productos_fabricacion
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(372, 178)
+        Me.Label7.Location = New System.Drawing.Point(11, 139)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(39, 13)
         Me.Label7.TabIndex = 22
@@ -157,16 +161,16 @@ Partial Class solicitud_productos_fabricacion
         '
         'comentamotivo
         '
-        Me.comentamotivo.Location = New System.Drawing.Point(155, 238)
+        Me.comentamotivo.Location = New System.Drawing.Point(66, 169)
         Me.comentamotivo.Multiline = True
         Me.comentamotivo.Name = "comentamotivo"
-        Me.comentamotivo.Size = New System.Drawing.Size(240, 66)
+        Me.comentamotivo.Size = New System.Drawing.Size(217, 66)
         Me.comentamotivo.TabIndex = 21
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(8, 241)
+        Me.Label6.Location = New System.Drawing.Point(8, 172)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(52, 13)
         Me.Label6.TabIndex = 20
@@ -176,7 +180,7 @@ Partial Class solicitud_productos_fabricacion
         '
         Me.motivo.FormattingEnabled = True
         Me.motivo.Items.AddRange(New Object() {"Produccion y Fabricacion", "Otro"})
-        Me.motivo.Location = New System.Drawing.Point(155, 207)
+        Me.motivo.Location = New System.Drawing.Point(394, 123)
         Me.motivo.Name = "motivo"
         Me.motivo.Size = New System.Drawing.Size(196, 21)
         Me.motivo.TabIndex = 19
@@ -184,7 +188,7 @@ Partial Class solicitud_productos_fabricacion
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(8, 210)
+        Me.Label5.Location = New System.Drawing.Point(277, 126)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(89, 13)
         Me.Label5.TabIndex = 18
@@ -192,7 +196,7 @@ Partial Class solicitud_productos_fabricacion
         '
         'fecha_solicitud
         '
-        Me.fecha_solicitud.Location = New System.Drawing.Point(155, 37)
+        Me.fecha_solicitud.Location = New System.Drawing.Point(67, 38)
         Me.fecha_solicitud.Name = "fecha_solicitud"
         Me.fecha_solicitud.Size = New System.Drawing.Size(196, 20)
         Me.fecha_solicitud.TabIndex = 17
@@ -210,7 +214,7 @@ Partial Class solicitud_productos_fabricacion
         '
         Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
         Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.Location = New System.Drawing.Point(414, 63)
+        Me.Button1.Location = New System.Drawing.Point(394, 172)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(166, 52)
         Me.Button1.TabIndex = 15
@@ -220,21 +224,21 @@ Partial Class solicitud_productos_fabricacion
         '
         'cantidad
         '
-        Me.cantidad.Location = New System.Drawing.Point(155, 176)
+        Me.cantidad.Location = New System.Drawing.Point(67, 124)
         Me.cantidad.Name = "cantidad"
         Me.cantidad.Size = New System.Drawing.Size(196, 20)
         Me.cantidad.TabIndex = 5
         '
         'umedida
         '
-        Me.umedida.Location = New System.Drawing.Point(155, 148)
+        Me.umedida.Location = New System.Drawing.Point(394, 82)
         Me.umedida.Name = "umedida"
         Me.umedida.Size = New System.Drawing.Size(196, 20)
         Me.umedida.TabIndex = 4
         '
         'producto
         '
-        Me.producto.Location = New System.Drawing.Point(155, 118)
+        Me.producto.Location = New System.Drawing.Point(67, 82)
         Me.producto.Name = "producto"
         Me.producto.Size = New System.Drawing.Size(196, 20)
         Me.producto.TabIndex = 3
@@ -242,7 +246,7 @@ Partial Class solicitud_productos_fabricacion
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(8, 178)
+        Me.Label3.Location = New System.Drawing.Point(8, 126)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(52, 13)
         Me.Label3.TabIndex = 2
@@ -251,7 +255,7 @@ Partial Class solicitud_productos_fabricacion
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(8, 151)
+        Me.Label2.Location = New System.Drawing.Point(277, 85)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(97, 13)
         Me.Label2.TabIndex = 1
@@ -260,7 +264,7 @@ Partial Class solicitud_productos_fabricacion
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(8, 121)
+        Me.Label1.Location = New System.Drawing.Point(8, 85)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(53, 13)
         Me.Label1.TabIndex = 0
@@ -272,25 +276,16 @@ Partial Class solicitud_productos_fabricacion
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLight
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(9, 401)
+        Me.DataGridView1.Location = New System.Drawing.Point(13, 423)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.Size = New System.Drawing.Size(667, 150)
+        Me.DataGridView1.Size = New System.Drawing.Size(623, 150)
         Me.DataGridView1.TabIndex = 2
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(474, 575)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(202, 30)
-        Me.Button2.TabIndex = 3
-        Me.Button2.Text = "Generar Pedido"
-        Me.Button2.UseVisualStyleBackColor = True
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(9, 388)
+        Me.Label8.Location = New System.Drawing.Point(23, 407)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(39, 13)
         Me.Label8.TabIndex = 4
@@ -299,27 +294,80 @@ Partial Class solicitud_productos_fabricacion
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(64, 388)
+        Me.Label10.Location = New System.Drawing.Point(86, 407)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(45, 13)
         Me.Label10.TabIndex = 5
         Me.Label10.Text = "Label10"
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.ImageLocation = ".\Resources\Secundario.jpg"
+        Me.PictureBox1.Location = New System.Drawing.Point(0, 27)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(646, 120)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 6
+        Me.PictureBox1.TabStop = False
+        '
+        'Button6
+        '
+        Me.Button6.BackColor = System.Drawing.SystemColors.Control
+        Me.Button6.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button6.Font = New System.Drawing.Font("Corbel", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button6.Image = CType(resources.GetObject("Button6.Image"), System.Drawing.Image)
+        Me.Button6.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.Button6.Location = New System.Drawing.Point(508, 577)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(128, 65)
+        Me.Button6.TabIndex = 45
+        Me.Button6.Text = "VOLVER"
+        Me.Button6.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.Button6.UseVisualStyleBackColor = False
+        Me.Button6.Visible = False
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(235, 655)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(182, 13)
+        Me.Label11.TabIndex = 52
+        Me.Label11.Text = "© 2013 Copyright Orion System Ltda."
+        '
+        'Button3
+        '
+        Me.Button3.BackColor = System.Drawing.SystemColors.Control
+        Me.Button3.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button3.Font = New System.Drawing.Font("Corbel", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Button3.Image = CType(resources.GetObject("Button3.Image"), System.Drawing.Image)
+        Me.Button3.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.Button3.Location = New System.Drawing.Point(223, 579)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(155, 63)
+        Me.Button3.TabIndex = 53
+        Me.Button3.Text = "GENERAR PEDIDO"
+        Me.Button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.Button3.UseVisualStyleBackColor = False
+        '
         'solicitud_productos_fabricacion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(691, 617)
+        Me.AutoSize = True
+        Me.ClientSize = New System.Drawing.Size(648, 677)
+        Me.Controls.Add(Me.Button3)
+        Me.Controls.Add(Me.Label11)
+        Me.Controls.Add(Me.Button6)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
-        Me.MaximizeBox = False
-        Me.MaximumSize = New System.Drawing.Size(707, 655)
         Me.Name = "solicitud_productos_fabricacion"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Solicitud de Productos Para Proceso de Fabricacion"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
@@ -327,6 +375,7 @@ Partial Class solicitud_productos_fabricacion
         Me.GroupBox1.PerformLayout()
         CType(Me.cantidad, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -349,7 +398,6 @@ Partial Class solicitud_productos_fabricacion
     Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
     Friend WithEvents fecha_solicitud As System.Windows.Forms.DateTimePicker
     Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents comentamotivo As System.Windows.Forms.TextBox
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents motivo As System.Windows.Forms.ComboBox
@@ -359,4 +407,8 @@ Partial Class solicitud_productos_fabricacion
     Friend WithEvents num_salida As System.Windows.Forms.TextBox
     Friend WithEvents Label9 As System.Windows.Forms.Label
     Friend WithEvents Label10 As System.Windows.Forms.Label
+    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
+    Friend WithEvents Button6 As System.Windows.Forms.Button
+    Friend WithEvents Label11 As System.Windows.Forms.Label
+    Friend WithEvents Button3 As System.Windows.Forms.Button
 End Class

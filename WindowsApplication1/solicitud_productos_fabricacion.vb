@@ -121,14 +121,11 @@ Public Class solicitud_productos_fabricacion
             Me.comentamotivo.Focus()
         End If
     End Sub
-
-    
-    
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         nueva_orden_salida()
     End Sub
 
-    Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GroupBox1.Enter
+    Private Sub Label9_Click(sender As Object, e As EventArgs) Handles Label9.Click
 
     End Sub
 End Class
