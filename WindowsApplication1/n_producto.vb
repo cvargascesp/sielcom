@@ -187,6 +187,10 @@ Public Class n_producto
         Catch err As Exception
             MessageBox.Show(err.Message)
         End Try
+        If (e_proceso_fabricacion.nombre_producto_fab <> "") Then
+            Me.txtNombre.Text = e_proceso_fabricacion.nombre_producto_fab
+        End If
+        
 
     End Sub
 
@@ -514,4 +518,7 @@ Public Class n_producto
   
 
     
+    Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GroupBox1.Enter
+
+    End Sub
 End Class

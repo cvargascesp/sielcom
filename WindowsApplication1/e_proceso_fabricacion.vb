@@ -1,8 +1,11 @@
 ﻿Imports MySql.Data.MySqlClient
+
 Public Class e_proceso_fabricacion
+    Public nombre_producto_fab As String
     Private Sub e_proceso_fabricacion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         formatear_fechas()
         Me.GroupBox2.Enabled = False
+      
     End Sub
     Sub formatear_fechas()
         fecha_solicitud.Format = DateTimePickerFormat.Custom
@@ -70,7 +73,16 @@ Public Class e_proceso_fabricacion
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         bodega_materias_primas_principal.Show()
     End Sub
+    Sub enviar_nuevo_producto()
+        If (estado_fab.Text = "Terminado" Or estado_fab.Text = "terminado" Or estado_fab.Text = "TERMINADO") Then
+            nombre_producto_fab = CStr(Me.prod_fab.Text)
+            MessageBox.Show(nombre_producto_fab)
+            Me.Hide()
+            n_producto.Show()
+        End If
 
+
+    End Sub
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         limpiar_formulario()
     End Sub
@@ -85,7 +97,7 @@ Public Class e_proceso_fabricacion
          Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
-
+        enviar_nuevo_producto()
         Conexion.close()
         limpiar_formulario()
     End Sub
