@@ -1,0 +1,8 @@
+* ingresar libro de pedido limpiar campos de textos despues de agregar a la grilla.
+* ingresar libro de pedido cerrar ventana despues de ingresar.
+* ingreso a mercaderia deve ir primero el numero de orden de pedido y verificar que el producto a ingresar exista previamente en dicha orden de pedido.
+* ingreso a mercaderia deve pregargar el proveedor de la orden de pedido.
+* ingreso a mercaderia deve limpiar formulario despues de ingresar.
+* ingreso a mercaderia deve implementar label que muestre unidad de medida del producto a ingresar.
+* ingreso a mercaderia, verificar conexion despues de ingresar.
+

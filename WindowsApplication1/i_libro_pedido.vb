@@ -118,7 +118,8 @@ Public Class i_libro_pedido
 
         'se recorre el datagridview para insertar el detalle
         For i As Integer = 0 To Me.DataGridView1.Rows.Count - 1
-            sql6 = "INSERT INTO orden_compramp_detalle (id_ordencompramp, codigo_mp, cantidad_mp_oc) VALUES ('" & Me.txtoc_mp.Text & "','" & get_mp_sku(Me.txtmateriaprima.Text) & "','" & Me.txtcantmp.Text & "')"
+            sql6 = "INSERT INTO orden_compramp_detalle (id_ordencompramp, codigo_mp, cantidad_mp_oc) VALUES ('" & Me.txtoc_mp.Text & "','" & get_mp_sku(DataGridView1.Item(0, i).Value) & "','" & Me.txtcantmp.Text & "')"
+            MessageBox.Show(sql6)
             Dim cmd2 As New MySqlCommand(sql6, Conexion.conn)
             Try
                 cmd2.ExecuteNonQuery()
@@ -134,7 +135,6 @@ Public Class i_libro_pedido
         Dim dataadapter2 As MySqlDataAdapter
         Dim dataset2 As DataSet
         Dim sql2 As String = "SELECT * FROM materia_prima WHERE codigo_mp LIKE'" & materiaprima & "' OR nombre_mp LIKE'" & materiaprima & "'"
-        MessageBox.Show(sql2)
         dataadapter2 = New MySqlDataAdapter(sql2, Conexion.conn)
         dataset2 = New DataSet()
         dataadapter2.Fill(dataset2)

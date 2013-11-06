@@ -11,7 +11,7 @@ Public Class libro_pedido_desglose
 
     Sub get_detalle_ondatagrid()
         Conexion.open()
-        Dim query As String = "SELECT id_ordencompramp'Numero de orden', materia_prima.nombre_mp'materia Prima',orden_compramp_detalle.cantidad_mp_oc'Cantidad' FROM orden_compramp_detalle INNER JOIN materia_prima ON materia_prima.codigo_mp=orden_compramp_detalle.codigo_mp WHERE id_ordencompramp='" & Libro_pedidos.buscar_libro_pedido & "'"
+        Dim query As String = "SELECT id_ordencompramp'Numero de orden',materia_prima.codigo_mp'Codigo material', materia_prima.nombre_mp'materia Prima',orden_compramp_detalle.cantidad_mp_oc'Cantidad' FROM orden_compramp_detalle INNER JOIN materia_prima ON materia_prima.codigo_mp=orden_compramp_detalle.codigo_mp WHERE id_ordencompramp='" & Libro_pedidos.buscar_libro_pedido & "'"
         Dim Adpt As New MySqlDataAdapter(query, Conexion.conn)
         Dim ds As New DataSet()
         Adpt.Fill(ds, "Emp")

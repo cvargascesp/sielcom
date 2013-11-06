@@ -15,7 +15,6 @@ Public Class solicitud_productos_fabricacion
         Conexion.open()
         Dim dataadapter5 As MySqlDataAdapter
         Dim dataset5 As DataSet
-        
         Dim sql5 As String = "SELECT * FROM materia_prima_existencias inner join materia_prima on materia_prima.codigo_mp=materia_prima_existencias.codigo_mp WHERE materia_prima.codigo_mp LIKE '" & Me.producto.Text & "' OR materia_prima.nombre_mp LIKE '" & Me.producto.Text & "'"
         dataadapter5 = New MySqlDataAdapter(sql5, Conexion.conn)
         dataset5 = New DataSet()
@@ -29,31 +28,34 @@ Public Class solicitud_productos_fabricacion
         Conexion.close()
     End Sub
     Sub quitar_de_inventario(ByVal codigo_mp, ByVal cantidad_mp)
-        Dim sql As String = "UPDATE materia_prima_existencias SET stock_mp=stock_mp-'" & cantidad_mp & "' where codigo_mp='" & codigo_mp & "'"
-        Dim cmd As New MySqlCommand(sql, Conexion.conn)
+        Conexion.open()
+        Dim sql1 As String = "UPDATE materia_prima_existencias SET stock_mp=stock_mp-'" & cantidad_mp & "' where codigo_mp='" & codigo_mp & "'"
+        Dim cmd2 As New MySqlCommand(sql1, Conexion.conn)
         Try
+            cmd2.ExecuteNonQuery()
             kardex_mp.add_kardex_salida(codigo_mp, cantidad_mp)
-            cmd.ExecuteNonQuery()
         Catch ex As Exception
-            MessageBox.Show(ex.Message)
+            MessageBox.Show(ex.Message + " quitar_inventario()")
         End Try
+        Conexion.close()
     End Sub
 
     Sub nueva_orden_salida()
-        Conexion.open()
-        For i As Integer = 0 To Me.DataGridView1.Rows.Count - 1
-            Dim sqlquery As String = "INSERT INTO libro_salida_mp (id_salida, codigo_mp,fecha_salida,cantidad_salida,motivo,comentario)VALUES('" & Me.num_salida.Text & "','" & Me.Label8.Text & "', '" & Me.fecha_solicitud.Text & "', '" & Me.Label10.Text & "','" & Me.motivo.SelectedItem & "','" & Me.comentamotivo.Text & "')"
-            Dim cmd As New MySqlCommand(sqlquery, Conexion.conn)
-            Try
-                cmd.ExecuteNonQuery()
-                quitar_de_inventario(CInt(Me.DataGridView1.Rows(i).Cells(0).Value.ToString()), CInt(Me.DataGridView1.Rows(i).Cells(2).Value.ToString()))
 
+        For i As Integer = 0 To Me.DataGridView1.Rows.Count - 1
+            Conexion.open()
+            Dim sqlquery1 As String = "INSERT INTO libro_salida_mp (id_salida, codigo_mp,fecha_salida,cantidad_salida,motivo,comentario)VALUES('" & Me.num_salida.Text & "', '" & CInt(Me.DataGridView1.Rows(i).Cells(0).Value.ToString()) & "' , '" & Me.fecha_solicitud.Text & "', '" & Me.Label10.Text & "','" & Me.motivo.SelectedItem & "','" & Me.comentamotivo.Text & "')"
+            Dim cmd3 As New MySqlCommand(sqlquery1, Conexion.conn)
+            Try
+                cmd3.ExecuteNonQuery()
+                quitar_de_inventario(CInt(Me.DataGridView1.Rows(i).Cells(0).Value.ToString()), CInt(Me.DataGridView1.Rows(i).Cells(2).Value.ToString()))
             Catch ex As Exception
-                MessageBox.Show(ex.Message)
+                MessageBox.Show(ex.Message + " nueva_orden_salida()")
             End Try
+            Conexion.close()
         Next
         MessageBox.Show("Solicitud salida Guardada con exito", "Guardada", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1)
-        Conexion.close()
+
     End Sub
     Sub preparar_datagrid()
         Dim col0, col1, col2, col3 As New DataGridViewTextBoxColumn
@@ -84,8 +86,9 @@ Public Class solicitud_productos_fabricacion
     End Sub
 
     Private Sub producto_LostFocus(sender As Object, e As EventArgs) Handles producto.LostFocus
+        Conexion.open()
         If Me.producto.Text <> "" Then
-            Conexion.open()
+
             Dim dataadapter3 As MySqlDataAdapter
             Dim dataset3 As DataSet
             Dim sql3 As String = "SELECT * FROM materia_prima WHERE codigo_mp LIKE'" & Me.producto.Text & "' OR nombre_mp LIKE'" & Me.producto.Text & "'"
@@ -103,8 +106,9 @@ Public Class solicitud_productos_fabricacion
 
             End If
 
-            Conexion.close()
+
         End If
+        Conexion.close()
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click

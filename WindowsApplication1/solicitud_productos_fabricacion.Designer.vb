@@ -153,7 +153,7 @@ Partial Class solicitud_productos_fabricacion
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(11, 139)
+        Me.Label7.Location = New System.Drawing.Point(64, 147)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(39, 13)
         Me.Label7.TabIndex = 22
@@ -161,7 +161,7 @@ Partial Class solicitud_productos_fabricacion
         '
         'comentamotivo
         '
-        Me.comentamotivo.Location = New System.Drawing.Point(66, 169)
+        Me.comentamotivo.Location = New System.Drawing.Point(66, 179)
         Me.comentamotivo.Multiline = True
         Me.comentamotivo.Name = "comentamotivo"
         Me.comentamotivo.Size = New System.Drawing.Size(217, 66)
@@ -170,7 +170,7 @@ Partial Class solicitud_productos_fabricacion
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(8, 172)
+        Me.Label6.Location = New System.Drawing.Point(8, 179)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(52, 13)
         Me.Label6.TabIndex = 20
