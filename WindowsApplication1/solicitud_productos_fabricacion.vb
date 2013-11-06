@@ -5,6 +5,8 @@ Public Class solicitud_productos_fabricacion
         preparar_datagrid()
         Me.comentamotivo.Enabled = False
         Me.Label7.Visible = False
+        Me.Label8.Visible = False
+        Me.Label10.Visible = False
 
     End Sub
     Sub formatear_fechas()
@@ -112,11 +114,24 @@ Public Class solicitud_productos_fabricacion
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        cargar_mp_datagrid()
-        Me.producto.Text = ""
-        Me.cantidad.Text = " 0 "
-        Me.umedida.Text = ""
-        Me.producto.Focus()
+        If Me.cantidad.Text <> "0" Then
+            If Me.num_salida.Text <> "" Then
+                cargar_mp_datagrid()
+                Me.producto.Text = ""
+                Me.cantidad.Text = " 0 "
+                Me.umedida.Text = ""
+                Label7.Text = ""
+                Me.producto.Focus()
+            Else
+                MsgBox("El numero de Orden de Salida no ha sido Registrado")
+                num_salida.Focus()
+            End If
+        Else
+            MsgBox("La cantidad a Solicitar no es valida")
+            cantidad.Focus()
+        End If
+
+
     End Sub
 
     Private Sub motivo_LostFocus(sender As Object, e As EventArgs) Handles motivo.LostFocus
@@ -127,9 +142,13 @@ Public Class solicitud_productos_fabricacion
     End Sub
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         nueva_orden_salida()
+        Me.producto.Text = ""
+        Me.cantidad.Text = " 0 "
+        Me.umedida.Text = ""
+        Me.Label7.Text = ""
+        DataGridView1.Rows.Clear()
+        Me.producto.Focus()
     End Sub
 
-    Private Sub Label9_Click(sender As Object, e As EventArgs) Handles Label9.Click
 
-    End Sub
 End Class
