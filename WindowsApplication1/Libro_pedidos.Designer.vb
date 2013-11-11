@@ -31,9 +31,9 @@ Partial Class Libro_pedidos
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
         Me.Button3 = New System.Windows.Forms.Button()
+        Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
+        Me.Label4 = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -123,14 +123,14 @@ Partial Class Libro_pedidos
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Desglose libro de pedido"
         '
-        'Label4
+        'Button3
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(6, 39)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(92, 13)
-        Me.Label4.TabIndex = 0
-        Me.Label4.Text = "Numero de orden:"
+        Me.Button3.Location = New System.Drawing.Point(9, 71)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(215, 23)
+        Me.Button3.TabIndex = 2
+        Me.Button3.Text = "Buscar"
+        Me.Button3.UseVisualStyleBackColor = True
         '
         'NumericUpDown1
         '
@@ -140,14 +140,14 @@ Partial Class Libro_pedidos
         Me.NumericUpDown1.Size = New System.Drawing.Size(120, 20)
         Me.NumericUpDown1.TabIndex = 1
         '
-        'Button3
+        'Label4
         '
-        Me.Button3.Location = New System.Drawing.Point(9, 71)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(215, 23)
-        Me.Button3.TabIndex = 2
-        Me.Button3.Text = "Buscar"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(6, 39)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(92, 13)
+        Me.Label4.TabIndex = 0
+        Me.Label4.Text = "Numero de orden:"
         '
         'Libro_pedidos
         '

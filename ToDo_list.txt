@@ -1,3 +1,4 @@
 * ingreso a mercaderia deve implementar label que muestre unidad de medida del producto a ingresar.
 * libro ingreso mercaderia deve asignar enabled/disabled acorde a orden de uso.
 * libro ingreso mercaderia deve verificar campos vacios de forma secuencial.
+* nuevo producto a fabricar validar campos

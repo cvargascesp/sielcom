@@ -28,8 +28,8 @@ Partial Class ifabricacion
         Me.Button1 = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.txt_productofabricar = New System.Windows.Forms.ComboBox()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.txt_productofabricar = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -102,8 +102,8 @@ Partial Class ifabricacion
         '
         'GroupBox2
         '
-        Me.GroupBox2.Controls.Add(Me.Button2)
         Me.GroupBox2.Controls.Add(Me.txt_productofabricar)
+        Me.GroupBox2.Controls.Add(Me.Button2)
         Me.GroupBox2.Controls.Add(Me.Label4)
         Me.GroupBox2.Controls.Add(Me.Label3)
         Me.GroupBox2.Controls.Add(Me.Label2)
@@ -116,6 +116,14 @@ Partial Class ifabricacion
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Tiempo de Fabricacion:"
         '
+        'txt_productofabricar
+        '
+        Me.txt_productofabricar.FormattingEnabled = True
+        Me.txt_productofabricar.Location = New System.Drawing.Point(126, 26)
+        Me.txt_productofabricar.Name = "txt_productofabricar"
+        Me.txt_productofabricar.Size = New System.Drawing.Size(121, 21)
+        Me.txt_productofabricar.TabIndex = 5
+        '
         'Button2
         '
         Me.Button2.Location = New System.Drawing.Point(213, 100)
@@ -124,13 +132,6 @@ Partial Class ifabricacion
         Me.Button2.TabIndex = 4
         Me.Button2.Text = "Guardar"
         Me.Button2.UseVisualStyleBackColor = True
-        '
-        'txt_productofabricar
-        '
-        Me.txt_productofabricar.Location = New System.Drawing.Point(124, 26)
-        Me.txt_productofabricar.Name = "txt_productofabricar"
-        Me.txt_productofabricar.Size = New System.Drawing.Size(165, 20)
-        Me.txt_productofabricar.TabIndex = 5
         '
         'Label4
         '
@@ -274,5 +275,5 @@ Partial Class ifabricacion
     Friend WithEvents VolverToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ConsultarStockToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents txt_productofabricar As System.Windows.Forms.TextBox
+    Friend WithEvents txt_productofabricar As System.Windows.Forms.ComboBox
 End Class

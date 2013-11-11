@@ -30,18 +30,18 @@ Partial Class e_proceso_fabricacion
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.fecha_t = New System.Windows.Forms.DateTimePicker()
+        Me.fecha_i = New System.Windows.Forms.DateTimePicker()
+        Me.prod_fab = New System.Windows.Forms.TextBox()
+        Me.cod_fab = New System.Windows.Forms.TextBox()
         Me.estado_fab = New System.Windows.Forms.ComboBox()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.Button3 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
-        Me.cod_fab = New System.Windows.Forms.TextBox()
-        Me.prod_fab = New System.Windows.Forms.TextBox()
-        Me.fecha_i = New System.Windows.Forms.DateTimePicker()
-        Me.fecha_t = New System.Windows.Forms.DateTimePicker()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
@@ -131,6 +131,36 @@ Partial Class e_proceso_fabricacion
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Editar  Proceso de Fabricacion"
         '
+        'fecha_t
+        '
+        Me.fecha_t.Location = New System.Drawing.Point(420, 76)
+        Me.fecha_t.Name = "fecha_t"
+        Me.fecha_t.Size = New System.Drawing.Size(200, 20)
+        Me.fecha_t.TabIndex = 9
+        '
+        'fecha_i
+        '
+        Me.fecha_i.Location = New System.Drawing.Point(139, 76)
+        Me.fecha_i.Name = "fecha_i"
+        Me.fecha_i.Size = New System.Drawing.Size(167, 20)
+        Me.fecha_i.TabIndex = 8
+        '
+        'prod_fab
+        '
+        Me.prod_fab.Location = New System.Drawing.Point(427, 39)
+        Me.prod_fab.Name = "prod_fab"
+        Me.prod_fab.ReadOnly = True
+        Me.prod_fab.Size = New System.Drawing.Size(193, 20)
+        Me.prod_fab.TabIndex = 7
+        '
+        'cod_fab
+        '
+        Me.cod_fab.Location = New System.Drawing.Point(139, 39)
+        Me.cod_fab.Name = "cod_fab"
+        Me.cod_fab.ReadOnly = True
+        Me.cod_fab.Size = New System.Drawing.Size(167, 20)
+        Me.cod_fab.TabIndex = 6
+        '
         'estado_fab
         '
         Me.estado_fab.FormattingEnabled = True
@@ -138,6 +168,15 @@ Partial Class e_proceso_fabricacion
         Me.estado_fab.Name = "estado_fab"
         Me.estado_fab.Size = New System.Drawing.Size(167, 21)
         Me.estado_fab.TabIndex = 5
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(156, 155)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(258, 23)
+        Me.Button3.TabIndex = 2
+        Me.Button3.Text = "Guardar Cambios"
+        Me.Button3.UseVisualStyleBackColor = True
         '
         'Label8
         '
@@ -184,15 +223,6 @@ Partial Class e_proceso_fabricacion
         Me.Label4.TabIndex = 0
         Me.Label4.Text = "Codigo de Fabricacion:"
         '
-        'Button3
-        '
-        Me.Button3.Location = New System.Drawing.Point(156, 155)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(258, 23)
-        Me.Button3.TabIndex = 2
-        Me.Button3.Text = "Guardar Cambios"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
         'Button4
         '
         Me.Button4.Location = New System.Drawing.Point(588, 412)
@@ -201,36 +231,6 @@ Partial Class e_proceso_fabricacion
         Me.Button4.TabIndex = 3
         Me.Button4.Text = "Volver"
         Me.Button4.UseVisualStyleBackColor = True
-        '
-        'cod_fab
-        '
-        Me.cod_fab.Location = New System.Drawing.Point(139, 39)
-        Me.cod_fab.Name = "cod_fab"
-        Me.cod_fab.ReadOnly = True
-        Me.cod_fab.Size = New System.Drawing.Size(167, 20)
-        Me.cod_fab.TabIndex = 6
-        '
-        'prod_fab
-        '
-        Me.prod_fab.Location = New System.Drawing.Point(427, 39)
-        Me.prod_fab.Name = "prod_fab"
-        Me.prod_fab.ReadOnly = True
-        Me.prod_fab.Size = New System.Drawing.Size(248, 20)
-        Me.prod_fab.TabIndex = 7
-        '
-        'fecha_i
-        '
-        Me.fecha_i.Location = New System.Drawing.Point(139, 76)
-        Me.fecha_i.Name = "fecha_i"
-        Me.fecha_i.Size = New System.Drawing.Size(167, 20)
-        Me.fecha_i.TabIndex = 8
-        '
-        'fecha_t
-        '
-        Me.fecha_t.Location = New System.Drawing.Point(420, 76)
-        Me.fecha_t.Name = "fecha_t"
-        Me.fecha_t.Size = New System.Drawing.Size(200, 20)
-        Me.fecha_t.TabIndex = 9
         '
         'e_proceso_fabricacion
         '

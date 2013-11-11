@@ -91,4 +91,16 @@ Public Class bodega_materias_primas_principal
         Me.Close()
         inicio.Show()
     End Sub
+
+    Private Sub NuevoProductoAFabricarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NuevoProductoAFabricarToolStripMenuItem.Click
+        i_productofabricado.Show()
+    End Sub
+
+    Private Sub AsociarIngredientesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AsociarIngredientesToolStripMenuItem.Click
+        asociar_productos_mp.Show()
+    End Sub
+
+    Private Sub SacarDeBodegaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SacarDeBodegaToolStripMenuItem.Click
+        solicitud_productos_fabricacion2.Show()
+    End Sub
 End Class

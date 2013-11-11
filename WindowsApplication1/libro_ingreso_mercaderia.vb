@@ -38,14 +38,9 @@ Public Class libro_ingreso_mercaderia
                     Me.TextBox1.Focus()
                 End If
             Else
-                'carga datos de mpen los componentes del formulario
+                'carga datos de mp en los componentes del formulario
                 Me.Button1.Enabled = True
-
-
-
             End If
-
-
             Conexion.close()
         Catch err As MySqlException
             MessageBox.Show(err.Message)

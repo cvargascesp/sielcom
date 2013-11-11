@@ -52,7 +52,7 @@ Public Class e_proceso_fabricacion
         Conexion.open()
         Dim dataadapter As MySqlDataAdapter
         Dim dataset As DataSet
-        Dim sqlquery As String = "SELECT proceso_fabricacion.id_fab, proceso_fabricacion.nombre_prod_fab, proceso_fabricacion.id_salida, proceso_fabricacion.fecha_inicio_fab, proceso_fabricacion.fecha_termino_fab, proceso_fabricacion.id_est_pro, estados_de_produccion.nom_est_pro FROM proceso_fabricacion INNER JOIN estados_de_produccion ON estados_de_produccion.id_est_pro=proceso_fabricacion.id_est_pro WHERE id_fab='" & Me.n_fabricacion_c.Text & "'"
+        Dim sqlquery As String = "SELECT proceso_fabricacion.id_fab, producto_fabricado.nom_profab, proceso_fabricacion.id_salida, proceso_fabricacion.fecha_inicio_fab, proceso_fabricacion.fecha_termino_fab, proceso_fabricacion.id_est_pro, estados_de_produccion.nom_est_pro FROM proceso_fabricacion INNER JOIN estados_de_produccion ON estados_de_produccion.id_est_pro=proceso_fabricacion.id_est_pro INNER JOIN producto_fabricado ON producto_fabricado.id_profab=proceso_fabricacion.id_profab WHERE id_fab='" & Me.n_fabricacion_c.Text & "'"
         dataadapter = New MySqlDataAdapter(sqlquery, Conexion.conn)
         dataset = New DataSet()
         dataadapter.Fill(dataset)
@@ -63,7 +63,6 @@ Public Class e_proceso_fabricacion
             Me.fecha_t.Value = dataset.Tables(0).Rows(0).Item(4).ToString()
             Me.estado_fab.SelectedText = dataset.Tables(0).Rows(0).Item(6).ToString()
             Me.estado_fab.SelectedValue = CInt(dataset.Tables(0).Rows(0).Item(5))
-
         Else
             MessageBox.Show("el numero de fabricacion es invalido", "error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         End If
@@ -100,5 +99,9 @@ Public Class e_proceso_fabricacion
         enviar_nuevo_producto()
         Conexion.close()
         limpiar_formulario()
+    End Sub
+
+    Private Sub GroupBox2_Enter(sender As Object, e As EventArgs) Handles GroupBox2.Enter
+
     End Sub
 End Class

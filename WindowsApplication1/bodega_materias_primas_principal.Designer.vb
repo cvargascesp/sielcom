@@ -34,6 +34,9 @@ Partial Class bodega_materias_primas_principal
         Me.IngresarProductosAFabricacionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EditarProcesoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ConsultaDeProcesoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ProductosAFabricarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NuevoProductoAFabricarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AsociarIngredientesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ParametrosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UnidadDeMedidaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.FamiliasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -46,6 +49,7 @@ Partial Class bodega_materias_primas_principal
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.SacarDeBodegaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -94,7 +98,7 @@ Partial Class bodega_materias_primas_principal
         '
         'PcesoDeFabricacionToolStripMenuItem
         '
-        Me.PcesoDeFabricacionToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SolicitudDeProductosToolStripMenuItem, Me.EnProcesoToolStripMenuItem, Me.ConsultaDeProcesoToolStripMenuItem})
+        Me.PcesoDeFabricacionToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SolicitudDeProductosToolStripMenuItem, Me.EnProcesoToolStripMenuItem, Me.ConsultaDeProcesoToolStripMenuItem, Me.ProductosAFabricarToolStripMenuItem})
         Me.PcesoDeFabricacionToolStripMenuItem.Name = "PcesoDeFabricacionToolStripMenuItem"
         Me.PcesoDeFabricacionToolStripMenuItem.Size = New System.Drawing.Size(141, 20)
         Me.PcesoDeFabricacionToolStripMenuItem.Text = "Proceso de Fabricacion"
@@ -129,6 +133,25 @@ Partial Class bodega_materias_primas_principal
         Me.ConsultaDeProcesoToolStripMenuItem.Name = "ConsultaDeProcesoToolStripMenuItem"
         Me.ConsultaDeProcesoToolStripMenuItem.Size = New System.Drawing.Size(193, 22)
         Me.ConsultaDeProcesoToolStripMenuItem.Text = "Consulta de Proceso"
+        '
+        'ProductosAFabricarToolStripMenuItem
+        '
+        Me.ProductosAFabricarToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NuevoProductoAFabricarToolStripMenuItem, Me.AsociarIngredientesToolStripMenuItem, Me.SacarDeBodegaToolStripMenuItem})
+        Me.ProductosAFabricarToolStripMenuItem.Name = "ProductosAFabricarToolStripMenuItem"
+        Me.ProductosAFabricarToolStripMenuItem.Size = New System.Drawing.Size(193, 22)
+        Me.ProductosAFabricarToolStripMenuItem.Text = "Productos a fabricar"
+        '
+        'NuevoProductoAFabricarToolStripMenuItem
+        '
+        Me.NuevoProductoAFabricarToolStripMenuItem.Name = "NuevoProductoAFabricarToolStripMenuItem"
+        Me.NuevoProductoAFabricarToolStripMenuItem.Size = New System.Drawing.Size(213, 22)
+        Me.NuevoProductoAFabricarToolStripMenuItem.Text = "Nuevo producto a fabricar"
+        '
+        'AsociarIngredientesToolStripMenuItem
+        '
+        Me.AsociarIngredientesToolStripMenuItem.Name = "AsociarIngredientesToolStripMenuItem"
+        Me.AsociarIngredientesToolStripMenuItem.Size = New System.Drawing.Size(213, 22)
+        Me.AsociarIngredientesToolStripMenuItem.Text = "Asociar Ingredientes"
         '
         'ParametrosToolStripMenuItem
         '
@@ -225,6 +248,12 @@ Partial Class bodega_materias_primas_principal
         Me.Button1.Text = "Volver"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'SacarDeBodegaToolStripMenuItem
+        '
+        Me.SacarDeBodegaToolStripMenuItem.Name = "SacarDeBodegaToolStripMenuItem"
+        Me.SacarDeBodegaToolStripMenuItem.Size = New System.Drawing.Size(213, 22)
+        Me.SacarDeBodegaToolStripMenuItem.Text = "Sacar de bodega"
+        '
         'bodega_materias_primas_principal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -272,4 +301,8 @@ Partial Class bodega_materias_primas_principal
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
     Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents ProductosAFabricarToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents NuevoProductoAFabricarToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents AsociarIngredientesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents SacarDeBodegaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class
