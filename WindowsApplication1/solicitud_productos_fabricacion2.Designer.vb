@@ -34,6 +34,7 @@ Partial Class solicitud_productos_fabricacion2
         Me.Label5 = New System.Windows.Forms.Label()
         Me.cantfab = New System.Windows.Forms.NumericUpDown()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Button2 = New System.Windows.Forms.Button()
         CType(Me.cantfab, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -56,41 +57,41 @@ Partial Class solicitud_productos_fabricacion2
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(15, 51)
+        Me.Button1.Location = New System.Drawing.Point(316, 23)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(295, 23)
+        Me.Button1.Size = New System.Drawing.Size(78, 23)
         Me.Button1.TabIndex = 2
         Me.Button1.Text = "Buscar"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'txtfamilia
         '
-        Me.txtfamilia.Location = New System.Drawing.Point(145, 180)
+        Me.txtfamilia.Location = New System.Drawing.Point(156, 136)
         Me.txtfamilia.Name = "txtfamilia"
         Me.txtfamilia.ReadOnly = True
-        Me.txtfamilia.Size = New System.Drawing.Size(165, 20)
+        Me.txtfamilia.Size = New System.Drawing.Size(154, 20)
         Me.txtfamilia.TabIndex = 14
         '
         'txtunidadmedida
         '
-        Me.txtunidadmedida.Location = New System.Drawing.Point(145, 148)
+        Me.txtunidadmedida.Location = New System.Drawing.Point(156, 110)
         Me.txtunidadmedida.Name = "txtunidadmedida"
         Me.txtunidadmedida.ReadOnly = True
-        Me.txtunidadmedida.Size = New System.Drawing.Size(165, 20)
+        Me.txtunidadmedida.Size = New System.Drawing.Size(154, 20)
         Me.txtunidadmedida.TabIndex = 13
         '
         'txtnombre
         '
-        Me.txtnombre.Location = New System.Drawing.Point(145, 114)
+        Me.txtnombre.Location = New System.Drawing.Point(156, 84)
         Me.txtnombre.Name = "txtnombre"
         Me.txtnombre.ReadOnly = True
-        Me.txtnombre.Size = New System.Drawing.Size(165, 20)
+        Me.txtnombre.Size = New System.Drawing.Size(154, 20)
         Me.txtnombre.TabIndex = 12
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(12, 117)
+        Me.Label2.Location = New System.Drawing.Point(12, 87)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(47, 13)
         Me.Label2.TabIndex = 9
@@ -99,7 +100,7 @@ Partial Class solicitud_productos_fabricacion2
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(12, 183)
+        Me.Label4.Location = New System.Drawing.Point(12, 139)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(42, 13)
         Me.Label4.TabIndex = 11
@@ -108,7 +109,7 @@ Partial Class solicitud_productos_fabricacion2
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(12, 151)
+        Me.Label3.Location = New System.Drawing.Point(12, 113)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(96, 13)
         Me.Label3.TabIndex = 10
@@ -117,7 +118,7 @@ Partial Class solicitud_productos_fabricacion2
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(12, 87)
+        Me.Label5.Location = New System.Drawing.Point(12, 57)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(96, 13)
         Me.Label5.TabIndex = 15
@@ -125,10 +126,12 @@ Partial Class solicitud_productos_fabricacion2
         '
         'cantfab
         '
-        Me.cantfab.Location = New System.Drawing.Point(145, 85)
+        Me.cantfab.Location = New System.Drawing.Point(156, 58)
+        Me.cantfab.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.cantfab.Name = "cantfab"
-        Me.cantfab.Size = New System.Drawing.Size(165, 20)
+        Me.cantfab.Size = New System.Drawing.Size(154, 20)
         Me.cantfab.TabIndex = 16
+        Me.cantfab.Value = New Decimal(New Integer() {1, 0, 0, 0})
         '
         'DataGridView1
         '
@@ -143,11 +146,21 @@ Partial Class solicitud_productos_fabricacion2
         Me.DataGridView1.Size = New System.Drawing.Size(729, 214)
         Me.DataGridView1.TabIndex = 17
         '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(319, 465)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.TabIndex = 18
+        Me.Button2.Text = "Guardar"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'solicitud_productos_fabricacion2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(756, 487)
+        Me.ClientSize = New System.Drawing.Size(756, 500)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.cantfab)
         Me.Controls.Add(Me.Label5)
@@ -180,4 +193,5 @@ Partial Class solicitud_productos_fabricacion2
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents cantfab As System.Windows.Forms.NumericUpDown
     Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents Button2 As System.Windows.Forms.Button
 End Class
