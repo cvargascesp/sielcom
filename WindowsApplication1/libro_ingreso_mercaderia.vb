@@ -38,15 +38,11 @@ Public Class libro_ingreso_mercaderia
                     Me.TextBox1.Focus()
                 End If
             Else
-                Dim dataadapter2 As MySqlDataAdapter
-                Dim dataset2 As DataSet
-                Dim sql2 As String = "Select * From materia_prima where codigo_mp='" & Me.TextBox1.Text & "'"
-                dataadapter2 = New MySqlDataAdapter(sql2, Conexion.conn)
-                dataset2 = New DataSet()
-                dataadapter2.Fill(dataset2)
-                Me.TextBox2.Text = dataset2.Tables(0).Rows(0).Item(1).ToString()
+                'carga datos de mpen los componentes del formulario
                 Me.Button1.Enabled = True
-                Me.NumericUpDown1.Focus()
+
+
+
             End If
 
 
@@ -124,6 +120,24 @@ Public Class libro_ingreso_mercaderia
 
     End Sub
 
+    Sub cargador_datos(ByVal orden_compra As Integer, ByVal codigomp As Integer)
+        'carga los datos en los campos
+        Conexion.open()
+        Dim sqlquery As String = "SELECT proveedor.nombre'nombre_proveedor',proveedor.rut'rut',materia_prima.nombre_mp'producto',orden_compramp_detalle.cantidad_mp_oc'cantidad' FROM orden_compramp_cabezera INNER JOIN proveedor ON orden_compramp_cabezera.rut=proveedor.rut INNER JOIN orden_compramp_detalle ON orden_compramp_detalle.id_ordencompramp=orden_compramp_cabezera.id_ordencompramp INNER JOIN materia_prima ON materia_prima.codigo_mp=orden_compramp_detalle.codigo_mp WHERE orden_compramp_cabezera.id_ordencompramp='" & orden_compra & "' AND orden_compramp_detalle.codigo_mp='" & codigomp & "'"
+        Dim dataset5 As New DataSet
+        Dim dataadapter5 As New MySqlDataAdapter(sqlquery, Conexion.conn)
+        dataadapter5.Fill(dataset5)
+        If (dataset5.Tables(0).Rows.Count <> 0) Then
+            Me.TextBox2.Text = dataset5.Tables(0).Rows(0).Item(2).ToString()
+            Me.NumericUpDown1.Value = dataset5.Tables(0).Rows(0).Item(3).ToString()
+            Me.comboproveedor.SelectedText = dataset5.Tables(0).Rows(0).Item(0).ToString()
+            Me.comboproveedor.SelectedValue = dataset5.Tables(0).Rows(0).Item(1).ToString()
+        Else
+            MessageBox.Show("error en los campos ingresados", "error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End If
+        Conexion.close()
+    End Sub
+
     Function check_oc_exists()
         'verificamos que la orden ingresada exista
         Conexion.open()
@@ -134,6 +148,24 @@ Public Class libro_ingreso_mercaderia
         Return dataset1.Tables(0).Rows(0).Item(0).ToString()
         Conexion.close()
     End Function
+    Function check_mp_on_ordencompramp(ByVal idorden_compra As Integer, ByVal codigomp As Integer)
+        'verifica que el la materia prima a ingresar exista en la orden de compra mencionada
+        Conexion.open()
+        Dim sqlquery As String = "SELECT COUNT(orden_compramp_detalle.codigo_mp) FROM orden_compramp_cabezera JOIN orden_compramp_detalle ON orden_compramp_cabezera.id_ordencompramp=orden_compramp_detalle.id_ordencompramp WHERE orden_compramp_detalle.id_ordencompramp='" & idorden_compra & "' AND orden_compramp_detalle.codigo_mp='" & codigomp & "' "
+        Dim dataset4 As New DataSet
+        Dim dataadapter4 As New MySqlDataAdapter(sqlquery, Conexion.conn)
+        dataadapter4.Fill(dataset4)
+        If (dataset4.Tables(0).Rows.Count <> 0) Then
+            Return dataset4.Tables(0).Rows(0).Item(0).ToString()
+            'retorna 0 si el producto no existe asociado a esa orden de compra
+        Else
+            Return 0
+            'retorna 0 si no encuentra nada por algun error
+        End If
+        Conexion.close()
+
+    End Function
+
     Function check_ot_ontime()
         'verifica que la orden de compra no este atrasada
         ' retorna 0 si a tiempo o 1 si atrasada
@@ -183,4 +215,11 @@ Public Class libro_ingreso_mercaderia
     End Sub
 
 
+    Private Sub TextBox8_TextChanged_1(sender As Object, e As EventArgs) Handles TextBox8.LostFocus
+        If (check_mp_on_ordencompramp(Me.TextBox8.Text, Me.TextBox1.Text) = 0) Then
+            MessageBox.Show("El producto ingresado no existe asociado a la orden de compra especificada", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Else
+            cargador_datos(Me.TextBox8.Text, Me.TextBox1.Text)
+        End If
+    End Sub
 End Class

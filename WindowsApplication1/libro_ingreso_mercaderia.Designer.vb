@@ -48,7 +48,7 @@ Partial Class libro_ingreso_mercaderia
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(28, 48)
+        Me.Label1.Location = New System.Drawing.Point(28, 55)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(161, 13)
         Me.Label1.TabIndex = 0
@@ -56,7 +56,7 @@ Partial Class libro_ingreso_mercaderia
         '
         'DateTimePicker1
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(195, 48)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(195, 52)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(200, 20)
         Me.DateTimePicker1.TabIndex = 1
@@ -64,7 +64,7 @@ Partial Class libro_ingreso_mercaderia
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(28, 77)
+        Me.Label2.Location = New System.Drawing.Point(28, 81)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(101, 13)
         Me.Label2.TabIndex = 2
@@ -73,7 +73,7 @@ Partial Class libro_ingreso_mercaderia
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(28, 103)
+        Me.Label3.Location = New System.Drawing.Point(28, 161)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(90, 13)
         Me.Label3.TabIndex = 3
@@ -82,7 +82,7 @@ Partial Class libro_ingreso_mercaderia
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(28, 128)
+        Me.Label4.Location = New System.Drawing.Point(28, 186)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(49, 13)
         Me.Label4.TabIndex = 4
@@ -91,7 +91,7 @@ Partial Class libro_ingreso_mercaderia
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(28, 211)
+        Me.Label5.Location = New System.Drawing.Point(28, 269)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(73, 13)
         Me.Label5.TabIndex = 5
@@ -100,7 +100,7 @@ Partial Class libro_ingreso_mercaderia
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(28, 235)
+        Me.Label6.Location = New System.Drawing.Point(28, 293)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(99, 13)
         Me.Label6.TabIndex = 6
@@ -109,7 +109,7 @@ Partial Class libro_ingreso_mercaderia
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(28, 262)
+        Me.Label7.Location = New System.Drawing.Point(28, 111)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(90, 13)
         Me.Label7.TabIndex = 7
@@ -118,7 +118,7 @@ Partial Class libro_ingreso_mercaderia
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(28, 155)
+        Me.Label8.Location = New System.Drawing.Point(28, 213)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(59, 13)
         Me.Label8.TabIndex = 8
@@ -127,7 +127,7 @@ Partial Class libro_ingreso_mercaderia
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(28, 181)
+        Me.Label9.Location = New System.Drawing.Point(28, 239)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(37, 13)
         Me.Label9.TabIndex = 9
@@ -135,50 +135,50 @@ Partial Class libro_ingreso_mercaderia
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(195, 74)
+        Me.TextBox1.Location = New System.Drawing.Point(195, 78)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(200, 20)
         Me.TextBox1.TabIndex = 1
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(195, 100)
+        Me.TextBox2.Location = New System.Drawing.Point(195, 158)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(200, 20)
         Me.TextBox2.TabIndex = 2
         '
         'TextBox5
         '
-        Me.TextBox5.Location = New System.Drawing.Point(195, 178)
+        Me.TextBox5.Location = New System.Drawing.Point(195, 236)
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.Size = New System.Drawing.Size(124, 20)
         Me.TextBox5.TabIndex = 5
         '
         'TextBox6
         '
-        Me.TextBox6.Location = New System.Drawing.Point(195, 205)
+        Me.TextBox6.Location = New System.Drawing.Point(195, 263)
         Me.TextBox6.Name = "TextBox6"
         Me.TextBox6.Size = New System.Drawing.Size(124, 20)
         Me.TextBox6.TabIndex = 6
         '
         'TextBox7
         '
-        Me.TextBox7.Location = New System.Drawing.Point(195, 232)
+        Me.TextBox7.Location = New System.Drawing.Point(195, 290)
         Me.TextBox7.Name = "TextBox7"
         Me.TextBox7.Size = New System.Drawing.Size(124, 20)
         Me.TextBox7.TabIndex = 7
         '
         'TextBox8
         '
-        Me.TextBox8.Location = New System.Drawing.Point(195, 259)
+        Me.TextBox8.Location = New System.Drawing.Point(195, 108)
         Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(124, 20)
+        Me.TextBox8.Size = New System.Drawing.Size(200, 20)
         Me.TextBox8.TabIndex = 8
         '
         'comboproveedor
         '
         Me.comboproveedor.FormattingEnabled = True
-        Me.comboproveedor.Location = New System.Drawing.Point(195, 152)
+        Me.comboproveedor.Location = New System.Drawing.Point(195, 210)
         Me.comboproveedor.Name = "comboproveedor"
         Me.comboproveedor.Size = New System.Drawing.Size(124, 21)
         Me.comboproveedor.TabIndex = 4
@@ -203,7 +203,7 @@ Partial Class libro_ingreso_mercaderia
         '
         'NumericUpDown1
         '
-        Me.NumericUpDown1.Location = New System.Drawing.Point(195, 126)
+        Me.NumericUpDown1.Location = New System.Drawing.Point(195, 184)
         Me.NumericUpDown1.Name = "NumericUpDown1"
         Me.NumericUpDown1.Size = New System.Drawing.Size(124, 20)
         Me.NumericUpDown1.TabIndex = 3
