@@ -18,11 +18,11 @@ Public Class solicitud_productos_fabricacion2
 
         For i As Integer = 0 To Me.DataGridView1.Rows.Count - 1
             Conexion.open()
-            Dim sqlquery1 As String = "INSERT INTO libro_salida_mp (id_salida, codigo_mp,fecha_salida,cantidad_salida,motivo,comentario)VALUES('" & Me.txtordensalida.Text & "', '" & CInt(Me.DataGridView1.Rows(i).Cells(1).Value.ToString()) & "' , '" & Me.fecha_salida.Text & "', '" & CInt(Me.DataGridView1.Rows(i).Cells(2).Value.ToString()) & "','" & Me.Combomotivo.SelectedItem & "','" & Me.txtcomentario.Text & "')"
+            Dim sqlquery1 As String = "INSERT INTO libro_salida_mp (id_salida, codigo_mp,fecha_salida,cantidad_salida,motivo,comentario)VALUES('" & Me.txtordensalida.Text & "', '" & CInt(Me.DataGridView1.Rows(i).Cells(1).Value.ToString()) & "' , '" & Me.fecha_salida.Text & "', '" & CInt(Me.DataGridView1.Rows(i).Cells(3).Value.ToString()) & "','" & Me.Combomotivo.SelectedItem & "','" & Me.txtcomentario.Text & "')"
             Dim cmd3 As New MySqlCommand(sqlquery1, Conexion.conn)
             Try
                 cmd3.ExecuteNonQuery()
-                quitar_de_inventario(CInt(Me.DataGridView1.Rows(i).Cells(1).Value.ToString()), CInt(Me.DataGridView1.Rows(i).Cells(2).Value.ToString()))
+                quitar_de_inventario(CInt(Me.DataGridView1.Rows(i).Cells(1).Value.ToString()), CInt(Me.DataGridView1.Rows(i).Cells(3).Value.ToString()))
             Catch ex As Exception
                 MessageBox.Show(ex.Message + " nueva_orden_salida()")
             End Try
@@ -84,7 +84,7 @@ Public Class solicitud_productos_fabricacion2
     End Function
     Sub iniciar_datagrid()
         Conexion.open()
-        Dim query As String = "SELECT id_profab'Codigo producto',producto_fabricado_materia_prima.codigo_mp'Codigo material',(cant_empleada)'Cant a utilizar',stock_mp'Cantidad disponible',IF(stock_mp < (cant_empleada),'insuficiente','Suficiente')'Disponibilidad' FROM producto_fabricado_materia_prima LEFT JOIN materia_prima_existencias ON materia_prima_existencias.codigo_mp=producto_fabricado_materia_prima.codigo_mp WHERE id_profab='" & Me.TextBox1.Text & "'"
+        Dim query As String = "SELECT id_profab'Codigo producto',producto_fabricado_materia_prima.codigo_mp'Codigo material',materia_prima.nombre_mp'Nombre material',(cant_empleada)'Cant a utilizar',stock_mp'Cantidad disponible',IF(stock_mp < (cant_empleada),'insuficiente','Suficiente')'Disponibilidad' FROM producto_fabricado_materia_prima LEFT JOIN materia_prima_existencias ON materia_prima_existencias.codigo_mp=producto_fabricado_materia_prima.codigo_mp  INNER JOIN materia_prima ON materia_prima.codigo_mp=producto_fabricado_materia_prima.codigo_mp WHERE id_profab='" & Me.TextBox1.Text & "'"
         Dim Adpt As New MySqlDataAdapter(query, Conexion.conn)
         Dim ds As New DataSet()
         Adpt.Fill(ds, "Emp")
@@ -111,7 +111,7 @@ Public Class solicitud_productos_fabricacion2
 
     Private Sub NumericUpDown1_ValueChanged(sender As Object, e As EventArgs) Handles cantfab.ValueChanged
         Conexion.open()
-        Dim query As String = "SELECT id_profab'Codigo producto',producto_fabricado_materia_prima.codigo_mp'Codigo material',(cant_empleada * '" & Me.cantfab.Value & "')'Cant a utilizar',stock_mp'Cantidad disponible',IF(stock_mp < (cant_empleada * '" & Me.cantfab.Value & "'),'insuficiente','Suficiente')'Disponibilidad' FROM producto_fabricado_materia_prima LEFT JOIN materia_prima_existencias ON materia_prima_existencias.codigo_mp=producto_fabricado_materia_prima.codigo_mp WHERE id_profab='" & Me.TextBox1.Text & "'"
+        Dim query As String = "SELECT id_profab'Codigo producto',producto_fabricado_materia_prima.codigo_mp'Codigo material',materia_prima.nombre_mp'Nombre material',(cant_empleada * '" & Me.cantfab.Value & "')'Cant a utilizar',stock_mp'Cantidad disponible',IF(stock_mp < (cant_empleada * '" & Me.cantfab.Value & "'),'insuficiente','Suficiente')'Disponibilidad' FROM producto_fabricado_materia_prima LEFT JOIN materia_prima_existencias ON materia_prima_existencias.codigo_mp=producto_fabricado_materia_prima.codigo_mp INNER JOIN materia_prima ON materia_prima.codigo_mp=producto_fabricado_materia_prima.codigo_mp WHERE id_profab='" & Me.TextBox1.Text & "'"
         Dim Adpt As New MySqlDataAdapter(query, Conexion.conn)
         Dim ds As New DataSet()
         Adpt.Fill(ds, "Emp")
