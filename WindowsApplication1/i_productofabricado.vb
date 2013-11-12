@@ -61,8 +61,34 @@ Public Class i_productofabricado
         llenar_combobox_unidadmedida()
         llenar_datagridview()
     End Sub
+    Function verificar_codigo_existente(ByVal codigo As Integer)
+        Conexion.open()
+        Dim dataadapter As MySqlDataAdapter
+        Dim dataset As DataSet
+        Dim sqlquery As String = "SELECT COUNT(id_profab) FROM producto_fabricado WHERE id_profab='" & codigo & "' UNION ALL (SELECT COUNT(codigo) FROM producto WHERE codigo='" & codigo & "')"
+        dataadapter = New MySqlDataAdapter(sqlquery, Conexion.conn)
+        dataset = New DataSet()
+        dataadapter.Fill(dataset)
+        If (dataset.Tables(0).Rows.Count <> 0) Then
+            Dim mp As Integer = dataset.Tables(0).Rows(0).Item(0).ToString()
+            Dim producto As Integer = dataset.Tables(0).Rows(1).Item(0).ToString()
+            If (mp = 1 Or producto = 1) Then
+                Return False
+            Else
+                Return True
+            End If
+        Else
+            Return False
+        End If
+            Conexion.close()
+    End Function
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        agregar_producto_fabricado(Me.txtcodigo.Text, Me.txtnombre.Text, Me.comboum.Text, Me.combofamilia.SelectedValue)
+        If (verificar_codigo_existente(Me.txtcodigo.Text) = True) Then
+            agregar_producto_fabricado(Me.txtcodigo.Text, Me.txtnombre.Text, Me.comboum.Text, Me.combofamilia.SelectedValue)
+        Else
+            MessageBox.Show("Ese codigo ya existe en algun producto", "error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End If
+
     End Sub
 End Class

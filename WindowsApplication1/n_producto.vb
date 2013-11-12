@@ -187,8 +187,10 @@ Public Class n_producto
         Catch err As Exception
             MessageBox.Show(err.Message)
         End Try
-        If (e_proceso_fabricacion.nombre_producto_fab <> "") Then
-            Me.txtNombre.Text = e_proceso_fabricacion.nombre_producto_fab
+        MessageBox.Show(e_proceso_fabricacion.id_producto_fab)
+        If (CStr(e_proceso_fabricacion.id_producto_fab) <> "") Then
+            Me.TextBox1.Text = CStr(e_proceso_fabricacion.id_producto_fab)
+            Me.txtNombre.Text = CStr(e_proceso_fabricacion.nom_producto_fab)
         End If
         
 

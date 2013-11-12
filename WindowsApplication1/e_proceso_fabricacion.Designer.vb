@@ -42,6 +42,8 @@ Partial Class e_proceso_fabricacion
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Button4 = New System.Windows.Forms.Button()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.idprodfab = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
@@ -113,6 +115,8 @@ Partial Class e_proceso_fabricacion
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.idprodfab)
+        Me.GroupBox2.Controls.Add(Me.Label3)
         Me.GroupBox2.Controls.Add(Me.fecha_t)
         Me.GroupBox2.Controls.Add(Me.fecha_i)
         Me.GroupBox2.Controls.Add(Me.prod_fab)
@@ -133,7 +137,7 @@ Partial Class e_proceso_fabricacion
         '
         'fecha_t
         '
-        Me.fecha_t.Location = New System.Drawing.Point(420, 76)
+        Me.fecha_t.Location = New System.Drawing.Point(427, 114)
         Me.fecha_t.Name = "fecha_t"
         Me.fecha_t.Size = New System.Drawing.Size(200, 20)
         Me.fecha_t.TabIndex = 9
@@ -190,7 +194,7 @@ Partial Class e_proceso_fabricacion
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(318, 82)
+        Me.Label7.Location = New System.Drawing.Point(325, 120)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(96, 13)
         Me.Label7.TabIndex = 3
@@ -232,6 +236,23 @@ Partial Class e_proceso_fabricacion
         Me.Button4.Text = "Volver"
         Me.Button4.UseVisualStyleBackColor = True
         '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(375, 76)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(43, 13)
+        Me.Label3.TabIndex = 10
+        Me.Label3.Text = "Codigo:"
+        '
+        'idprodfab
+        '
+        Me.idprodfab.Location = New System.Drawing.Point(427, 73)
+        Me.idprodfab.Name = "idprodfab"
+        Me.idprodfab.ReadOnly = True
+        Me.idprodfab.Size = New System.Drawing.Size(193, 20)
+        Me.idprodfab.TabIndex = 11
+        '
         'e_proceso_fabricacion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -270,4 +291,6 @@ Partial Class e_proceso_fabricacion
     Friend WithEvents fecha_i As System.Windows.Forms.DateTimePicker
     Friend WithEvents prod_fab As System.Windows.Forms.TextBox
     Friend WithEvents cod_fab As System.Windows.Forms.TextBox
+    Friend WithEvents idprodfab As System.Windows.Forms.TextBox
+    Friend WithEvents Label3 As System.Windows.Forms.Label
 End Class
