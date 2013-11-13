@@ -1,4 +1,7 @@
 ﻿Imports MySql.Data.MySqlClient
+Imports Microsoft.Office.Interop.Excel
+Imports Microsoft.Office.Core
+Imports System.IO
 Public Class kardex_mp
     Sub formato_datetimepicker()
         DateTimePicker1.Format = DateTimePickerFormat.Custom
@@ -61,6 +64,7 @@ Public Class kardex_mp
     End Sub
     Private Sub kardex_mp_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         formato_datetimepicker()
+        Me.Button2.Enabled = False
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -71,5 +75,60 @@ Public Class kardex_mp
         Adpt.Fill(ds, "Emp")
         DataGridView1.DataSource = ds.Tables(0)
         Conexion.close()
+        Me.Button2.Enabled = True
     End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+
+        Dim xlApp As Microsoft.Office.Interop.Excel.Application
+        Dim xlWorkBook As Microsoft.Office.Interop.Excel.Workbook
+        Dim xlWorkSheet As Microsoft.Office.Interop.Excel.Worksheet
+        Dim misValue As Object = System.Reflection.Missing.Value
+        Dim i As Integer
+        Dim j As Integer
+
+        xlApp = New Microsoft.Office.Interop.Excel.ApplicationClass
+        xlWorkBook = xlApp.Workbooks.Add(misValue)
+        xlWorkSheet = xlWorkBook.ActiveSheet
+
+
+
+        For i = 0 To DataGridView1.RowCount - 1
+            For j = 0 To DataGridView1.ColumnCount - 1
+                For k As Integer = 1 To DataGridView1.Columns.Count
+                    xlWorkSheet.Cells(1, k) = DataGridView1.Columns(k - 1).HeaderText
+                    xlWorkSheet.Cells(i + 2, j + 1) = DataGridView1(j, i).Value.ToString()
+                Next
+            Next
+        Next
+
+        Try
+            xlWorkSheet.SaveAs(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + CStr("\kardex_materia_prima.xlsx"))
+            MessageBox.Show("El archivo se guardo en: " + (Environment.GetFolderPath(Environment.SpecialFolder.Desktop)) + CStr("\kardex_productos.xlsx"), "Exportacion", MessageBoxButtons.OK, MessageBoxIcon.Question)
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+
+        xlWorkBook.Close()
+        xlApp.Quit()
+
+        releaseObject(xlApp)
+        releaseObject(xlWorkBook)
+        releaseObject(xlWorkSheet)
+
+
+    End Sub
+
+    Private Sub releaseObject(ByVal obj As Object)
+        Try
+            System.Runtime.InteropServices.Marshal.ReleaseComObject(obj)
+            obj = Nothing
+        Catch ex As Exception
+            obj = Nothing
+        Finally
+            GC.Collect()
+        End Try
+    End Sub
+
+
 End Class

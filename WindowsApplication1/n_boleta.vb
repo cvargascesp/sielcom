@@ -240,8 +240,10 @@ Public Class n_boleta
                                 cmdprodupd.Parameters.AddWithValue("@vender", porvender)
                                 cmdprodupd.Parameters.AddWithValue("@codigo", codigo)
                                 cmdprodupd.ExecuteNonQuery()
+                                kardex_pro.kardexpro_salida(codigo, cant)
                             End If
                         Next
+
                         'actualiza datos
                         Dim sql2 As String = "UPDATE ticket SET estado ='PAGADO' where numdocu='" & TextBox2.Text & "'"
                         Dim cm2 As New MySqlCommand(sql2, Conexion.conn)
@@ -291,6 +293,7 @@ Public Class n_boleta
         Else
             MessageBox.Show("Complete Información Requerida", "Pagar", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
+
     End Sub
 
     Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
