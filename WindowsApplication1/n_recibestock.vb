@@ -37,7 +37,7 @@ Public Class n_recibestock
             cmd2.ExecuteNonQuery()
             trans.Commit()
             Conexion.close()
-
+            kardex_pro.agregar_kardexpro(Me.txtCodigo.Text, Me.txtCantidad.Text)
             Me.DialogResult = System.Windows.Forms.DialogResult.OK
             Me.Close()
         Catch ex As Exception

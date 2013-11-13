@@ -72,7 +72,7 @@ Public Class i_productofabricado
         If (dataset.Tables(0).Rows.Count <> 0) Then
             Dim mp As Integer = dataset.Tables(0).Rows(0).Item(0).ToString()
             Dim producto As Integer = dataset.Tables(0).Rows(1).Item(0).ToString()
-            If (mp = 1 Or producto = 1) Then
+            If (mp >= 1 Or producto >= 1) Then
                 Return False
             Else
                 Return True

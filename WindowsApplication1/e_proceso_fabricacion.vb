@@ -81,8 +81,6 @@ Public Class e_proceso_fabricacion
             Me.Hide()
             n_producto.Show()
         End If
-
-
     End Sub
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         limpiar_formulario()

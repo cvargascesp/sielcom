@@ -789,7 +789,7 @@ Partial Class n_producto
         'TextBox7
         '
         Me.TextBox7.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox7.Location = New System.Drawing.Point(357, 21)
+        Me.TextBox7.Location = New System.Drawing.Point(356, 18)
         Me.TextBox7.MaxLength = 9
         Me.TextBox7.Name = "TextBox7"
         Me.TextBox7.Size = New System.Drawing.Size(85, 22)

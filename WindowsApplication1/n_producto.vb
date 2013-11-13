@@ -187,8 +187,7 @@ Public Class n_producto
         Catch err As Exception
             MessageBox.Show(err.Message)
         End Try
-        MessageBox.Show(e_proceso_fabricacion.id_producto_fab)
-        If (CStr(e_proceso_fabricacion.id_producto_fab) <> "") Then
+        If (CStr(e_proceso_fabricacion.id_producto_fab) <> "" Or CStr(e_proceso_fabricacion.id_producto_fab) <> "0") Then
             Me.TextBox1.Text = CStr(e_proceso_fabricacion.id_producto_fab)
             Me.txtNombre.Text = CStr(e_proceso_fabricacion.nom_producto_fab)
         End If
@@ -199,7 +198,7 @@ Public Class n_producto
     Private Sub NumericUpDown1_ValueChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles NumericUpDown1.ValueChanged
         If NumericUpDown1.Text >= 1 And TextBox7.Text <> "" Then
             Label21.Text = CInt(TextBox7.Text) * CInt(NumericUpDown1.Value)
-            Label23.Text = CInt(Label19.Text) * CInt(NumericUpDown1.Value)
+            ' Me.Label23.Text = CInt(Label19.Text) * CInt(Me.NumericUpDown1.Value)
         End If
     End Sub
 

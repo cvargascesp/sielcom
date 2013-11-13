@@ -311,6 +311,12 @@
     <Compile Include="kardex_mp.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="kardex_pro.Designer.vb">
+      <DependentUpon>kardex_pro.vb</DependentUpon>
+    </Compile>
+    <Compile Include="kardex_pro.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="libro_ingreso_mercaderia.Designer.vb">
       <DependentUpon>libro_ingreso_mercaderia.vb</DependentUpon>
     </Compile>
@@ -547,6 +553,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="kardex_mp.resx">
       <DependentUpon>kardex_mp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kardex_pro.resx">
+      <DependentUpon>kardex_pro.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="libro_ingreso_mercaderia.resx">
       <DependentUpon>libro_ingreso_mercaderia.vb</DependentUpon>
