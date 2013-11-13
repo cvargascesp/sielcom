@@ -24,7 +24,7 @@ Partial Class bodega_compraventa
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(bodega_compraventa))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Button4 = New System.Windows.Forms.Button()
@@ -42,6 +42,7 @@ Partial Class bodega_compraventa
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.KardexToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
@@ -142,7 +143,7 @@ Partial Class bodega_compraventa
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
         Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-        Me.MenuStrip1.Size = New System.Drawing.Size(231, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(323, 24)
         Me.MenuStrip1.TabIndex = 41
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -167,7 +168,7 @@ Partial Class bodega_compraventa
         '
         'InformesToolStripMenuItem
         '
-        Me.InformesToolStripMenuItem.Enabled = False
+        Me.InformesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.KardexToolStripMenuItem})
         Me.InformesToolStripMenuItem.Name = "InformesToolStripMenuItem"
         Me.InformesToolStripMenuItem.Size = New System.Drawing.Size(70, 20)
         Me.InformesToolStripMenuItem.Text = "Informes"
@@ -226,8 +227,8 @@ Partial Class bodega_compraventa
         Me.DataGridView1.Location = New System.Drawing.Point(3, 19)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle2
         Me.DataGridView1.Size = New System.Drawing.Size(640, 186)
         Me.DataGridView1.TabIndex = 0
         '
@@ -242,6 +243,12 @@ Partial Class bodega_compraventa
         Me.Label1.Size = New System.Drawing.Size(210, 15)
         Me.Label1.TabIndex = 51
         Me.Label1.Text = "© 2013 Copyright Orion System Ltda."
+        '
+        'KardexToolStripMenuItem
+        '
+        Me.KardexToolStripMenuItem.Name = "KardexToolStripMenuItem"
+        Me.KardexToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.KardexToolStripMenuItem.Text = "Kardex"
         '
         'bodega_compraventa
         '
@@ -292,4 +299,5 @@ Partial Class bodega_compraventa
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
     Friend WithEvents InformesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents KardexToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class

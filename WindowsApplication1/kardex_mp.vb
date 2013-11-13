@@ -5,6 +5,7 @@ Public Class kardex_mp
         DateTimePicker1.CustomFormat = "yyyy-MM-dd"
         DateTimePicker2.Format = DateTimePickerFormat.Custom
         DateTimePicker2.CustomFormat = "yyyy-MM-dd"
+
     End Sub
 
     Public Function get_saldo(ByVal producto As Integer)

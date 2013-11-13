@@ -119,4 +119,8 @@ Public Class bodega_compraventa
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
 
     End Sub
+
+    Private Sub KardexToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles KardexToolStripMenuItem.Click
+        kardex_pro.Show()
+    End Sub
 End Class
