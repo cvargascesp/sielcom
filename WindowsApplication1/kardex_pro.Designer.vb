@@ -82,7 +82,7 @@ Partial Class kardex_pro
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(316, 151)
+        Me.GroupBox1.Size = New System.Drawing.Size(316, 161)
         Me.GroupBox1.TabIndex = 4
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Consulta"
@@ -120,7 +120,7 @@ Partial Class kardex_pro
         Me.DataGridView1.Location = New System.Drawing.Point(12, 179)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.Size = New System.Drawing.Size(810, 270)
+        Me.DataGridView1.Size = New System.Drawing.Size(810, 315)
         Me.DataGridView1.TabIndex = 5
         '
         'Button2
@@ -136,7 +136,7 @@ Partial Class kardex_pro
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(834, 461)
+        Me.ClientSize = New System.Drawing.Size(834, 506)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.GroupBox1)

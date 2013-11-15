@@ -32,7 +32,7 @@ Partial Class bodega_general
         'Button1
         '
         Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
-        Me.Button1.Location = New System.Drawing.Point(33, 31)
+        Me.Button1.Location = New System.Drawing.Point(12, 31)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(175, 143)
         Me.Button1.TabIndex = 0
@@ -43,7 +43,7 @@ Partial Class bodega_general
         'Button2
         '
         Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
-        Me.Button2.Location = New System.Drawing.Point(253, 31)
+        Me.Button2.Location = New System.Drawing.Point(261, 31)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(175, 143)
         Me.Button2.TabIndex = 1
@@ -53,7 +53,7 @@ Partial Class bodega_general
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(348, 216)
+        Me.Button3.Location = New System.Drawing.Point(348, 256)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(88, 34)
         Me.Button3.TabIndex = 2

@@ -39,7 +39,7 @@ Public Class proceso_de_fabricacion
     
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Conexion.open()
-        Dim query As String = "SELECT id_fab'Numero orden fabricacion',nombre_prod_fab'Nombre producto a fabricar',id_salida'orden de salida bodega', fecha_inicio_fab'Fecha inicio',fecha_termino_fab'fecha termino',IF(fecha_termino_fab-CURDATE()>=0,'OK','Atrasado')'Tiempo',estados_de_produccion.nom_est_pro'Estado de fabricacion' FROM proceso_fabricacion INNER JOIN estados_de_produccion ON estados_de_produccion.id_est_pro=proceso_fabricacion.id_est_pro WHERE (fecha_inicio_fab>='%" & Me.fechaconsulta.Text & "%' AND fecha_termino_fab<'%" & Me.fechaconsulta2.Text & "%') OR id_fab LIKE '%" & Me.txtid_sal.Value & "%'   OR id_salida LIKE '%" & Me.n_ordensalida.Text & "%'"
+        Dim query As String = "SELECT id_fab'Numero orden fabricacion',nom_profab'Nombre producto a fabricar',id_salida'orden de salida bodega', fecha_inicio_fab'Fecha inicio',fecha_termino_fab'fecha termino',IF(fecha_termino_fab-CURDATE()>=0,'OK','Atrasado')'Tiempo',estados_de_produccion.nom_est_pro'Estado de fabricacion' FROM proceso_fabricacion INNER JOIN estados_de_produccion ON estados_de_produccion.id_est_pro=proceso_fabricacion.id_est_pro INNER JOIN producto_fabricado ON proceso_fabricacion.id_profab=producto_fabricado.id_profab WHERE (fecha_inicio_fab>='%" & Me.fechaconsulta.Text & "%' AND fecha_termino_fab<'%" & Me.fechaconsulta2.Text & "%') OR id_fab LIKE '%" & Me.txtid_sal.Value & "%'   OR id_salida LIKE '%" & Me.n_ordensalida.Text & "%'"
         Dim Adpt As New MySqlDataAdapter(query, Conexion.conn)
         Dim ds As New DataSet()
         Adpt.Fill(ds, "Emp")
